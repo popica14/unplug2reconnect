@@ -129,7 +129,7 @@ body.is-offline .signal-meter span:not(:first-child) { opacity: .18; transform: 
 .field-log__intro .lead { margin-top: 1.8rem; }
 .timeline { grid-column: 2 / 4; margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--charcoal); }
 .timeline__item { position: relative; display: grid; grid-template-columns: 8rem 1fr 10rem; gap: 2rem; min-height: 10rem; padding: 2rem 0; border-bottom: 1px solid var(--charcoal); align-items: start; }
-.timeline__item time { font-size: .68rem; }
+.timeline__item .daypart { font-size: .68rem; }
 .timeline__item h3 { font-size: clamp(2.1rem, 4vw, 4.5rem); }
 .timeline__item p { max-width: 38rem; margin-top: .7rem; }
 .scribble, .hand-note { font-family: cursive; color: var(--clay); font-size: 1.35rem; transform: rotate(-7deg); }
