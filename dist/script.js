@@ -73,6 +73,6 @@ form?.addEventListener("submit", (event) => {
     return;
   }
 
-  message.textContent = "You’re on the field list. We’ll be in touch when the pilot is ready.";
+  message.textContent = "Looks good. Connect the mailing-list service to start collecting sign-ups.";
   form.reset();
 });

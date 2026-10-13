@@ -220,6 +220,7 @@ body.is-offline .signal-meter span:not(:first-child) { opacity: .18; transform: 
 .form-row input::placeholder { color: rgba(238,233,222,.65); }
 .consent { display: flex; gap: .7rem; align-items: flex-start; margin-top: 1rem; font-size: .78rem; }
 .consent input { width: 1rem; height: 1rem; accent-color: var(--fire); }
+.form-note { margin: .65rem 0 0; color: rgba(238,233,222,.72); font-size: .7rem; }
 .form-message { min-height: 1.5rem; margin-top: 1rem; font-family: var(--mono); font-size: .65rem; text-transform: uppercase; }
 
 .site-footer { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; padding: 4rem var(--gutter) 2rem; color: var(--bone); background: var(--charcoal); }
