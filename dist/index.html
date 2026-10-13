@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#20211e" />
+    <meta
+      name="description"
+      content="One week offline in the Romanian Carpathians. Practical skills, mountain air, and real conversations for 18–25 year olds."
+    />
+    <title>Unplug to Reconnect — One week of real life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,600&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to the real world</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Unplug to Reconnect, home">
+        <svg class="brand-mark" viewBox="0 0 42 28" aria-hidden="true">
+          <path d="M2 24h5V19H2zM10 24h5V14h-5zM18 24h5V9h-5z" />
+          <path d="m18 23 9-12 13 13H18Z" />
+        </svg>
+        <span><b>UNPLUG</b><small>to</small><b>RECONNECT</b></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Menu</span><i></i><i></i>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#week">The week</a>
+        <a href="#workshops">What you do</a>
+        <a href="#expedition">The expedition</a>
+        <a href="#field-notes">Field notes</a>
+        <a class="button button--small" href="#join">Join the pilot list</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero__image"
+          src="assets/carpathian-departure.jpg"
+          alt="A small group carrying backpacks walks from a mountain village into the Carpathians at sunrise."
+          width="1536"
+          height="1024"
+        />
+        <div class="hero__wash" aria-hidden="true"></div>
+        <div class="hero__topline mono">
+          <span>FIELD TEST 001</span>
+          <span>CARPATHIANS / RO</span>
+          <span>STATUS: <b data-signal-label>LEAVING SIGNAL</b></span>
+        </div>
+        <div class="hero__content">
+          <p class="eyebrow">Unplug to Reconnect presents</p>
+          <h1 id="hero-title">One week <em>offline.</em><br />One week of <em>real life.</em></h1>
+          <p class="hero__lede">
+            Seven days to use your hands, walk into the mountains, meet people face-to-face,
+            and remember what happens when no algorithm decides what comes next.
+          </p>
+          <div class="hero__actions">
+            <a class="button" href="#join">Join the pilot list <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#week">See the week <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="hero__facts mono" aria-label="Key facts">
+          <span>10–12 PEOPLE</span><span>7 DAYS</span><span>AGES 18–25</span>
+        </div>
+        <div class="signal-meter" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </section>
+
+      <section class="manifesto section-grid topo" aria-labelledby="manifesto-title">
+        <div class="section-index mono">01 / THE POINT</div>
+        <div class="manifesto__copy reveal">
+          <p class="eyebrow">Less digital. More analogue.</p>
+          <h2 id="manifesto-title">Technology isn’t the enemy. It just doesn’t get the best seat for a week.</h2>
+          <p class="lead">
+            We don’t offer answers. We create an environment where you might find your own
+            direction through doing, talking, listening, and living alongside other people.
+          </p>
+        </div>
+        <div class="switch-card reveal" aria-label="Digital to analogue">
+          <span class="mono">DIGITAL</span>
+          <div class="toggle-track"><i></i></div>
+          <span class="mono">ANALOGUE</span>
+          <p>Your phone will survive a week without you.</p>
+        </div>
+      </section>
+
+      <section class="outcomes" aria-label="What you take home">
+        <article class="outcome outcome--bone reveal">
+          <span class="outcome__number mono">01</span>
+          <div class="outcome__icon" aria-hidden="true">▥</div>
+          <h3>Digital reset</h3>
+          <p>Not a rejection of technology. A chance to notice what happens when it stops occupying the center of every day.</p>
+          <span class="outcome__tag mono">NO FEED / MORE ROOM</span>
+        </article>
+        <article class="outcome outcome--clay reveal">
+          <span class="outcome__number mono">02</span>
+          <div class="outcome__icon" aria-hidden="true">↗</div>
+          <h3>Confidence</h3>
+          <p>Carry the pack. Cook the meal. Read the map. Meet manageable discomfort and find out what you can do yourself.</p>
+          <span class="outcome__tag mono">LEARN BY DOING</span>
+        </article>
+        <article class="outcome outcome--forest reveal">
+          <span class="outcome__number mono">03</span>
+          <div class="outcome__icon" aria-hidden="true">○○</div>
+          <h3>Real connection</h3>
+          <p>Live, work, eat, disagree, laugh, and solve things with a small international group—in the same place, at the same time.</p>
+          <span class="outcome__tag mono">FACE TO FACE</span>
+        </article>
+      </section>
+
+      <section id="week" class="field-log section-grid" aria-labelledby="week-title">
+        <div class="section-index mono">02 / THE WEEK</div>
+        <div class="field-log__intro reveal">
+          <p class="eyebrow">Seven-day field log</p>
+          <h2 id="week-title">A rhythm, not a packed schedule.</h2>
+          <p class="lead">There is time to learn something useful—and time to do absolutely nothing.</p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <time class="mono">07:30</time>
+            <div><h3>Wake slowly</h3><p>Breakfast. Coffee. Weather. No morning scroll required.</p></div>
+            <span class="scribble">begin here</span>
+          </li>
+          <li class="timeline__item reveal">
+            <time class="mono">09:30</time>
+            <div><h3>Use your hands—or your head</h3><p>A practical workshop, a debate, or both. Learn from mentors, moderators, locals, and one another.</p></div>
+          </li>
+          <li class="timeline__item reveal">
+            <time class="mono">13:00</time>
+            <div><h3>Make lunch together</h3><p>Planning, chopping, cooking, eating, cleaning. Everyone contributes to life at camp.</p></div>
+          </li>
+          <li class="timeline__item timeline__item--image reveal">
+            <figure class="photo-print photo-print--tilt-left">
+              <img src="assets/shared-meal.jpg" alt="Young adults prepare a shared meal at a wooden table outside a rural house." width="1536" height="1024" loading="lazy" />
+              <figcaption class="mono">DAY 03 / LUNCH CREW / 13:16</figcaption>
+            </figure>
+          </li>
+          <li class="timeline__item reveal">
+            <time class="mono">15:08</time>
+            <div><h3>Nothing is scheduled</h3><p>Read. Sleep. Walk. Play cards. Help in the garden. Have a ridiculous conversation—or an important one.</p></div>
+            <span class="stamp">BOREDOM<br />ALLOWED</span>
+          </li>
+          <li class="timeline__item reveal">
+            <time class="mono">19:24</time>
+            <div><h3>Fire, food, stories</h3><p>Dinner, games, music, stars. Tomorrow can wait until tomorrow.</p></div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="workshops" class="workshops" aria-labelledby="workshops-title">
+        <div class="workshops__heading section-grid">
+          <div class="section-index mono">03 / LEARN TOGETHER</div>
+          <div class="reveal">
+            <p class="eyebrow">No fixed curriculum</p>
+            <h2 id="workshops-title">Learn by doing.<br /><em>Think by talking.</em></h2>
+          </div>
+          <p class="lead reveal">These are possibilities, not promises. The week evolves with the people, mentors, and place.</p>
+        </div>
+        <div class="workshop-split">
+          <article class="workshop-panel workshop-panel--light reveal">
+            <p class="mono">HANDS / PRACTICAL</p>
+            <h3>Try it. Get it wrong.<br />Try it again.</h3>
+            <ul>
+              <li><span>01</span> Build and manage a campfire</li>
+              <li><span>02</span> Navigate beyond the blue dot</li>
+              <li><span>03</span> Plan and pack for a mountain hike</li>
+              <li><span>04</span> Set up a camp that survives the night</li>
+              <li><span>05</span> Cook food worth sharing</li>
+              <li><span>06</span> Work with wood and traditional tools</li>
+            </ul>
+          </article>
+          <article class="workshop-panel workshop-panel--dark reveal">
+            <p class="mono">VOICES / DISCUSSION</p>
+            <h3>No feed. No likes.<br />Just different views.</h3>
+            <ul>
+              <li><span>01</span> Relationships and identity</li>
+              <li><span>02</span> Climate and consumption</li>
+              <li><span>03</span> Society, politics, responsibility</li>
+              <li><span>04</span> What success actually means</li>
+              <li><span>05</span> The choices of early adulthood</li>
+              <li><span>06</span> Social media and who shapes whom</li>
+            </ul>
+          </article>
+        </div>
+        <p class="workshops__note mono">OUR ROLE: CREATE THE ENVIRONMENT / NOT DICTATE THE ANSWER</p>
+      </section>
+
+      <section id="expedition" class="expedition" aria-labelledby="expedition-title">
+        <img src="assets/mountain-night.jpg" alt="A small group sits around a campfire beside tents beneath a starry mountain sky." width="1536" height="1024" loading="lazy" />
+        <div class="expedition__overlay" aria-hidden="true"></div>
+        <div class="expedition__content reveal">
+          <div class="section-index mono">04 / THE MOUNTAIN NIGHT</div>
+          <p class="eyebrow">Leave from camp. On foot.</p>
+          <h2 id="expedition-title">Carry what you need.<br />Sleep under the stars.<br /><em>Walk home different.</em></h2>
+          <p>
+            One night in the mountains, reached under your own power. A real challenge with
+            experienced leadership, thoughtful planning, and proper equipment—not survival training.
+          </p>
+          <div class="route mono" aria-label="Expedition route">
+            <span>PACK</span><i></i><span>WALK</span><i></i><span>CAMP</span><i></i><span>SUNRISE</span><i></i><span>HOME</span>
+          </div>
+        </div>
+        <aside class="kit-label mono">
+          <b>KIT PROVIDED</b>
+          <span>PROPER BACKPACKS</span>
+          <span>RELIABLE TENTS</span>
+          <span>SLEEPING BAGS / ~0°C</span>
+        </aside>
+      </section>
+
+      <section class="cameras section-grid" aria-labelledby="cameras-title">
+        <div class="section-index mono">05 / MEMORY</div>
+        <div class="cameras__copy reveal">
+          <p class="eyebrow">Phones down. Cameras up.</p>
+          <h2 id="cameras-title">Capture it.<br /><em>Don’t post it.</em></h2>
+          <p class="lead">
+            Smartphones are stored safely and remain available when needed. There are designated
+            times to contact home, and the camp can always be reached in an emergency.
+          </p>
+          <p>Instead, take a digital camera. Photograph the week. Bring the memory card home.</p>
+        </div>
+        <div class="contact-stack reveal" aria-label="Participant camera concept">
+          <figure class="photo-print photo-print--back"><div class="placeholder-frame">NO SIGNAL</div><figcaption class="mono">IMG_0021.JPG</figcaption></figure>
+          <figure class="photo-print photo-print--front">
+            <img src="assets/shared-meal.jpg" alt="Friends cooking together outdoors, shown as a participant camera print." width="1536" height="1024" loading="lazy" />
+            <figcaption class="mono">DAY 03 / 17:42 / SOMEONE LAUGHED</figcaption>
+          </figure>
+          <span class="hand-note">keep this one →</span>
+        </div>
+      </section>
+
+      <section class="village" aria-labelledby="village-title">
+        <div class="village__landscape" aria-hidden="true">
+          <svg viewBox="0 0 1440 390" preserveAspectRatio="none">
+            <path d="M0 260 160 130l135 95L470 72l180 174 170-105 144 98 180-184 296 205v130H0Z" />
+            <path d="M0 310 220 226l175 48 210-96 237 103 236-85 362 114v80H0Z" />
+          </svg>
+        </div>
+        <div class="village__content section-grid reveal">
+          <div class="section-index mono">06 / THE PLACE</div>
+          <div>
+            <p class="eyebrow">A real village. Not a resort.</p>
+            <h2 id="village-title">Rooted in the place—and the people already there.</h2>
+          </div>
+          <div>
+            <p>An old house or simple base. A garden. Tents. The everyday life of a mountain community.</p>
+            <p>Local people and craftspeople may share food, agriculture, woodworking, music, culture, and knowledge accumulated over generations. The village is part of the relationship, not scenery.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="field-notes" class="practical section-grid" aria-labelledby="practical-title">
+        <div class="section-index mono">07 / FIELD NOTES</div>
+        <div class="practical__heading reveal">
+          <p class="eyebrow">What we know so far</p>
+          <h2 id="practical-title">Small on purpose.<br /><em>Real enough to learn from.</em></h2>
+        </div>
+        <dl class="fact-grid reveal">
+          <div><dt class="mono">WHO</dt><dd>Young adults aged 18–25</dd></div>
+          <div><dt class="mono">GROUP</dt><dd>10–12 participants + two hosts</dd></div>
+          <div><dt class="mono">TIME</dt><dd>One week</dd></div>
+          <div><dt class="mono">PLACE</dt><dd>Romanian Carpathians</dd></div>
+          <div><dt class="mono">LANGUAGE</dt><dd>English</dd></div>
+          <div><dt class="mono">FORMAT</dt><dd>International pilot</dd></div>
+          <div><dt class="mono">DATES</dt><dd>To be announced</dd></div>
+          <div><dt class="mono">PRICE</dt><dd>To be announced</dd></div>
+        </dl>
+        <div class="safety-note reveal">
+          <span class="mono">SAFETY NOTE / 001</span>
+          <p>The experience includes hiking, outdoor living, and intentional discomfort. Appropriate equipment, planning, and experienced leadership are fundamental. Full eligibility, accessibility, and safety details will come with pilot registration.</p>
+        </div>
+      </section>
+
+      <section class="faq section-grid" aria-labelledby="faq-title">
+        <div class="section-index mono">08 / ASK US</div>
+        <div class="faq__heading reveal"><p class="eyebrow">Useful questions</p><h2 id="faq-title">Before you pack.</h2></div>
+        <div class="faq__list reveal">
+          <details>
+            <summary>Do I have to give up my phone completely?<span>+</span></summary>
+            <p>No. Phones are stored safely for most of the experience and remain available when needed. The point is distance, not punishment.</p>
+          </details>
+          <details>
+            <summary>Can my family reach me?<span>+</span></summary>
+            <p>Yes. There will be designated opportunities to contact home, and the camp remains reachable in an emergency.</p>
+          </details>
+          <details>
+            <summary>Do I need hiking or camping experience?<span>+</span></summary>
+            <p>The pilot is designed around learning by doing, but final experience and fitness requirements will be shared before applications open.</p>
+          </details>
+          <details>
+            <summary>What equipment is provided?<span>+</span></summary>
+            <p>Proper hiking backpacks, reliable tents, and sleeping bags suitable for temperatures around 0°C are planned. A final packing list will accompany registration.</p>
+          </details>
+          <details>
+            <summary>Is this survival training?<span>+</span></summary>
+            <p>No. There is challenge and manageable discomfort, balanced by experienced leadership, planning, and suitable equipment.</p>
+          </details>
+          <details>
+            <summary>Who leads the workshops and expedition?<span>+</span></summary>
+            <p>Practical mentors, knowledgeable guests, moderators, and experienced outdoor leadership will shape the program. Names and credentials will be published with the pilot details.</p>
+          </details>
+          <details>
+            <summary>When is it, and how much will it cost?<span>+</span></summary>
+            <p>Dates and pricing are not set yet. Join the pilot list and we’ll share them when the first week is ready.</p>
+          </details>
+        </div>
+      </section>
+
+      <section id="join" class="join" aria-labelledby="join-title">
+        <div class="join__noise mono" aria-hidden="true">SCROLLING ○────● LIVING &nbsp; ONLINE ○────● OUTSIDE</div>
+        <div class="join__content reveal">
+          <span class="stamp stamp--light">PILOT<br />001</span>
+          <p class="eyebrow">This starts small</p>
+          <h2 id="join-title">10–12 people.<br />7 days.<br /><em>0 algorithms deciding what comes next.</em></h2>
+          <p>The first camp will be small on purpose. Join the pilot list to hear when applications open and help shape what this becomes.</p>
+          <form class="interest-form" data-interest-form novalidate>
+            <div class="form-row">
+              <label for="email">Your email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+              <button class="button button--light" type="submit">Keep me posted <span aria-hidden="true">↗</span></button>
+            </div>
+            <label class="consent">
+              <input type="checkbox" name="consent" required />
+              <span>I’m happy to receive occasional pilot updates. No feed-filling nonsense.</span>
+            </label>
+            <p class="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand brand--footer" href="#top">
+        <span><b>UNPLUG</b><small>to</small><b>RECONNECT</b></span>
+      </a>
+      <p>Let’s unplug for a moment from our digital worlds and reconnect with nature, people, and simple things.</p>
+      <div class="footer-meta mono"><span>LESS DIGITAL.</span><span>MORE ANALOGUE.</span><a href="#top">BACK TO TOP ↑</a></div>
+    </footer>
+  </body>
+</html>
