@@ -157,9 +157,7 @@ Short. Clear. Intelligent. Occasionally dry or playful. Never preachy or overly 
 **UNPLUG TO RECONNECT**
 
 **ONE WEEK OFFLINE.  
-ONE WEEK OF REAL LIFE.**
-
-**LESS DIGITAL.  
+LESS DIGITAL.  
 MORE ANALOGUE.**
 
 ### Supporting Lines
