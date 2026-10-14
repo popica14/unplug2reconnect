@@ -38,8 +38,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .mono { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.06em; }
 .eyebrow {
-  margin: 0 0 1.2rem; font-family: var(--mono); font-size: 0.7rem; font-weight: 700;
-  letter-spacing: 0.13em; text-transform: uppercase;
+  margin: 0 0 1.2rem; font-family: var(--mono); font-size: clamp(1rem, 1.3vw, 1.18rem); font-weight: 700;
+  letter-spacing: 0.08em; line-height: 1.35; text-transform: uppercase;
 }
 h1, h2, h3 { margin: 0; font-family: var(--condensed); line-height: 0.9; text-transform: uppercase; }
 h1 { font-size: clamp(4.2rem, 10vw, 9.8rem); letter-spacing: -0.035em; }
