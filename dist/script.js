@@ -8,7 +8,7 @@ const updateScrollState = () => {
   const scrolled = window.scrollY > 48;
   header?.classList.toggle("is-scrolled", scrolled);
   document.body.classList.toggle("is-offline", window.scrollY > window.innerHeight * 0.55);
-  if (signalLabel) signalLabel.textContent = scrolled ? "NO SIGNAL" : "LEAVING SIGNAL";
+  if (signalLabel) signalLabel.textContent = scrolled ? "...NO SIGNAL" : "...LEAVING SIGNAL";
 };
 
 updateScrollState();
