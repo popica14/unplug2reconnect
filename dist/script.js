@@ -3,9 +3,22 @@ const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".site-nav");
 const signalLabel = document.querySelector("[data-signal-label]");
 const form = document.querySelector("[data-interest-form]");
-const languageSelect = document.querySelector("[data-language-select]");
+const languagePicker = document.querySelector("[data-language-picker]");
+const languageTrigger = document.querySelector("[data-language-trigger]");
+const languageMenu = document.querySelector("[data-language-menu]");
+const languageFlag = document.querySelector("[data-language-flag]");
+const languageCode = document.querySelector("[data-language-code]");
+const languageOptions = [...document.querySelectorAll("[data-locale]")];
 const translations = window.U2R_TRANSLATIONS || {};
 const supportedLocales = Object.keys(translations);
+const localeDetails = {
+  en: { flag: "🇬🇧", code: "EN" },
+  de: { flag: "🇩🇪", code: "DE" },
+  fr: { flag: "🇫🇷", code: "FR" },
+  ro: { flag: "🇷🇴", code: "RO" },
+  es: { flag: "🇪🇸", code: "ES" },
+  it: { flag: "🇮🇹", code: "IT" }
+};
 let currentLocale = "en";
 
 const getTranslation = (locale, key) =>
@@ -53,7 +66,12 @@ const applyLocale = (locale, updateUrl = false) => {
     element.setAttribute("aria-label", translate(element.dataset.i18nAriaLabel));
   });
 
-  if (languageSelect) languageSelect.value = currentLocale;
+  const localeDetail = localeDetails[currentLocale] || localeDetails.en;
+  if (languageFlag) languageFlag.textContent = localeDetail.flag;
+  if (languageCode) languageCode.textContent = localeDetail.code;
+  languageOptions.forEach((option) => {
+    option.setAttribute("aria-selected", String(option.dataset.locale === currentLocale));
+  });
   if (signalLabel) signalLabel.textContent = translate(window.scrollY > 48 ? "hero.signalGone" : "hero.signalLeaving");
   const formMessage = form?.querySelector(".form-message");
   if (formMessage) formMessage.textContent = "";
@@ -81,10 +99,62 @@ applyLocale(
         : "en"
 );
 
-languageSelect?.addEventListener("change", (event) => {
-  applyLocale(event.target.value, true);
+const setLanguageMenu = (open, focusSelected = false) => {
+  languagePicker?.classList.toggle("is-open", open);
+  languageTrigger?.setAttribute("aria-expanded", String(open));
+  if (open && focusSelected) {
+    languageOptions.find((option) => option.dataset.locale === currentLocale)?.focus();
+  }
+};
+
+const chooseLocale = (locale) => {
+  applyLocale(locale, true);
+  setLanguageMenu(false);
   menuButton?.setAttribute("aria-expanded", "false");
   navigation?.classList.remove("is-open");
+};
+
+languageTrigger?.addEventListener("click", () => {
+  const willOpen = languageTrigger.getAttribute("aria-expanded") !== "true";
+  setLanguageMenu(willOpen, willOpen);
+});
+
+languageTrigger?.addEventListener("keydown", (event) => {
+  if (!["ArrowDown", "ArrowUp"].includes(event.key)) return;
+  event.preventDefault();
+  setLanguageMenu(true);
+  const target = event.key === "ArrowUp"
+    ? languageOptions.at(-1)
+    : languageOptions.find((option) => option.dataset.locale === currentLocale);
+  target?.focus();
+});
+
+languageMenu?.addEventListener("click", (event) => {
+  const option = event.target.closest("[data-locale]");
+  if (option) chooseLocale(option.dataset.locale);
+});
+
+languageMenu?.addEventListener("keydown", (event) => {
+  const currentIndex = languageOptions.indexOf(document.activeElement);
+  let nextIndex = currentIndex;
+
+  if (event.key === "ArrowDown") nextIndex = (currentIndex + 1) % languageOptions.length;
+  else if (event.key === "ArrowUp") nextIndex = (currentIndex - 1 + languageOptions.length) % languageOptions.length;
+  else if (event.key === "Home") nextIndex = 0;
+  else if (event.key === "End") nextIndex = languageOptions.length - 1;
+  else if (event.key === "Escape") {
+    event.preventDefault();
+    setLanguageMenu(false);
+    languageTrigger?.focus();
+    return;
+  } else return;
+
+  event.preventDefault();
+  languageOptions[nextIndex]?.focus();
+});
+
+document.addEventListener("click", (event) => {
+  if (languagePicker && !languagePicker.contains(event.target)) setLanguageMenu(false);
 });
 
 const updateScrollState = () => {

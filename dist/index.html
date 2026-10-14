@@ -40,17 +40,37 @@
         <a href="#workshops" data-i18n="nav.activities">What you do</a>
         <a href="#expedition" data-i18n="nav.expedition">The expedition</a>
         <a href="#field-notes" data-i18n="nav.glance">At a glance</a>
-        <label class="language-switcher">
-          <span class="sr-only" data-i18n="nav.language">Language</span>
-          <select data-language-select aria-label="Language" data-i18n-aria-label="nav.language">
-            <option value="en">EN</option>
-            <option value="de">DE</option>
-            <option value="fr">FR</option>
-            <option value="ro">RO</option>
-            <option value="es">ES</option>
-            <option value="it">IT</option>
-          </select>
-        </label>
+        <div class="language-picker" data-language-picker>
+          <button
+            class="language-picker__trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="language-menu"
+            aria-haspopup="listbox"
+            aria-label="Language"
+            data-i18n-aria-label="nav.language"
+            data-language-trigger
+          >
+            <span class="language-picker__flag" data-language-flag aria-hidden="true">🇬🇧</span>
+            <span class="language-picker__code" data-language-code>EN</span>
+            <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1.5 5 5 5-5" /></svg>
+          </button>
+          <div
+            id="language-menu"
+            class="language-picker__menu"
+            role="listbox"
+            aria-label="Language"
+            data-i18n-aria-label="nav.language"
+            data-language-menu
+          >
+            <button type="button" role="option" aria-selected="true" data-locale="en"><span aria-hidden="true">🇬🇧</span><span>English</span><small>EN</small></button>
+            <button type="button" role="option" aria-selected="false" data-locale="de"><span aria-hidden="true">🇩🇪</span><span>Deutsch</span><small>DE</small></button>
+            <button type="button" role="option" aria-selected="false" data-locale="fr"><span aria-hidden="true">🇫🇷</span><span>Français</span><small>FR</small></button>
+            <button type="button" role="option" aria-selected="false" data-locale="ro"><span aria-hidden="true">🇷🇴</span><span>Română</span><small>RO</small></button>
+            <button type="button" role="option" aria-selected="false" data-locale="es"><span aria-hidden="true">🇪🇸</span><span>Español</span><small>ES</small></button>
+            <button type="button" role="option" aria-selected="false" data-locale="it"><span aria-hidden="true">🇮🇹</span><span>Italiano</span><small>IT</small></button>
+          </div>
+        </div>
         <a class="button button--small" href="#join" data-i18n="nav.join">Join the pilot list</a>
       </nav>
     </header>
