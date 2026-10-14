@@ -16,13 +16,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="translations.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to the real world</a>
+    <a class="skip-link" href="#main" data-i18n="access.skip">Skip to the real world</a>
 
     <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="Unplug to Reconnect, home">
+      <a class="brand" href="#top" aria-label="Unplug to Reconnect, home" data-i18n-aria-label="access.home">
         <svg class="brand-mark" viewBox="0 0 42 28" aria-hidden="true">
           <path d="M2 24h5V19H2zM10 24h5V14h-5zM18 24h5V9h-5z" />
           <path d="m18 23 9-12 13 13H18Z" />
@@ -31,15 +32,26 @@
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span>Menu</span><i></i><i></i>
+        <span data-i18n="nav.menu">Menu</span><i></i><i></i>
       </button>
 
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#week">The week</a>
-        <a href="#workshops">What you do</a>
-        <a href="#expedition">The expedition</a>
-        <a href="#field-notes">At a glance</a>
-        <a class="button button--small" href="#join">Join the pilot list</a>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation" data-i18n-aria-label="access.primaryNav">
+        <a href="#week" data-i18n="nav.week">The week</a>
+        <a href="#workshops" data-i18n="nav.activities">What you do</a>
+        <a href="#expedition" data-i18n="nav.expedition">The expedition</a>
+        <a href="#field-notes" data-i18n="nav.glance">At a glance</a>
+        <label class="language-switcher">
+          <span class="sr-only" data-i18n="nav.language">Language</span>
+          <select data-language-select aria-label="Language" data-i18n-aria-label="nav.language">
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+            <option value="fr">FR</option>
+            <option value="ro">RO</option>
+            <option value="es">ES</option>
+            <option value="it">IT</option>
+          </select>
+        </label>
+        <a class="button button--small" href="#join" data-i18n="nav.join">Join the pilot list</a>
       </nav>
     </header>
 
@@ -49,28 +61,29 @@
           class="hero__image"
           src="assets/carpathian-departure.jpg"
           alt="A small group carrying backpacks walks from a mountain village into the Carpathians at sunrise."
+          data-i18n-alt="hero.imageAlt"
           width="1536"
           height="1024"
         />
         <div class="hero__wash" aria-hidden="true"></div>
         <div class="hero__topline mono">
-          <span>FIELD TEST 001</span>
-          <span>CARPATHIANS / RO</span>
+          <span data-i18n="hero.fieldTest">FIELD TEST 001</span>
+          <span data-i18n="hero.location">CARPATHIANS / RO</span>
           <span><b data-signal-label>...LEAVING SIGNAL</b></span>
         </div>
         <div class="hero__content">
-          <p class="eyebrow">Unplug to Reconnect presents</p>
-          <h1 id="hero-title">One week <em>offline.</em><br /><em>Less digital.</em><br />More analogue.</h1>
-          <p class="hero__lede">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Unplug to Reconnect presents</p>
+          <h1 id="hero-title" data-i18n-html="hero.title">One week <em>offline.</em><br /><em>Less digital.</em><br />More analogue.</h1>
+          <p class="hero__lede" data-i18n="hero.lede">
             A one-week outdoor experience for young adults in a rural corner of the Romanian Carpathians.
           </p>
           <div class="hero__actions">
-            <a class="button" href="#join">Join the pilot list <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#week">See the week <span aria-hidden="true">↓</span></a>
+            <a class="button" href="#join"><span data-i18n="nav.join">Join the pilot list</span> <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#week"><span data-i18n="hero.seeWeek">See the week</span> <span aria-hidden="true">↓</span></a>
           </div>
         </div>
-        <div class="hero__facts mono" aria-label="Key facts">
-          <span>10–12 PEOPLE</span><span>7 DAYS</span><span>AGES 18–25</span>
+        <div class="hero__facts mono" aria-label="Key facts" data-i18n-aria-label="access.keyFacts">
+          <span data-i18n="hero.people">10–12 PEOPLE</span><span data-i18n="hero.days">7 DAYS</span><span data-i18n="hero.ages">AGES 18–25</span>
         </div>
         <div class="signal-meter" aria-hidden="true">
           <span></span><span></span><span></span><span></span>
@@ -78,94 +91,94 @@
       </section>
 
       <section class="manifesto section-grid topo" aria-labelledby="manifesto-title">
-        <div class="section-index mono">01 / THE POINT</div>
+        <div class="section-index mono" data-i18n="point.index">01 / THE POINT</div>
         <div class="manifesto__copy reveal">
-          <h2 id="manifesto-title">Step away from the digital noise for a week.</h2>
-          <div class="point-copy">
+          <h2 id="manifesto-title" data-i18n="point.title">Step away from the digital noise for a week.</h2>
+          <div class="point-copy" data-i18n-html="point.copy">
             <p>At 18–25, many of us are making some of our first big decisions about study, work, relationships, where we want to live, and what kind of life we want.</p>
             <p>At the same time, much of what we see, hear, and compare ourselves with comes through a screen.</p>
             <p><strong>We don’t offer answers. We create a different environment where you might find your own direction, inspiration, or perspective through doing things, spending time in nature, and talking face-to-face with other people.</strong></p>
           </div>
         </div>
-        <div class="switch-card reveal" aria-label="Digital to analogue">
-          <span class="mono">DIGITAL</span>
+        <div class="switch-card reveal" aria-label="Digital to analogue" data-i18n-aria-label="access.switch">
+          <span class="mono" data-i18n="point.digital">DIGITAL</span>
           <div class="toggle-track"><i></i></div>
-          <span class="mono">ANALOGUE</span>
-          <p>Your phone will survive a week without you.</p>
+          <span class="mono" data-i18n="point.analogue">ANALOGUE</span>
+          <p data-i18n="point.phone">Your phone will survive a week without you.</p>
         </div>
       </section>
 
-      <section class="outcomes" aria-label="What you take home">
+      <section class="outcomes" aria-label="What you take home" data-i18n-aria-label="access.outcomes">
         <article class="outcome outcome--bone reveal">
           <span class="outcome__number mono">01</span>
-          <h3>Digital reset</h3>
-          <p>Move technology away from the centre of everyday life for a week and experience what changes when your phone is no longer the default place to turn.</p>
+          <h3 data-i18n="outcomes.resetTitle">Digital reset</h3>
+          <p data-i18n="outcomes.resetCopy">Move technology away from the centre of everyday life for a week and experience what changes when your phone is no longer the default place to turn.</p>
         </article>
         <article class="outcome outcome--clay reveal">
           <span class="outcome__number mono">02</span>
-          <h3>Confidence</h3>
-          <p>Hike, cook, camp, learn practical skills, take responsibility, and discover more of what you can do for yourself.</p>
+          <h3 data-i18n="outcomes.confidenceTitle">Confidence</h3>
+          <p data-i18n="outcomes.confidenceCopy">Hike, cook, camp, learn practical skills, take responsibility, and discover more of what you can do for yourself.</p>
         </article>
         <article class="outcome outcome--forest reveal">
           <span class="outcome__number mono">03</span>
-          <h3>Real connection</h3>
-          <p>Live, work, eat, disagree, laugh, and spend time with a small group of people, face-to-face.</p>
+          <h3 data-i18n="outcomes.connectionTitle">Real connection</h3>
+          <p data-i18n="outcomes.connectionCopy">Live, work, eat, disagree, laugh, and spend time with a small group of people, face-to-face.</p>
         </article>
       </section>
 
       <section id="week" class="field-log section-grid" aria-labelledby="week-title">
-        <div class="section-index mono">02 / A TYPICAL DAY AT CAMP</div>
+        <div class="section-index mono" data-i18n="day.index">02 / A TYPICAL DAY AT CAMP</div>
         <div class="field-log__intro reveal">
-          <h2 id="week-title">A general rhythm, not a packed schedule.</h2>
-          <p class="lead">Every day will be a little different, but most follow the same simple structure. There is time to learn, time to help run the camp, and plenty of time when nothing is scheduled.</p>
+          <h2 id="week-title" data-i18n="day.title">A general rhythm, not a packed schedule.</h2>
+          <p class="lead" data-i18n="day.intro">Every day will be a little different, but most follow the same simple structure. There is time to learn, time to help run the camp, and plenty of time when nothing is scheduled.</p>
         </div>
 
         <ol class="timeline">
           <li class="timeline__item reveal">
-            <span class="daypart mono">01 / BREAKFAST</span>
-            <div><h3>Start slowly</h3><p>Eat together, drink coffee or tea, check the weather, and get ready for the day.</p></div>
+            <span class="daypart mono" data-i18n="day.breakfastLabel">01 / BREAKFAST</span>
+            <div data-i18n-html="day.breakfast"><h3>Start slowly</h3><p>Eat together, drink coffee or tea, check the weather, and get ready for the day.</p></div>
           </li>
           <li class="timeline__item reveal">
-            <span class="daypart mono">02 / MORNING WORKSHOP</span>
-            <div><h3>Learn or discuss</h3><p>A practical session where we learn by doing, or a discussion and debate session where we explore a topic together.</p></div>
+            <span class="daypart mono" data-i18n="day.workshopLabel">02 / MORNING WORKSHOP</span>
+            <div data-i18n-html="day.workshop"><h3>Learn or discuss</h3><p>A practical session where we learn by doing, or a discussion and debate session where we explore a topic together.</p></div>
           </li>
           <li class="timeline__item reveal">
-            <span class="daypart mono">03 / LUNCH</span>
-            <div><h3>Eat together</h3><p>A local cook prepares fresh, traditional regional dishes, the kind of generous food a Romanian grandmother might put on the table.</p></div>
+            <span class="daypart mono" data-i18n="day.lunchLabel">03 / LUNCH</span>
+            <div data-i18n-html="day.lunch"><h3>Eat together</h3><p>A local cook prepares fresh, traditional regional dishes, the kind of generous food a Romanian grandmother might put on the table.</p></div>
           </li>
           <li class="timeline__item reveal">
-            <span class="daypart mono">04 / FREE AFTERNOON</span>
-            <div><h3>Nothing scheduled</h3><p>Read, sleep, walk, play cards, help in the garden, or talk. Learning to spend unstructured time without reaching for a phone is part of the experience.</p></div>
+            <span class="daypart mono" data-i18n="day.afternoonLabel">04 / FREE AFTERNOON</span>
+            <div data-i18n-html="day.afternoon"><h3>Nothing scheduled</h3><p>Read, sleep, walk, play cards, help in the garden, or talk. Learning to spend unstructured time without reaching for a phone is part of the experience.</p></div>
           </li>
           <li class="timeline__item reveal">
-            <span class="daypart mono">05 / DINNER</span>
-            <div><h3>Cook together</h3><p>Everyone helps prepare dinner, clean up, and look after the camp.</p></div>
+            <span class="daypart mono" data-i18n="day.dinnerLabel">05 / DINNER</span>
+            <div data-i18n-html="day.dinner"><h3>Cook together</h3><p>Everyone helps prepare dinner, clean up, and look after the camp.</p></div>
           </li>
           <li class="timeline__item reveal">
-            <span class="daypart mono">06 / EVENING</span>
-            <div><h3>Campfire, games, conversation</h3><p>After dinner come music, conversations, and stars.</p></div>
+            <span class="daypart mono" data-i18n="day.eveningLabel">06 / EVENING</span>
+            <div data-i18n-html="day.evening"><h3>Campfire, games, conversation</h3><p>After dinner come music, conversations, and stars.</p></div>
           </li>
         </ol>
         <div class="day-pause reveal">
           <div class="day-pause__statement">
-            <span class="mono">UNSTRUCTURED TIME / 01</span>
-            <strong>BOREDOM<br />ALLOWED</strong>
+            <span class="mono" data-i18n="day.pauseLabel">UNSTRUCTURED TIME / 01</span>
+            <strong data-i18n-html="day.pauseTitle">BOREDOM<br />ALLOWED</strong>
           </div>
           <figure class="photo-print photo-print--tilt-left">
-            <img src="assets/shared-meal.jpg" alt="Young adults prepare dinner together at a wooden table outside a rural house." width="1536" height="1024" loading="lazy" />
-            <figcaption class="mono">EVENING / DINNER CREW / CAMERA 02</figcaption>
+            <img src="assets/shared-meal.jpg" alt="Young adults prepare dinner together at a wooden table outside a rural house." data-i18n-alt="day.imageAlt" width="1536" height="1024" loading="lazy" />
+            <figcaption class="mono" data-i18n="day.caption">EVENING / DINNER CREW / CAMERA 02</figcaption>
           </figure>
         </div>
       </section>
 
       <section id="workshops" class="workshops" aria-labelledby="workshops-title">
         <div class="workshops__heading section-grid">
-          <div class="section-index mono">03 / LEARN TOGETHER</div>
+          <div class="section-index mono" data-i18n="workshops.index">03 / LEARN TOGETHER</div>
           <div class="reveal">
-            <p class="eyebrow">The morning workshop</p>
-            <h2 id="workshops-title">It can take<br /><em>different forms.</em></h2>
+            <p class="eyebrow" data-i18n="workshops.eyebrow">The morning workshop</p>
+            <h2 id="workshops-title" data-i18n-html="workshops.title">It can take<br /><em>different forms.</em></h2>
           </div>
-          <div class="workshops__intro reveal">
+          <div class="workshops__intro reveal" data-i18n-html="workshops.intro">
             <p>Some mornings focus on <strong>practical skills</strong>, learning something by actually doing it.</p>
             <p>Other mornings are <strong>discussion and debate workshops</strong>, a chance to explore a subject, hear different perspectives, ask questions, and form your own view.</p>
             <p>The exact mix is not fixed. It depends on the participants, mentors, local people, and the place.</p>
@@ -173,10 +186,10 @@
         </div>
         <div class="workshop-split">
           <article class="workshop-panel workshop-panel--light reveal">
-            <p class="mono">FORMAT 01</p>
-            <h3>Practical</h3>
-            <p class="workshop-panel__label">Possible workshops</p>
-            <ul>
+            <p class="mono" data-i18n="workshops.format1">FORMAT 01</p>
+            <h3 data-i18n="workshops.practicalTitle">Practical</h3>
+            <p class="workshop-panel__label" data-i18n="workshops.possibleWorkshops">Possible workshops</p>
+            <ul data-i18n-html="workshops.practicalList">
               <li>Campfire</li>
               <li>Navigation</li>
               <li>Hiking preparation</li>
@@ -185,13 +198,13 @@
               <li>Woodworking</li>
               <li>Traditional rural skills</li>
             </ul>
-            <p class="panel-note">Led by mentors, craftspeople, or local people with practical experience.</p>
+            <p class="panel-note" data-i18n="workshops.practicalNote">Led by mentors, craftspeople, or local people with practical experience.</p>
           </article>
           <article class="workshop-panel workshop-panel--dark reveal">
-            <p class="mono">FORMAT 02</p>
-            <h3>Discussion / debate</h3>
-            <p class="workshop-panel__label">Possible topics</p>
-            <ul>
+            <p class="mono" data-i18n="workshops.format2">FORMAT 02</p>
+            <h3 data-i18n="workshops.discussionTitle">Discussion / debate</h3>
+            <p class="workshop-panel__label" data-i18n="workshops.possibleTopics">Possible topics</p>
+            <ul data-i18n-html="workshops.discussionList">
               <li>Relationships</li>
               <li>Gender</li>
               <li>Social media</li>
@@ -201,121 +214,121 @@
               <li>Success</li>
               <li>Adulthood</li>
             </ul>
-            <p class="panel-note">A mentor or moderator asks useful questions and creates space for different perspectives, not a “right” answer.</p>
+            <p class="panel-note" data-i18n="workshops.discussionNote">A mentor or moderator asks useful questions and creates space for different perspectives, not a “right” answer.</p>
           </article>
         </div>
-        <p class="workshops__note mono">OUR ROLE: CREATE THE ENVIRONMENT / NOT DICTATE THE ANSWER</p>
+        <p class="workshops__note mono" data-i18n="workshops.role">OUR ROLE: CREATE THE ENVIRONMENT / NOT DICTATE THE ANSWER</p>
       </section>
 
       <section id="expedition" class="expedition" aria-labelledby="expedition-title">
-        <img src="assets/mountain-night.jpg" alt="A small group sits around a campfire beside tents beneath a starry mountain sky." width="1536" height="1024" loading="lazy" />
+        <img src="assets/mountain-night.jpg" alt="A small group sits around a campfire beside tents beneath a starry mountain sky." data-i18n-alt="mountain.imageAlt" width="1536" height="1024" loading="lazy" />
         <div class="expedition__overlay" aria-hidden="true"></div>
         <div class="expedition__content reveal">
-          <div class="section-index mono">04 / THE MOUNTAIN NIGHT</div>
-          <p class="eyebrow">Leave from camp. On foot.</p>
-          <h2 id="expedition-title">Spend one night up<br /><em>in the mountains.</em></h2>
-          <div class="expedition__text">
+          <div class="section-index mono" data-i18n="mountain.index">04 / THE MOUNTAIN NIGHT</div>
+          <p class="eyebrow" data-i18n="mountain.eyebrow">Leave from camp. On foot.</p>
+          <h2 id="expedition-title" data-i18n-html="mountain.title">Spend one night up<br /><em>in the mountains.</em></h2>
+          <div class="expedition__text" data-i18n-html="mountain.copy">
             <p>One of the defining experiences of the week is a one-night mountain expedition starting directly from camp.</p>
             <p>We leave on foot carrying our backpacks, tents, sleeping bags, food, and equipment. We hike into the mountains, set up camp, cook, spend the evening outside, sleep there for the night, watch the sunrise, pack everything again, and walk back to base the next day.</p>
             <p><strong>No excursion bus. No drive to a tourist attraction. We start and finish on foot from camp.</strong></p>
             <p>This is a real challenge with intentional discomfort, but it is not survival training. Experienced leadership, proper planning, suitable equipment, and safety remain fundamental.</p>
           </div>
-          <div class="route mono" aria-label="Expedition route">
-            <span>PACK</span><i></i><span>WALK</span><i></i><span>CAMP</span><i></i><span>SUNRISE</span><i></i><span>HOME</span>
+          <div class="route mono" aria-label="Expedition route" data-i18n-aria-label="access.route">
+            <span data-i18n="mountain.pack">PACK</span><i></i><span data-i18n="mountain.walk">WALK</span><i></i><span data-i18n="mountain.camp">CAMP</span><i></i><span data-i18n="mountain.sunrise">SUNRISE</span><i></i><span data-i18n="mountain.home">HOME</span>
           </div>
         </div>
         <aside class="kit-label mono">
-          <b>KIT PROVIDED</b>
-          <span>PROPER BACKPACKS</span>
-          <span>RELIABLE TENTS</span>
-          <span>SLEEPING BAGS / ~0°C</span>
-          <span>SHARED CAMPING EQUIPMENT</span>
+          <b data-i18n="mountain.kit">KIT PROVIDED</b>
+          <span data-i18n="mountain.backpacks">PROPER BACKPACKS</span>
+          <span data-i18n="mountain.tents">RELIABLE TENTS</span>
+          <span data-i18n="mountain.sleepingBags">SLEEPING BAGS / ~0°C</span>
+          <span data-i18n="mountain.sharedGear">SHARED CAMPING EQUIPMENT</span>
         </aside>
       </section>
 
       <section id="field-notes" class="practical section-grid" aria-labelledby="practical-title">
-        <div class="section-index mono">05 / THE WEEK AT A GLANCE</div>
+        <div class="section-index mono" data-i18n="glance.index">05 / THE WEEK AT A GLANCE</div>
         <div class="practical__heading reveal">
-          <h2 id="practical-title">Everything important<br /><em>in one place.</em></h2>
+          <h2 id="practical-title" data-i18n-html="glance.title">Everything important<br /><em>in one place.</em></h2>
         </div>
         <dl class="fact-grid reveal">
-          <div><dt class="mono">WHO</dt><dd>Ages 18–25</dd></div>
-          <div><dt class="mono">GROUP</dt><dd>10–12 participants + two hosts</dd></div>
-          <div><dt class="mono">DURATION</dt><dd>One week</dd></div>
-          <div><dt class="mono">PLACE</dt><dd>A rural community in the Romanian Carpathians</dd></div>
-          <div><dt class="mono">LANGUAGE</dt><dd>English</dd></div>
-          <div><dt class="mono">DATES + PRICE</dt><dd>To be announced for the pilot</dd></div>
-          <div class="fact--wide"><dt class="mono">FORMAT</dt><dd>Outdoor living, shared meals, morning workshops, free afternoons, evenings together, and a one-night mountain expedition</dd></div>
-          <div class="fact--wide"><dt class="mono">PHONES</dt><dd>You can use your phone if you really need to, but we suggest keeping it stored and trying the week without it. The camp remains reachable if someone at home needs to contact you.</dd></div>
-          <div class="fact--wide"><dt class="mono">SAFETY</dt><dd>The week includes hiking, outdoor living, and manageable discomfort. Appropriate equipment, planning, and experienced leadership are fundamental.</dd></div>
+          <div data-i18n-html="glance.who"><dt class="mono">WHO</dt><dd>Ages 18–25</dd></div>
+          <div data-i18n-html="glance.group"><dt class="mono">GROUP</dt><dd>10–12 participants + two hosts</dd></div>
+          <div data-i18n-html="glance.duration"><dt class="mono">DURATION</dt><dd>One week</dd></div>
+          <div data-i18n-html="glance.place"><dt class="mono">PLACE</dt><dd>A rural community in the Romanian Carpathians</dd></div>
+          <div data-i18n-html="glance.language"><dt class="mono">LANGUAGE</dt><dd>English</dd></div>
+          <div data-i18n-html="glance.dates"><dt class="mono">DATES + PRICE</dt><dd>To be announced for the pilot</dd></div>
+          <div class="fact--wide" data-i18n-html="glance.format"><dt class="mono">FORMAT</dt><dd>Outdoor living, shared meals, morning workshops, free afternoons, evenings together, and a one-night mountain expedition</dd></div>
+          <div class="fact--wide" data-i18n-html="glance.phones"><dt class="mono">PHONES</dt><dd>You can use your phone if you really need to, but we suggest keeping it stored and trying the week without it. The camp remains reachable if someone at home needs to contact you.</dd></div>
+          <div class="fact--wide" data-i18n-html="glance.safety"><dt class="mono">SAFETY</dt><dd>The week includes hiking, outdoor living, and manageable discomfort. Appropriate equipment, planning, and experienced leadership are fundamental.</dd></div>
         </dl>
       </section>
 
       <section class="faq section-grid" aria-labelledby="faq-title">
-        <div class="section-index mono">06 / ASK US</div>
-        <div class="faq__heading reveal"><h2 id="faq-title">Before you pack.</h2></div>
+        <div class="section-index mono" data-i18n="faq.index">06 / ASK US</div>
+        <div class="faq__heading reveal"><h2 id="faq-title" data-i18n="faq.title">Before you pack.</h2></div>
         <div class="faq__list reveal">
           <details>
-            <summary>Can I use my phone, and can home reach me?<span>+</span></summary>
-            <p>Yes. You can use your phone if you really need to, but we suggest keeping it stored and trying the week without it. The camp remains reachable if someone at home needs to contact you.</p>
+            <summary><span data-i18n="faq.phoneQ">Can I use my phone, and can home reach me?</span><span>+</span></summary>
+            <p data-i18n="faq.phoneA">Yes. You can use your phone if you really need to, but we suggest keeping it stored and trying the week without it. The camp remains reachable if someone at home needs to contact you.</p>
           </details>
           <details>
-            <summary>Do I need hiking or camping experience?<span>+</span></summary>
-            <p>No previous hiking or camping experience is expected. The week is built around learning by doing, and the mountain route will be planned and adapted around the group so everyone can manage it.</p>
+            <summary><span data-i18n="faq.experienceQ">Do I need hiking or camping experience?</span><span>+</span></summary>
+            <p data-i18n="faq.experienceA">No previous hiking or camping experience is expected. The week is built around learning by doing, and the mountain route will be planned and adapted around the group so everyone can manage it.</p>
           </details>
           <details>
-            <summary>Is this survival training, and what is provided?<span>+</span></summary>
-            <p>No. The mountain night is a planned outdoor challenge, not survival training. The camp provides proper hiking backpacks, reliable tents, sleeping bags suitable for temperatures around 0°C, and the necessary shared equipment.</p>
+            <summary><span data-i18n="faq.survivalQ">Is this survival training, and what is provided?</span><span>+</span></summary>
+            <p data-i18n="faq.survivalA">No. The mountain night is a planned outdoor challenge, not survival training. The camp provides proper hiking backpacks, reliable tents, sleeping bags suitable for temperatures around 0°C, and the necessary shared equipment.</p>
           </details>
           <details>
-            <summary>When is it, and how much will it cost?<span>+</span></summary>
-            <p>Dates and pricing for the first pilot are not final yet. Join the pilot list and we will share the details when applications open.</p>
+            <summary><span data-i18n="faq.costQ">When is it, and how much will it cost?</span><span>+</span></summary>
+            <p data-i18n="faq.costA">Dates and pricing for the first pilot are not final yet. Join the pilot list and we will share the details when applications open.</p>
           </details>
           <details>
-            <summary>Do I need to speak fluent English?<span>+</span></summary>
-            <p>No. English is the common language of the camp, but it does not need to be your first language. The point is to use English naturally while cooking, hiking, talking, and spending time together, not to speak perfectly.</p>
+            <summary><span data-i18n="faq.englishQ">Do I need to speak fluent English?</span><span>+</span></summary>
+            <p data-i18n="faq.englishA">No. English is the common language of the camp, but it does not need to be your first language. The point is to use English naturally while cooking, hiking, talking, and spending time together, not to speak perfectly.</p>
           </details>
           <details>
-            <summary>Where do we sleep?<span>+</span></summary>
-            <p>The base camp uses simple outdoor accommodation in a rural setting, with tents and access to the basic facilities needed for the week. One night is spent camping in the mountains as part of the expedition. Exact accommodation details will be shared before booking.</p>
+            <summary><span data-i18n="faq.sleepQ">Where do we sleep?</span><span>+</span></summary>
+            <p data-i18n="faq.sleepA">The base camp uses simple outdoor accommodation in a rural setting, with tents and access to the basic facilities needed for the week. One night is spent camping in the mountains as part of the expedition. Exact accommodation details will be shared before booking.</p>
           </details>
           <details>
-            <summary>What will we eat?<span>+</span></summary>
-            <p>Meals are part of the shared experience. Lunch is prepared fresh by a local cook, with an emphasis on simple food and local ingredients. We prepare dinner together. Dietary requirements and allergies will be collected during registration so the team can confirm what can be accommodated.</p>
+            <summary><span data-i18n="faq.foodQ">What will we eat?</span><span>+</span></summary>
+            <p data-i18n="faq.foodA">Meals are part of the shared experience. Lunch is prepared fresh by a local cook, with an emphasis on simple food and local ingredients. We prepare dinner together. Dietary requirements and allergies will be collected during registration so the team can confirm what can be accommodated.</p>
           </details>
         </div>
       </section>
 
-      <section class="closing-reset" aria-label="Less digital, more analogue">
-        <img src="assets/carpathian-departure.jpg" alt="A small group walks from a mountain village into the Carpathians." width="1536" height="1024" loading="lazy" />
+      <section class="closing-reset" aria-label="Less digital, more analogue" data-i18n-aria-label="access.reset">
+        <img src="assets/carpathian-departure.jpg" alt="A small group walks from a mountain village into the Carpathians." data-i18n-alt="reset.imageAlt" width="1536" height="1024" loading="lazy" />
         <div class="closing-reset__wash" aria-hidden="true"></div>
-        <p class="reveal">Less digital.<br /><em>More analogue.</em></p>
+        <p class="reveal" data-i18n-html="reset.title">Less digital.<br /><em>More analogue.</em></p>
       </section>
 
       <section class="pilot-manifesto" aria-labelledby="pilot-title">
         <div class="pilot-manifesto__content reveal">
-          <span class="stamp stamp--light">PILOT<br />001</span>
-          <p class="eyebrow">This starts small</p>
-          <h2 id="pilot-title">10–12 people.<br />7 days.<br /><em>0 algorithms deciding what comes next.</em></h2>
+          <span class="stamp stamp--light" data-i18n-html="pilot.stamp">PILOT<br />001</span>
+          <p class="eyebrow" data-i18n="pilot.eyebrow">This starts small</p>
+          <h2 id="pilot-title" data-i18n-html="pilot.title">10–12 people.<br />7 days.<br /><em>0 algorithms deciding what comes next.</em></h2>
         </div>
       </section>
 
       <section id="join" class="signup section-grid" aria-labelledby="join-title">
-        <div class="section-index mono">JOIN / PILOT 001</div>
+        <div class="section-index mono" data-i18n="signup.index">JOIN / PILOT 001</div>
         <div class="signup__content reveal">
-          <h2 id="join-title">Come with us.</h2>
-          <p>The first camp will be small on purpose. Join the pilot list to hear when applications open and help shape what Unplug to Reconnect becomes.</p>
+          <h2 id="join-title" data-i18n="signup.title">Come with us.</h2>
+          <p data-i18n="signup.copy">The first camp will be small on purpose. Join the pilot list to hear when applications open and help shape what Unplug to Reconnect becomes.</p>
           <form class="interest-form" data-interest-form novalidate>
             <div class="form-row">
-              <label for="email">Your email</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
-              <button class="button button--light" type="submit">Keep me posted <span aria-hidden="true">↗</span></button>
+              <label for="email" data-i18n="signup.emailLabel">Your email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" data-i18n-placeholder="signup.emailPlaceholder" required />
+              <button class="button button--light" type="submit"><span data-i18n="signup.submit">Keep me posted</span> <span aria-hidden="true">↗</span></button>
             </div>
             <label class="consent">
               <input type="checkbox" name="consent" required />
-              <span>I’m happy to receive occasional pilot updates. No feed-filling nonsense.</span>
+              <span data-i18n="signup.consent">I’m happy to receive occasional pilot updates. No feed-filling nonsense.</span>
             </label>
-            <p class="form-note">Prototype form: submissions are not sent until a mailing-list service is connected.</p>
+            <p class="form-note" data-i18n="signup.note">Prototype form: submissions are not sent until a mailing-list service is connected.</p>
             <p class="form-message" role="status" aria-live="polite"></p>
           </form>
         </div>
@@ -326,8 +339,8 @@
       <a class="brand brand--footer" href="#top">
         <span><b>UNPLUG</b><small>to</small><b>RECONNECT</b></span>
       </a>
-      <p>Let’s unplug for a moment from our digital worlds and reconnect with nature, people, and simple things.</p>
-      <div class="footer-meta mono"><span>LESS DIGITAL.</span><span>MORE ANALOGUE.</span><a href="#top">BACK TO TOP ↑</a></div>
+      <p data-i18n="footer.line">Let’s unplug for a moment from our digital worlds and reconnect with nature, people, and simple things.</p>
+      <div class="footer-meta mono"><span data-i18n="footer.less">LESS DIGITAL.</span><span data-i18n="footer.more">MORE ANALOGUE.</span><a href="#top" data-i18n="footer.top">BACK TO TOP ↑</a></div>
     </footer>
   </body>
 </html>
