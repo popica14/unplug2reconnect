@@ -72,7 +72,7 @@ const en = {
     sleepQ: "Where do we sleep?", sleepA: "The base camp uses simple outdoor accommodation in a rural setting, with tents and access to the basic facilities needed for the week. One night is spent camping in the mountains as part of the expedition. Exact accommodation details will be shared before booking.",
     foodQ: "What will we eat?", foodA: "Meals are part of the shared experience. Lunch is prepared fresh by a local cook, with an emphasis on simple food and local ingredients. We prepare dinner together. Dietary requirements and allergies will be collected during registration so the team can confirm what can be accommodated."
   },
-  reset: { imageAlt: "A small group walks from a mountain village into the Carpathians.", title: "Less digital.<br><em>More analogue.</em>" },
+  reset: { imageAlt: "Two canvas tents and a campfire glow beside a timber barn in a Maramureș garden.", title: "Less digital.<br><em>More analogue.</em>" },
   pilot: { stamp: "PILOT<br>001", eyebrow: "This starts small", title: "10–12 people.<br>7 days.<br><em>0 algorithms deciding what comes next.</em>" },
   signup: {
     index: "JOIN / PILOT 001", title: "Come with us.", copy: "The first camp will be small on purpose. Join the pilot list to hear when applications open and help shape what Unplug to Reconnect becomes.",
@@ -152,7 +152,7 @@ const de = {
     sleepQ: "Wo schlafen wir?", sleepA: "Das Basiscamp bietet einfache Outdoor-Unterkünfte in ländlicher Umgebung, mit Zelten und Zugang zu den grundlegenden Einrichtungen für die Woche. Eine Nacht verbringen wir während der Expedition in den Bergen. Die genauen Details zur Unterkunft folgen vor der Buchung.",
     foodQ: "Was werden wir essen?", foodA: "Mahlzeiten sind Teil der gemeinsamen Erfahrung. Das Mittagessen wird von einer Köchin oder einem Koch aus der Region frisch zubereitet, mit einfachen Speisen und lokalen Zutaten. Das Abendessen kochen wir gemeinsam. Ernährungsbedürfnisse und Allergien werden bei der Anmeldung abgefragt, damit das Team bestätigen kann, was möglich ist."
   },
-  reset: { imageAlt: "Eine kleine Gruppe wandert aus einem Bergdorf in die Karpaten.", title: "Weniger digital.<br><em>Mehr analog.</em>" },
+  reset: { imageAlt: "Zwei Leinwandzelte und ein Lagerfeuer leuchten neben einer Holzscheune in einem Garten in Maramureș.", title: "Weniger digital.<br><em>Mehr analog.</em>" },
   pilot: { stamp: "PILOT<br>001", eyebrow: "Wir fangen klein an", title: "10–12 Personen.<br>7 Tage.<br><em>0 Algorithmen, die bestimmen, was als Nächstes kommt.</em>" },
   signup: {
     index: "MITMACHEN / PILOT 001", title: "Komm mit.", copy: "Das erste Camp bleibt bewusst klein. Trag dich in die Pilotliste ein, erfahre, wann die Bewerbungen starten, und gestalte mit, was Unplug to Reconnect wird.",
@@ -232,7 +232,7 @@ const fr = {
     sleepQ: "Où dormons-nous ?", sleepA: "Le camp de base propose un hébergement simple en plein air dans un environnement rural, avec des tentes et l’accès aux installations de base nécessaires pour la semaine. Une nuit est passée en montagne pendant l’expédition. Les détails précis seront communiqués avant la réservation.",
     foodQ: "Qu’allons-nous manger ?", foodA: "Les repas font partie de l’expérience collective. Le déjeuner est préparé frais par une personne de la région, avec des plats simples et des ingrédients locaux. Nous préparons le dîner ensemble. Les régimes alimentaires et allergies seront recueillis lors de l’inscription afin que l’équipe puisse confirmer ce qui peut être adapté."
   },
-  reset: { imageAlt: "Un petit groupe quitte un village de montagne pour marcher dans les Carpates.", title: "Moins numérique.<br><em>Plus analogique.</em>" },
+  reset: { imageAlt: "Deux tentes en toile et un feu de camp brillent près d’une grange en bois dans un jardin du Maramureș.", title: "Moins numérique.<br><em>Plus analogique.</em>" },
   pilot: { stamp: "PILOTE<br>001", eyebrow: "Tout commence à petite échelle", title: "10–12 personnes.<br>7 jours.<br><em>0 algorithme pour décider de la suite.</em>" },
   signup: {
     index: "REJOINDRE / PILOTE 001", title: "Venez avec nous.", copy: "Le premier camp sera volontairement petit. Rejoignez la liste pilote pour savoir quand les candidatures ouvriront et contribuer à façonner l’avenir d’Unplug to Reconnect.",
@@ -312,7 +312,7 @@ const ro = {
     sleepQ: "Unde dormim?", sleepA: "Tabăra de bază folosește cazare simplă în aer liber, într-un cadru rural, cu corturi și acces la facilitățile de bază necesare pentru săptămână. O noapte este petrecută în munți, ca parte a expediției. Detaliile exacte despre cazare vor fi comunicate înainte de rezervare.",
     foodQ: "Ce vom mânca?", foodA: "Mesele fac parte din experiența comună. Prânzul este pregătit proaspăt de un bucătar local, cu mâncare simplă și ingrediente locale. Cina o pregătim împreună. Preferințele alimentare și alergiile vor fi colectate la înscriere, astfel încât echipa să poată confirma ce poate fi adaptat."
   },
-  reset: { imageAlt: "Un grup mic pleacă dintr-un sat de munte spre Carpați.", title: "Mai puțin digital.<br><em>Mai mult analog.</em>" },
+  reset: { imageAlt: "Două corturi din pânză și un foc de tabără luminează lângă un hambar din lemn, într-o grădină din Maramureș.", title: "Mai puțin digital.<br><em>Mai mult analog.</em>" },
   pilot: { stamp: "PILOT<br>001", eyebrow: "Începem cu puțini oameni", title: "10–12 persoane.<br>7 zile.<br><em>0 algoritmi care decid ce urmează.</em>" },
   signup: {
     index: "ÎNSCRIERI / PILOT 001", title: "Vino cu noi.", copy: "Prima tabără va fi intenționat mică. Înscrie-te pe lista pilot pentru a afla când se deschid aplicațiile și pentru a contribui la ceea ce va deveni Unplug to Reconnect.",
@@ -392,7 +392,7 @@ const es = {
     sleepQ: "¿Dónde dormimos?", sleepA: "El campamento base utiliza un alojamiento sencillo al aire libre en un entorno rural, con tiendas y acceso a las instalaciones básicas necesarias para la semana. Una noche se pasa acampando en las montañas como parte de la expedición. Los detalles exactos se compartirán antes de reservar.",
     foodQ: "¿Qué comeremos?", foodA: "Las comidas forman parte de la experiencia compartida. Una persona de la zona prepara el almuerzo al momento, con comida sencilla e ingredientes locales. La cena la preparamos juntos. Las necesidades alimentarias y las alergias se recogerán durante la inscripción para que el equipo pueda confirmar qué adaptaciones son posibles."
   },
-  reset: { imageAlt: "Un pequeño grupo sale de un pueblo de montaña hacia los Cárpatos.", title: "Menos digital.<br><em>Más analógico.</em>" },
+  reset: { imageAlt: "Dos tiendas de lona y una hoguera iluminan el jardín junto a un granero de madera en Maramureș.", title: "Menos digital.<br><em>Más analógico.</em>" },
   pilot: { stamp: "PILOTO<br>001", eyebrow: "Esto empieza en pequeño", title: "10–12 personas.<br>7 días.<br><em>0 algoritmos decidiendo qué viene después.</em>" },
   signup: {
     index: "ÚNETE / PILOTO 001", title: "Ven con nosotros.", copy: "El primer campamento será pequeño a propósito. Únete a la lista piloto para saber cuándo se abren las solicitudes y ayudar a dar forma a lo que será Unplug to Reconnect.",
@@ -472,7 +472,7 @@ const it = {
     sleepQ: "Dove dormiamo?", sleepA: "Il campo base offre una sistemazione semplice all’aperto in un contesto rurale, con tende e accesso ai servizi di base necessari per la settimana. Una notte viene trascorsa in campeggio sulle montagne durante la spedizione. I dettagli esatti saranno condivisi prima della prenotazione.",
     foodQ: "Cosa mangeremo?", foodA: "I pasti fanno parte dell’esperienza condivisa. Il pranzo viene preparato fresco da una persona del posto, con cibo semplice e ingredienti locali. Prepariamo la cena insieme. Le esigenze alimentari e le allergie saranno raccolte durante l’iscrizione, così il team potrà confermare quali adattamenti sono possibili."
   },
-  reset: { imageAlt: "Un piccolo gruppo lascia un villaggio di montagna e cammina verso i Carpazi.", title: "Meno digitale.<br><em>Più analogico.</em>" },
+  reset: { imageAlt: "Due tende in tela e un falò illuminano il giardino accanto a un fienile in legno nel Maramureș.", title: "Meno digitale.<br><em>Più analogico.</em>" },
   pilot: { stamp: "PILOTA<br>001", eyebrow: "Iniziamo in piccolo", title: "10–12 persone.<br>7 giorni.<br><em>0 algoritmi a decidere cosa viene dopo.</em>" },
   signup: {
     index: "PARTECIPA / PILOTA 001", title: "Vieni con noi.", copy: "Il primo campo sarà volutamente piccolo. Unisciti alla lista pilota per sapere quando apriranno le candidature e contribuire a dare forma a ciò che diventerà Unplug to Reconnect.",

@@ -230,8 +230,8 @@ body.is-offline .signal-meter span:not(:first-child) { opacity: .18; transform: 
 
 .closing-reset { position: relative; min-height: 68svh; display: grid; place-items: center; color: var(--bone); background: var(--charcoal); overflow: hidden; }
 .closing-reset > img, .closing-reset__wash { position: absolute; inset: 0; width: 100%; height: 100%; }
-.closing-reset > img { object-fit: cover; object-position: center 58%; filter: saturate(.65) contrast(1.08); }
-.closing-reset__wash { background: rgba(20,21,19,.55); }
+.closing-reset > img { object-fit: cover; object-position: center 58%; filter: saturate(.82) contrast(1.04); }
+.closing-reset__wash { background: rgba(20,21,19,.48); }
 .closing-reset > p { position: relative; z-index: 1; margin: 0; padding: 6rem var(--gutter); font-family: var(--condensed); font-size: clamp(5rem, 12vw, 13rem); font-weight: 700; letter-spacing: -.045em; line-height: .76; text-align: center; text-transform: uppercase; }
 .closing-reset em { color: var(--fire); font-style: normal; }
 .pilot-manifesto { position: relative; min-height: 60rem; display: grid; place-items: center; padding: 10rem var(--gutter); color: var(--bone); background: var(--forest); overflow: hidden; }
