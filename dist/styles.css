@@ -187,7 +187,7 @@ body.is-offline .signal-meter span:not(:first-child) { opacity: .18; transform: 
 .workshop-panel--light { color: var(--charcoal); background: var(--sky); }
 .workshop-panel--dark { color: var(--bone); background: var(--forest); }
 .workshop-panel > .mono { font-size: .72rem; font-weight: 700; }
-.workshop-panel h3 { max-width: 9ch; margin: 1.6rem 0 2.5rem; font-size: clamp(4rem, 7vw, 8rem); }
+.workshop-panel h3 { max-width: 12ch; margin: 1.6rem 0 2.5rem; font-size: clamp(4rem, 7vw, 8rem); overflow-wrap: normal; word-break: normal; }
 .workshop-panel__label { margin-bottom: .75rem; font-family: var(--mono); font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .workshop-panel ul { margin: 0; padding: 0; list-style: none; border-top: 1px solid currentColor; }
 .workshop-panel li { padding: .78rem 0; border-bottom: 1px solid currentColor; font-family: var(--condensed); font-size: clamp(1.35rem, 2vw, 2rem); line-height: 1; text-transform: uppercase; }
