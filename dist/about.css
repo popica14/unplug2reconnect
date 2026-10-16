@@ -5,7 +5,7 @@
 .letter-header__back:hover { text-decoration: underline; text-underline-offset: .35rem; }
 .letter-cover { position: relative; min-height: 72svh; display: flex; align-items: flex-end; padding: 10rem var(--gutter) 9rem; color: var(--bone); background: var(--charcoal); overflow: hidden; }
 .letter-cover > img, .letter-cover__wash { position: absolute; inset: 0; width: 100%; height: 100%; }
-.letter-cover > img { object-fit: cover; object-position: center 54%; filter: saturate(.72) contrast(1.05); }
+.letter-cover > img { object-fit: cover; object-position: center 52%; filter: saturate(.76) contrast(1.04); }
 .letter-cover__wash { background: linear-gradient(90deg, rgba(20,21,19,.9), rgba(20,21,19,.5) 55%, rgba(20,21,19,.18)), linear-gradient(0deg, rgba(20,21,19,.64), transparent 65%); }
 .letter-cover__content { position: relative; z-index: 1; width: min(72rem, 88%); }
 .letter-cover h1 { max-width: 10ch; font-size: clamp(4.4rem, 8.5vw, 8.5rem); overflow-wrap: normal; word-break: normal; }
@@ -32,10 +32,11 @@
 .letter-quote small { font-family: var(--mono); font-size: .6rem; letter-spacing: .06em; text-transform: uppercase; }
 .letter-photo { margin: clamp(5rem, 9vw, 8rem) 0; padding: .7rem .7rem 1rem; background: #fffdf7; border: 1px solid rgba(32,33,30,.12); box-shadow: 0 1rem 2.5rem rgba(32,33,30,.15); }
 .letter-photo--wide { width: calc(100% + 12rem); margin-left: -6rem; transform: rotate(-.8deg); }
-.letter-photo--portrait { width: min(30rem, 82%); margin-left: auto; margin-right: -3rem; transform: rotate(1.2deg); }
+.letter-photo--offset-left { width: min(31rem, 84%); margin-right: auto; margin-left: -3rem; transform: rotate(-1.1deg); }
+.letter-photo--offset-right { width: min(31rem, 84%); margin-right: -3rem; margin-left: auto; transform: rotate(1.1deg); }
 .letter-photo img { width: 100%; object-fit: cover; filter: saturate(.76) contrast(1.03); }
 .letter-photo--wide img { aspect-ratio: 16 / 9; }
-.letter-photo--portrait img { aspect-ratio: 4 / 3; }
+.letter-photo--offset-left img, .letter-photo--offset-right img { aspect-ratio: 4 / 3; }
 .letter-photo figcaption { padding-top: .7rem; font-size: .56rem; }
 .letter-belief { width: calc(100% + 12rem); margin: clamp(6rem, 10vw, 9rem) 0 clamp(6rem, 10vw, 9rem) -6rem; padding: clamp(3rem, 6vw, 5.5rem); color: var(--bone); background: var(--forest); }
 .letter-belief .letter-marker { color: var(--fire); }
@@ -58,14 +59,15 @@
   .letter-quote { width: 100%; margin-left: 0; }
   .letter-quote::before { left: .5rem; top: -2.8rem; }
   .letter-photo--wide, .letter-belief { width: calc(100% + 3rem); margin-left: -1.5rem; }
-  .letter-photo--portrait { margin-right: 0; }
+  .letter-photo--offset-left { margin-left: 0; }
+  .letter-photo--offset-right { margin-right: 0; }
 }
 @media (max-width: 640px) {
   .letter-header { height: 4.4rem; }
   .letter-header__label { display: none; }
   .letter-header__back { width: 2rem; justify-content: center; font-size: .9rem; }
   .letter-cover { min-height: 44rem; padding: 8rem var(--gutter) 8rem; }
-  .letter-cover > img { object-position: 57% center; }
+  .letter-cover > img { object-position: 76% center; }
   .letter-cover__content { width: 100%; }
   .letter-cover h1 { max-width: 9ch; font-size: clamp(3.35rem, 15vw, 4.35rem); }
   .letter-cover__meta { left: var(--gutter); right: auto; }
@@ -79,7 +81,7 @@
   .letter-passage h2 { font-size: 2.9rem; }
   .letter-quote { padding: 1.8rem 1rem; }
   .letter-photo--wide, .letter-belief { width: calc(100% + 1.7rem); margin-left: -.85rem; transform: none; }
-  .letter-photo--portrait { width: 100%; transform: none; }
+  .letter-photo--offset-left, .letter-photo--offset-right { width: 100%; transform: none; }
   .letter-belief { padding: 3rem 1.5rem; }
   .letter-belief h2 { font-size: 4rem; }
   .letter-afterword { align-items: flex-start; flex-direction: column; }
