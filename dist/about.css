@@ -41,6 +41,8 @@
 .letter-photo figcaption { padding-top: .7rem; font-size: .56rem; }
 .letter-belief { width: calc(100% + 12rem); margin: clamp(6rem, 10vw, 9rem) 0 clamp(6rem, 10vw, 9rem) -6rem; padding: clamp(3rem, 6vw, 5.5rem); color: var(--bone); background: var(--forest); }
 .letter-belief .letter-marker { color: var(--fire); }
+.letter-belief .letter-link { color: var(--fire); }
+.letter-belief .letter-link:hover { color: var(--bone); }
 .letter-belief h2 { font-size: clamp(4rem, 7vw, 7rem); }
 .letter-belief__lead { padding-bottom: 1.5rem; border-bottom: 1px solid rgba(238,233,222,.4); font-family: var(--condensed); font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1; text-transform: uppercase; }
 .letter-signoff { margin-top: clamp(6rem, 10vw, 9rem); padding-top: 3rem; border-top: 1px solid var(--charcoal); }
