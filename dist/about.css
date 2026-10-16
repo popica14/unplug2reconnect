@@ -21,6 +21,8 @@
 .letter-paper__header strong { font-family: var(--serif); font-size: .98rem; font-weight: 600; }
 .letter-body { width: min(46rem, 100%); margin: 0 auto; font-family: var(--serif); font-size: clamp(1.08rem, 1.35vw, 1.25rem); line-height: 1.75; }
 .letter-body p { margin: 0 0 1.45rem; }
+.letter-link { color: var(--clay); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.letter-link:hover { color: var(--charcoal); }
 .letter-salutation { margin-bottom: 3rem !important; font-size: clamp(1.8rem, 3vw, 2.7rem); font-style: italic; line-height: 1.2; }
 .letter-passage { margin-top: clamp(5rem, 9vw, 8rem); }
 .letter-marker { margin-bottom: 1.4rem !important; color: var(--clay); font-size: .63rem; font-weight: 700; }
