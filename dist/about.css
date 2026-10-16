@@ -34,8 +34,10 @@
 .letter-photo--wide { width: calc(100% + 12rem); margin-left: -6rem; transform: rotate(-.8deg); }
 .letter-photo--offset-left { width: min(31rem, 84%); margin-right: auto; margin-left: -3rem; transform: rotate(-1.1deg); }
 .letter-photo--offset-right { width: min(31rem, 84%); margin-right: -3rem; margin-left: auto; transform: rotate(1.1deg); }
+.letter-photo--childhood { width: calc(100% + 4rem); margin: 3.5rem 0 4.5rem -2rem; transform: rotate(.6deg); }
 .letter-photo img { width: 100%; object-fit: cover; filter: saturate(.76) contrast(1.03); }
 .letter-photo--wide img { aspect-ratio: 16 / 9; }
+.letter-photo--childhood img { aspect-ratio: 16 / 9; }
 .letter-photo--offset-left img, .letter-photo--offset-right img { aspect-ratio: 4 / 3; }
 .letter-photo figcaption { padding-top: .7rem; font-size: .56rem; }
 .letter-belief { width: calc(100% + 12rem); margin: clamp(6rem, 10vw, 9rem) 0 clamp(6rem, 10vw, 9rem) -6rem; padding: clamp(3rem, 6vw, 5.5rem); color: var(--bone); background: var(--forest); }
@@ -61,6 +63,7 @@
   .letter-photo--wide, .letter-belief { width: calc(100% + 3rem); margin-left: -1.5rem; }
   .letter-photo--offset-left { margin-left: 0; }
   .letter-photo--offset-right { margin-right: 0; }
+  .letter-photo--childhood { width: 100%; margin-left: 0; }
 }
 @media (max-width: 640px) {
   .letter-header { height: 4.4rem; }
@@ -81,7 +84,7 @@
   .letter-passage h2 { font-size: 2.9rem; }
   .letter-quote { padding: 1.8rem 1rem; }
   .letter-photo--wide, .letter-belief { width: calc(100% + 1.7rem); margin-left: -.85rem; transform: none; }
-  .letter-photo--offset-left, .letter-photo--offset-right { width: 100%; transform: none; }
+  .letter-photo--offset-left, .letter-photo--offset-right, .letter-photo--childhood { width: 100%; transform: none; }
   .letter-belief { padding: 3rem 1.5rem; }
   .letter-belief h2 { font-size: 4rem; }
   .letter-afterword { align-items: flex-start; flex-direction: column; }
