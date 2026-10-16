@@ -46,7 +46,7 @@
 .letter-signoff > p strong { color: var(--fire); font-weight: 700; }
 .letter-signature { display: grid; justify-items: end; margin-top: 4rem; }
 .letter-signature span { font-style: italic; }
-.letter-signature b { font-family: var(--serif); font-size: clamp(3.5rem, 6vw, 6rem); font-style: italic; font-weight: 500; line-height: 1; transform: rotate(-4deg); }
+.letter-signature b { font-family: var(--serif); font-size: clamp(2.8rem, 6vw, 5.5rem); font-style: italic; font-weight: 500; line-height: 1; white-space: nowrap; transform: rotate(-4deg); }
 .letter-afterword { width: min(72rem, 100%); display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin: 3.5rem auto 0; }
 .letter-afterword p { margin: 0; font-size: .65rem; font-weight: 700; }
 .letter-footer { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 3rem var(--gutter); color: var(--bone); background: var(--charcoal); }
