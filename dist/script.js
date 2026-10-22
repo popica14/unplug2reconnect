@@ -229,3 +229,36 @@ form?.addEventListener("submit", (event) => {
   message.textContent = translate("signup.success");
   form.reset();
 });
+
+// Floating letter card: stays pinned while scrolling, can be dismissed, and steps aside at the sign-up form.
+const letterFloat = document.querySelector("[data-letter-float]");
+
+if (letterFloat) {
+  const closeButton = letterFloat.querySelector("[data-letter-close]");
+  const joinSection = document.getElementById("join");
+  let dismissed = false;
+  let joinVisible = false;
+
+  const syncLetterFloat = () => {
+    letterFloat.classList.toggle("is-hidden", dismissed || joinVisible);
+  };
+
+  // Closing hides the card for this page view only; a refresh brings it back.
+  closeButton?.addEventListener("click", () => {
+    dismissed = true;
+    syncLetterFloat();
+  });
+
+  if (joinSection && "IntersectionObserver" in window) {
+    new IntersectionObserver(
+      ([entry]) => {
+        joinVisible = entry.isIntersecting;
+        syncLetterFloat();
+      },
+      { rootMargin: "0px 0px -15% 0px" }
+    ).observe(joinSection);
+  }
+
+  syncLetterFloat();
+}
+

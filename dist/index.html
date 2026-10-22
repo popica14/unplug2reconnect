@@ -40,6 +40,7 @@
         <a href="#workshops" data-i18n="nav.activities">What you do</a>
         <a href="#expedition" data-i18n="nav.expedition">The expedition</a>
         <a href="#field-notes" data-i18n="nav.glance">At a glance</a>
+        <a href="/about/" data-i18n="nav.about">The letter</a>
         <div class="language-picker" data-language-picker>
           <button
             class="language-picker__trigger"
@@ -185,8 +186,8 @@
             <strong data-i18n-html="day.pauseTitle">BOREDOM<br />ALLOWED</strong>
           </div>
           <figure class="photo-print photo-print--tilt-left">
-            <img src="assets/shared-meal.jpg" alt="Young adults prepare dinner together at a wooden table outside a rural house." data-i18n-alt="day.imageAlt" width="1536" height="1024" loading="lazy" />
-            <figcaption class="mono" data-i18n="day.caption">EVENING / DINNER CREW / CAMERA 02</figcaption>
+            <img src="assets/personal-child-in-tree.jpg" alt="A child sits on a branch of an apple tree, looking out over a green valley." data-i18n-alt="day.imageAlt" width="2048" height="1152" loading="lazy" />
+            <figcaption class="mono" data-i18n="day.caption">AFTERNOON / NOTHING SCHEDULED / CAMERA 02</figcaption>
           </figure>
         </div>
       </section>
@@ -352,6 +353,21 @@
             <p class="form-message" role="status" aria-live="polite"></p>
           </form>
         </div>
+
+        <aside class="letter-preview reveal" aria-labelledby="letter-preview-title">
+          <a class="letter-preview__link" href="/about/">
+            <figure class="letter-preview__photo">
+              <img src="assets/personal-man-cooking-over-stove-outdoors.jpg" alt="An older man in a white cap leans over a large pot on an outdoor stove, stirring it with a wooden spoon in an orchard." data-i18n-alt="letter.imageAlt" width="1600" height="1200" loading="lazy" decoding="async" />
+              <figcaption class="mono" data-i18n="letter.caption">FROM THE ARCHIVE</figcaption>
+            </figure>
+            <div class="letter-preview__body">
+              <p class="letter-preview__eyebrow mono" data-i18n="letter.eyebrow">OPEN LETTER / FROM ALEX</p>
+              <h3 id="letter-preview-title" data-i18n="letter.title">An open letter from Alex about why we do this.</h3>
+              <p data-i18n="letter.copy">Basketball, software, and a week in the hills with my grandfather. This is not a rejection of technology. It is an invitation to step out of the noise for a while.</p>
+              <span class="letter-preview__cta mono"><span data-i18n="letter.cta">Read the letter</span> <span aria-hidden="true">↗</span></span>
+            </div>
+          </a>
+        </aside>
       </section>
     </main>
 
@@ -362,5 +378,21 @@
       <p data-i18n="footer.line">Let’s unplug for a moment from our digital worlds and reconnect with nature, people, and simple things.</p>
       <div class="footer-meta mono"><span data-i18n="footer.less">LESS DIGITAL.</span><span data-i18n="footer.more">MORE ANALOGUE.</span><a href="#top" data-i18n="footer.top">BACK TO TOP ↑</a></div>
     </footer>
+
+    <aside class="letter-float" aria-labelledby="letter-float-title" data-letter-float>
+      <button class="letter-float__close" type="button" aria-label="Close" data-i18n-aria-label="letter.close" data-letter-close><span aria-hidden="true">×</span></button>
+      <a class="letter-preview__link" href="/about/">
+        <figure class="letter-preview__photo">
+          <img src="assets/personal-man-cooking-over-stove-outdoors.jpg" alt="An older man in a white cap leans over a large pot on an outdoor stove, stirring it with a wooden spoon in an orchard." data-i18n-alt="letter.imageAlt" width="1600" height="1200" loading="lazy" decoding="async" />
+          <figcaption class="mono" data-i18n="letter.caption">FROM THE ARCHIVE</figcaption>
+        </figure>
+        <div class="letter-preview__body">
+          <p class="letter-preview__eyebrow mono" data-i18n="letter.eyebrow">OPEN LETTER / FROM ALEX</p>
+          <h3 id="letter-float-title" data-i18n="letter.title">An open letter from Alex about why we do this.</h3>
+          <p data-i18n="letter.copy">Basketball, software, and a week in the hills with my grandfather. This is not a rejection of technology. It is an invitation to step out of the noise for a while.</p>
+          <span class="letter-preview__cta mono"><span data-i18n="letter.cta">Read the letter</span> <span aria-hidden="true">↗</span></span>
+        </div>
+      </a>
+    </aside>
   </body>
 </html>

@@ -14,156 +14,200 @@
     <link rel="stylesheet" href="../about.css" />
   </head>
   <body class="letter-page">
-    <a class="skip-link" href="#letter">Skip to the letter</a>
+    <a class="skip-link" href="#letter" data-i18n="s01">Skip to the letter</a>
 
     <header class="letter-header">
-      <a class="brand" href="/" aria-label="Unplug to Reconnect, home">
+      <a class="brand" href="/" aria-label="Unplug to Reconnect, home" data-i18n-aria-label="brandHome">
         <svg class="brand-mark" viewBox="0 0 42 28" aria-hidden="true">
           <path d="M2 24h5V19H2zM10 24h5V14h-5zM18 24h5V9h-5z" />
           <path d="m18 23 9-12 13 13H18Z" />
         </svg>
         <span><b>UNPLUG</b><small>to</small><b>RECONNECT</b></span>
       </a>
-      <a class="letter-header__back" href="/"><span class="letter-header__label">Back to the camp</span><span aria-hidden="true">↗</span></a>
+      <div class="letter-header__actions">
+        <div class="language-picker" data-language-picker>
+          <button class="language-picker__trigger" type="button" aria-expanded="false" aria-controls="language-menu" aria-haspopup="listbox" aria-label="Language" data-language-trigger>
+            <span class="language-picker__flag" data-language-flag aria-hidden="true">🇬🇧</span>
+            <span class="language-picker__code" data-language-code>EN</span>
+            <svg viewBox="0 0 12 8" aria-hidden="true"><path d="m1 1.5 5 5 5-5" /></svg>
+          </button>
+          <div id="language-menu" class="language-picker__menu" role="listbox" aria-label="Language" data-language-menu>
+            <button type="button" role="option" aria-selected="true" data-locale="en"><span aria-hidden="true">🇬🇧</span><span>English</span><small>EN</small></button>
+            <button type="button" role="option" aria-selected="false" data-locale="de"><span aria-hidden="true">🇩🇪</span><span>Deutsch</span><small>DE</small></button>
+            <button type="button" role="option" aria-selected="false" data-locale="fr"><span aria-hidden="true">🇫🇷</span><span>Français</span><small>FR</small></button>
+            <button type="button" role="option" aria-selected="false" data-locale="ro"><span aria-hidden="true">🇷🇴</span><span>Română</span><small>RO</small></button>
+            <button type="button" role="option" aria-selected="false" data-locale="es"><span aria-hidden="true">🇪🇸</span><span>Español</span><small>ES</small></button>
+            <button type="button" role="option" aria-selected="false" data-locale="it"><span aria-hidden="true">🇮🇹</span><span>Italiano</span><small>IT</small></button>
+          </div>
+        </div>
+        <a class="letter-header__back" href="/"><span class="letter-header__label" data-i18n="s02">Back to the camp</span><span aria-hidden="true">↗</span></a>
+      </div>
     </header>
 
     <main>
       <section class="letter-cover" aria-labelledby="letter-title">
-        <img src="../assets/personal-maramures-landscape.jpg" alt="A traditional haystack stands in a wide green Maramureș valley beneath a blue sky." width="3648" height="1680" fetchpriority="high" decoding="async" />
+        <img src="../assets/personal-maramures-landscape.jpg" alt="A traditional haystack stands in a wide green Maramureș valley beneath a blue sky." data-i18n-alt="s03" width="3648" height="1680" fetchpriority="high" decoding="async" />
         <div class="letter-cover__wash" aria-hidden="true"></div>
         <div class="letter-cover__content">
-          <p class="eyebrow">A personal note from Alex</p>
-          <h1 id="letter-title">An open letter about <em>why we started.</em></h1>
+          <p class="eyebrow" data-i18n="s04">A personal note from Alex</p>
+          <h1 id="letter-title" data-i18n-html="s05">An open letter about <em>why we started.</em></h1>
         </div>
-        <p class="letter-cover__meta mono">MARAMUREȘ / RO <span>FIELD NOTE 001</span></p>
+        <p class="letter-cover__meta mono" data-i18n-html="s06">MARAMUREȘ / RO <span>FIELD NOTE 001</span></p>
       </section>
 
       <article id="letter" class="open-letter">
         <div class="letter-paper">
           <header class="letter-paper__header">
-            <div><span>From</span><strong>Alex</strong></div>
-            <div><span>To</span><strong>The next generation</strong></div>
-            <div><span>Subject</span><strong>Why Unplug to Reconnect</strong></div>
+            <div><span data-i18n="s07">From</span><strong>Alex</strong></div>
+            <div><span data-i18n="s08">To</span><strong data-i18n="s09">The next generation</strong></div>
+            <div><span data-i18n="s10">Subject</span><strong data-i18n="s11">Why Unplug to Reconnect</strong></div>
           </header>
 
           <div class="letter-body">
-            <p class="letter-salutation">Hello world, both digital and analogue,</p>
+            <p class="letter-salutation" data-i18n="s12">Hello world, both digital and analogue,</p>
 
-            <p>I’m Alex. I’m passionate about the outdoors, a sports enthusiast, a software engineer by profession and, these days, a tech leader. Alongside all of that, I would add an entrepreneurial mindset, which I tend to bring into most things I do.</p>
-            <p>Who I am today is very much a result of how I grew up and what I experienced along the way. I started playing basketball when I was eight and continued until I was 24. During the last five years, I <a class="letter-link" href="https://youtu.be/EMNWqEf5BJY" target="_blank" rel="noopener noreferrer">played professionally for my hometown team in Cluj-Napoca</a> in Romania’s first league, while also being part of the Romanian Men’s National Basketball Team. I consider that a defining part of who I am today.</p>
-            <p>For most of my life, I’ve combined things that might seem to compete with each other: sports and studies, basketball and software engineering, technology and the outdoors. I don’t really see them as competing, though. I believe they complement each other, counterbalance each other and, in many ways, need each other.</p>
+            <p data-i18n="s13">I’m Alex. I’m passionate about the outdoors, a sports enthusiast, a software engineer by profession and, these days, a tech leader. Alongside all of that, I would add an entrepreneurial mindset, which I tend to bring into most things I do.</p>
+            <p data-i18n-html="s14">Who I am today is very much a result of how I grew up and what I experienced along the way. I started playing basketball when I was eight and continued until I was 24. During the last five years, I <a class="letter-link" href="https://youtu.be/EMNWqEf5BJY" target="_blank" rel="noopener noreferrer">played professionally for my hometown team in Cluj-Napoca</a> in Romania’s first league, while also being part of the Romanian Men’s National Basketball Team. I consider that a defining part of who I am today.</p>
+            <p data-i18n="s15">For most of my life, I’ve combined things that might seem to compete with each other: sports and studies, basketball and software engineering, technology and the outdoors. I don’t really see them as competing, though. I believe they complement each other, counterbalance each other and, in many ways, need each other.</p>
 
             <blockquote class="letter-quote">
-              <p>The physical balances the mental, <a class="letter-link" href="https://www.nature.com/articles/s41598-019-44097-3" target="_blank" rel="noopener noreferrer">the outdoors balances the screen</a>, and stepping away from one often makes me better when I return to it.</p>
-              <small>By the way, I still do.</small>
+              <p data-i18n-html="s16">The physical balances the mental, <a class="letter-link" href="https://www.nature.com/articles/s41598-019-44097-3" target="_blank" rel="noopener noreferrer">the outdoors balances the screen</a>, and stepping away from one often makes me better when I return to it.</p>
+              <small data-i18n="s17">By the way, I still do.</small>
             </blockquote>
 
-            <p>I’m also a father of two, Max and Iris. Together with my wife, Laura, I believe we’re doing a pretty good job raising them. The key word here is together. We’re a team.</p>
+            <p data-i18n="s18">I’m also a father of two, Max and Iris. Together with my wife, Laura, I believe we’re doing a pretty good job raising them. The key word here is together. We’re a team.</p>
 
             <section class="letter-passage" aria-labelledby="between-title">
-              <p class="letter-marker mono">01 / GROWING UP</p>
-              <h2 id="between-title">Between analogue and digital</h2>
-              <p>I was born in 1990, which means I’m part of a generation that remembers life before smartphones and social media, but was also there when all of it arrived.</p>
-              <p>I have vivid memories of my grandfather, my brother and me spending a week in the hills of Maramureș. We slept in a shelter we had made ourselves, with a campfire in front of it. We slept on hay, warmed tea over the fire in the morning, bathed in the river, climbed trees and could easily spend half an hour sitting in one without needing anything else to happen.</p>
-              <figure class="letter-photo letter-photo--childhood">
-                <img src="../assets/personal-child-in-tree.jpg" alt="A child sits in an apple tree overlooking a green valley." width="2048" height="1152" loading="lazy" decoding="async" />
-                <figcaption class="mono">SOME THINGS START EARLY</figcaption>
+              <p class="letter-marker mono" data-i18n="s19">01 / GROWING UP</p>
+              <h2 id="between-title" data-i18n="s20">Between analogue and digital</h2>
+              <p data-i18n="s21">I was born in 1990, which means I’m part of a generation that remembers life before smartphones and social media, but was also there when all of it arrived.</p>
+              <p data-i18n="s22">I have vivid memories of my grandfather, my brother and me spending a week in the hills of Maramureș. We slept in a shelter we had made ourselves, with a campfire in front of it. We slept on hay, warmed tea over the fire in the morning, bathed in the river, climbed trees and could easily spend half an hour sitting in one without needing anything else to happen.</p>
+              <figure class="time-bridge">
+                <div class="time-bridge__frames">
+                  <div class="time-bridge__frame time-bridge__frame--then" style="--ar:0.750"><img src="../assets/personal-boy-in-orchard-tree.jpg" alt="A boy in a red T-shirt sits on a tree branch, photographed from below against leaves and sky." data-i18n-alt="s87" width="1536" height="2048" loading="lazy" decoding="async" /></div>
+                  <div class="time-bridge__frame time-bridge__frame--now" style="--ar:1.778"><img src="../assets/personal-child-in-tree.jpg" alt="A child sits in an apple tree overlooking a green valley." data-i18n-alt="s23" width="2048" height="1152" loading="lazy" decoding="async" /></div>
+                </div>
+                <figcaption class="mono" data-i18n="s24">SOME THINGS START EARLY</figcaption>
               </figure>
-              <p class="letter-emphasis">Those experiences stayed with me.</p>
-              <p>At the same time, I watched technology gradually squeeze itself into almost every corner of our lives. And I want to be very clear about something: I’m all for technology. Heck, I work in tech. Technology has given us extraordinary things, and I don’t believe the answer is to reject it, fear it or pretend we can go backwards.</p>
-              <p>But I do believe something becomes problematic when the digital world starts feeling more real than the world around you.</p>
+              <p class="letter-emphasis" data-i18n="s25">Those experiences stayed with me.</p>
+              <p data-i18n="s26">At the same time, I watched technology gradually squeeze itself into almost every corner of our lives. And I want to be very clear about something: I’m all for technology. Heck, I work in tech. Technology has given us extraordinary things, and I don’t believe the answer is to reject it, fear it or pretend we can go backwards.</p>
+              <p data-i18n="s27">But I do believe something becomes problematic when the digital world starts feeling more real than the world around you.</p>
             </section>
 
-            <figure class="letter-photo letter-photo--wide">
-              <img src="../assets/personal-hike-forest-valley.jpg" alt="Four people walk down a grassy hillside into a misty forest valley." width="3648" height="1680" loading="lazy" decoding="async" />
-              <figcaption class="mono">FROM ALEX’S ARCHIVE / WALKING INTO THE VALLEY</figcaption>
+            <figure class="letter-photo letter-photo--valley">
+              <img src="../assets/personal-hike-forest-valley.jpg" alt="Four people walk down a grassy hillside into a misty forest valley." data-i18n-alt="s28" width="3648" height="1680" loading="lazy" decoding="async" />
+              <figcaption class="mono" data-i18n="s29">FROM ALEX’S ARCHIVE / WALKING INTO THE VALLEY</figcaption>
             </figure>
 
             <section class="letter-passage" aria-labelledby="matters-title">
-              <p class="letter-marker mono">02 / WHY THIS MATTERS NOW</p>
-              <h2 id="matters-title">You are growing up in a very different environment</h2>
-              <p><a class="letter-link" href="https://medium.com/@murithikelvin005/the-most-connected-yet-the-most-disconnected-generation-87b1cbb62771" target="_blank" rel="noopener noreferrer">You are more connected than any generation before you, but you are also surrounded by more noise.</a> <a class="letter-link" href="https://www.oecd.org/en/publications/pisa-2022-results-volume-ii_a97db61c-en/full-report/component-12.html" target="_blank" rel="noopener noreferrer">Your attention is constantly being pulled in different directions</a> by platforms, messages, feeds, creators, brands, games, algorithms and now AI.</p>
-              <p>And at the same time, you are being asked to make some pretty serious decisions. What do you want to study? What kind of work do you want to do? Where do you want to live? What matters to you? What kind of person do you want to become?</p>
-              <p>Those questions have always existed. What has changed is how much input surrounds you while you are trying to answer them.</p>
-              <p>I don’t think that makes your generation weaker or less capable. I just think it makes the environment harder to navigate.</p>
+              <p class="letter-marker mono" data-i18n="s30">02 / WHY THIS MATTERS NOW</p>
+              <h2 id="matters-title" data-i18n="s31">You are growing up in a very different environment</h2>
+              <p data-i18n-html="s32"><a class="letter-link" href="https://medium.com/@murithikelvin005/the-most-connected-yet-the-most-disconnected-generation-87b1cbb62771" target="_blank" rel="noopener noreferrer">You are more connected than any generation before you, but you are also surrounded by more noise.</a> <a class="letter-link" href="https://www.oecd.org/en/publications/pisa-2022-results-volume-ii_a97db61c-en/full-report/component-12.html" target="_blank" rel="noopener noreferrer">Your attention is constantly being pulled in different directions</a> by platforms, messages, feeds, creators, brands, games, algorithms and now AI.</p>
+              <p data-i18n="s33">And at the same time, you are being asked to make some pretty serious decisions. What do you want to study? What kind of work do you want to do? Where do you want to live? What matters to you? What kind of person do you want to become?</p>
+              <p data-i18n="s34">Those questions have always existed. What has changed is how much input surrounds you while you are trying to answer them.</p>
+              <p data-i18n="s35">I don’t think that makes your generation weaker or less capable. I just think it makes the environment harder to navigate.</p>
             </section>
 
             <section class="letter-passage" aria-labelledby="different-title">
-              <p class="letter-marker mono">03 / SOMETHING DIFFERENT</p>
-              <h2 id="different-title">I feel some of this pressure myself</h2>
-              <p>Technology has accelerated enormously in the workplace. I see it in the amount of information, the number of details, the constant context switching and the endless stream of communication and decisions. I don’t think I can continue in this 40-hour-a-week rhythm without changing something in the way I structure my time off.</p>
-              <p>I need breaks from it, not because I dislike technology, but because I want to return to it with a clear head.</p>
-              <p>And I think you may need that too.</p>
-              <p>Not as an escape, and not because your phone or laptop is the problem. Simply because sometimes you need enough distance from the noise to notice what you actually think, what you enjoy, what you care about and who you enjoy being around.</p>
+              <p class="letter-marker mono" data-i18n="s36">03 / SOMETHING DIFFERENT</p>
+              <h2 id="different-title" data-i18n="s37">I feel some of this pressure myself</h2>
+              <p data-i18n="s38">Technology has accelerated enormously in the workplace. I see it in the amount of information, the number of details, the constant context switching and the endless stream of communication and decisions. I don’t think I can continue in this 40-hour-a-week rhythm without changing something in the way I structure my time off.</p>
+              <p data-i18n="s39">I need breaks from it, not because I dislike technology, but because I want to return to it with a clear head.</p>
+              <p data-i18n="s40">And I think you may need that too.</p>
+              <p data-i18n="s41">Not as an escape, and not because your phone or laptop is the problem. Simply because sometimes you need enough distance from the noise to notice what you actually think, what you enjoy, what you care about and who you enjoy being around.</p>
             </section>
 
-            <figure class="letter-photo letter-photo--offset-left">
-              <img src="../assets/personal-hike-mountain-lake.jpg" alt="A lone walker descends toward a mountain lake beneath a bright sky and large clouds." width="4618" height="3464" loading="lazy" decoding="async" />
-              <figcaption class="mono">FROM ALEX’S ARCHIVE / SPACE TO HEAR YOUR OWN THOUGHTS</figcaption>
+            <figure class="time-bridge">
+              <div class="time-bridge__frames">
+                <div class="time-bridge__frame time-bridge__frame--then" style="--ar:1.333"><img src="../assets/personal-two-boys-at-lake-fishing-rod.jpg" alt="Two shirtless boys stand by a lake, one holding a long thin rod, with reeds and hills behind them." data-i18n-alt="s89" width="2048" height="1536" loading="lazy" decoding="async" /></div>
+                <div class="time-bridge__frame time-bridge__frame--now" style="--ar:1.333"><img src="../assets/personal-hike-mountain-lake.jpg" alt="A lone walker descends toward a mountain lake beneath a bright sky and large clouds." data-i18n-alt="s42" width="4618" height="3464" loading="lazy" decoding="async" /></div>
+              </div>
+              <figcaption class="mono" data-i18n="s43">FROM ALEX’S ARCHIVE / SPACE TO HEAR YOUR OWN THOUGHTS</figcaption>
             </figure>
 
             <section class="letter-passage" aria-labelledby="romania-title">
-              <p class="letter-marker mono">04 / ROMANIA, MY CHILDREN, AND YOU</p>
-              <h2 id="romania-title">I want to give something real back</h2>
-              <p>Another reason is Romania. I feel a certain duty toward the country where I grew up. I received a lot from that place, from the people around me and from the experiences I had there, and I want to give something back. It doesn’t need to be grand. It just needs to be real.</p>
-              <p>Then there are my children. We live in Germany, while their grandparents are in Romania, which means they cannot have the same everyday relationship with them that I had with mine.</p>
-              <p>I cannot recreate my childhood for Max and Iris, nor do I want to. But I can try to create today’s version of some of the things I received from my grandfather: time outside, adventure, practical experience, stories, independence, responsibility and memories that don’t begin with a screen.</p>
-              <p>And that thought naturally extends beyond my own children.</p>
-              <p class="letter-emphasis">Because you deserve those kinds of experiences too.</p>
-              <p>You deserve moments when no one is trying to sell you something, influence you, measure your engagement or keep you scrolling. You deserve space to be bored, curious, uncomfortable, useful, social, quiet, physical and present.</p>
+              <p class="letter-marker mono" data-i18n="s44">04 / ROMANIA, MY CHILDREN, AND YOU</p>
+              <h2 id="romania-title" data-i18n="s45">I want to give something real back</h2>
+              <p data-i18n="s46">Another reason is Romania. I feel a certain duty toward the country where I grew up. I received a lot from that place, from the people around me and from the experiences I had there, and I want to give something back. It doesn’t need to be grand. It just needs to be real.</p>
+              <p data-i18n="s47">Then there are my children. We live in Germany, while their grandparents are in Romania, which means they cannot have the same everyday relationship with them that I had with mine.</p>
+              <p data-i18n="s48">I cannot recreate my childhood for Max and Iris, nor do I want to. But I can try to create today’s version of some of the things I received from my grandfather: time outside, adventure, practical experience, stories, independence, responsibility and memories that don’t begin with a screen.</p>
+              <figure class="letter-photo letter-photo--inline">
+                <img src="../assets/personal-mushroom-haul-02-shed.jpg" alt="A boy and an older man in a blue cap lie on the grass beside a bucket of large mushrooms, in front of a wooden shed." data-i18n-alt="s79" width="2048" height="1536" loading="lazy" decoding="async" />
+                <figcaption class="mono" data-i18n="s80">FROM ALEX’S ARCHIVE / TIME OUTSIDE</figcaption>
+              </figure>
+              <p data-i18n="s49">And that thought naturally extends beyond my own children.</p>
+              <p class="letter-emphasis" data-i18n="s50">Because you deserve those kinds of experiences too.</p>
+              <p data-i18n="s51">You deserve moments when no one is trying to sell you something, influence you, measure your engagement or keep you scrolling. You deserve space to be bored, curious, uncomfortable, useful, social, quiet, physical and present.</p>
             </section>
 
-            <figure class="letter-photo letter-photo--offset-right">
-              <img src="../assets/personal-hike-misty-meadow.jpg" alt="Two hikers cross a tall green meadow toward mountains hidden in low cloud." width="3968" height="2976" loading="lazy" decoding="async" />
-              <figcaption class="mono">FROM ALEX’S ARCHIVE / THE EXPERIENCE IS THE POINT</figcaption>
+            <figure class="time-bridge">
+              <div class="time-bridge__frames">
+                <div class="time-bridge__frame time-bridge__frame--then" style="--ar:1.333"><img src="../assets/personal-boy-on-haystack.jpg" alt="A boy stands on top of a tall haystack with his arms spread wide, against a hazy sky and green hills." data-i18n-alt="s90" width="2048" height="1536" loading="lazy" decoding="async" /></div>
+                <div class="time-bridge__frame time-bridge__frame--now" style="--ar:1.333"><img src="../assets/personal-hike-misty-meadow.jpg" alt="Two hikers cross a tall green meadow toward mountains hidden in low cloud." data-i18n-alt="s52" width="3968" height="2976" loading="lazy" decoding="async" /></div>
+              </div>
+              <figcaption class="mono" data-i18n="s53">FROM ALEX’S ARCHIVE / THE EXPERIENCE IS THE POINT</figcaption>
             </figure>
 
             <section class="letter-passage" aria-labelledby="create-title">
-              <p class="letter-marker mono">05 / WHAT I WANT TO CREATE FOR YOU</p>
-              <h2 id="create-title">I’m not trying to give you answers</h2>
-              <p>I don’t know what you should study. I don’t know what career you should choose, where you should live or what kind of person you should become. That is yours to figure out.</p>
-              <p>What I want to do is create an environment where, for a short period of time, some of the noise disappears. A place where you can spend time with other people without constantly reaching for a phone. Where you can walk, cook, build, carry, talk, laugh, struggle a little, get bored, solve problems, sit around a fire and experience things directly.</p>
-              <p class="letter-emphasis">Because some things cannot be experienced through a screen.</p>
-              <p>You can watch someone climb a mountain, but that is not the same as your own legs getting tired on the way up. You can message someone all day, but that is not the same as sitting across from them for hours. You can consume endless content about confidence, resilience or independence, but those things usually grow when you actually have to do something yourself.</p>
+              <p class="letter-marker mono" data-i18n="s54">05 / WHAT I WANT TO CREATE FOR YOU</p>
+              <h2 id="create-title" data-i18n="s55">I’m not trying to give you answers</h2>
+              <p data-i18n="s56">I don’t know what you should study. I don’t know what career you should choose, where you should live or what kind of person you should become. That is yours to figure out.</p>
+              <p data-i18n="s57">What I want to do is create an environment where, for a short period of time, some of the noise disappears. A place where you can spend time with other people without constantly reaching for a phone. Where you can walk, cook, build, carry, talk, laugh, struggle a little, get bored, solve problems, sit around a fire and experience things directly.</p>
+              <p class="letter-emphasis" data-i18n="s58">Because some things cannot be experienced through a screen.</p>
+              <p data-i18n="s59">You can watch someone climb a mountain, but that is not the same as your own legs getting tired on the way up. You can message someone all day, but that is not the same as sitting across from them for hours. You can consume endless content about confidence, resilience or independence, but those things usually grow when you actually have to do something yourself.</p>
             </section>
 
+            <figure class="time-bridge time-bridge--archive">
+              <div class="time-bridge__frames">
+                <div class="time-bridge__frame time-bridge__frame--then" style="--ar:1.333"><img src="../assets/personal-haymaking-with-rakes.jpg" alt="Several people turn hay with rakes in an orchard, with wooded hills behind them." data-i18n-alt="s81" width="2048" height="1536" loading="lazy" decoding="async" /></div>
+                <div class="time-bridge__frame time-bridge__frame--now" style="--ar:1.333"><img src="../assets/personal-chopping-wood-at-barn.jpg" alt="A man in a hat swings an axe beside a thatched barn, with two boys standing near him in an orchard." data-i18n-alt="s91" width="2048" height="1536" loading="lazy" decoding="async" /></div>
+              </div>
+              <figcaption class="mono" data-i18n="s82">FROM ALEX’S ARCHIVE / LEARNING BY DOING</figcaption>
+            </figure>
+
             <aside class="letter-belief">
-              <p class="letter-marker mono">06 / WHAT I BELIEVE</p>
-              <h2>We are analogue.</h2>
-              <p class="letter-belief__lead">Digital is a skill. Technology is a tool.</p>
-              <p>It can extend what you are capable of, help you communicate, help you create and help you solve problems. But it should support your life, not replace the human parts of it.</p>
-              <p><a class="letter-link" href="https://www.who.int/groups/commission-on-social-connection/report/" target="_blank" rel="noopener noreferrer">Real relationships</a>, curiosity, responsibility, physical experience, nature, conversation, silence, being useful to someone else, doing something difficult and discovering that you can handle it, these things still matter.</p>
-              <p><strong>Probably more than ever.</strong></p>
+              <p class="letter-marker mono" data-i18n="s60">06 / WHAT I BELIEVE</p>
+              <h2 data-i18n="s61">We are analogue.</h2>
+              <p class="letter-belief__lead" data-i18n="s62">Digital is a skill. Technology is a tool.</p>
+              <p data-i18n="s63">It can extend what you are capable of, help you communicate, help you create and help you solve problems. But it should support your life, not replace the human parts of it.</p>
+              <p data-i18n-html="s64"><a class="letter-link" href="https://www.who.int/groups/commission-on-social-connection/report/" target="_blank" rel="noopener noreferrer">Real relationships</a>, curiosity, responsibility, physical experience, nature, conversation, silence, being useful to someone else, doing something difficult and discovering that you can handle it, these things still matter.</p>
+              <p data-i18n-html="s65"><strong>Probably more than ever.</strong></p>
             </aside>
 
             <section class="letter-passage" aria-labelledby="why-title">
-              <p class="letter-marker mono">07 / WHY UNPLUG TO RECONNECT</p>
-              <h2 id="why-title">An invitation to step out of the noise for a while</h2>
-              <p>That is where Unplug to Reconnect comes from.</p>
-              <p>It is not a rejection of technology, it is not an attempt to go backwards, and it is not me telling you how you should live. It is an invitation to step out of the noise for a while and see what happens.</p>
-              <p>Maybe you come back with a new idea. Maybe you make a close friend. Maybe you discover that you like being outdoors more than you thought. Maybe you gain some confidence. Maybe you get clarity on something that has been sitting in the back of your mind.</p>
-              <p>Or maybe you simply have a really good week.</p>
-              <p class="letter-emphasis">That is enough too.</p>
-              <p>My belief is simple: as technology becomes more powerful and more present in your life, deliberately creating space for offline human experience will become increasingly valuable.</p>
+              <p class="letter-marker mono" data-i18n="s66">07 / WHY UNPLUG TO RECONNECT</p>
+              <h2 id="why-title" data-i18n="s67">An invitation to step out of the noise for a while</h2>
+              <p data-i18n="s68">That is where Unplug to Reconnect comes from.</p>
+              <p data-i18n="s69">It is not a rejection of technology, it is not an attempt to go backwards, and it is not me telling you how you should live. It is an invitation to step out of the noise for a while and see what happens.</p>
+              <p data-i18n="s70">Maybe you come back with a new idea. Maybe you make a close friend. Maybe you discover that you like being outdoors more than you thought. Maybe you gain some confidence. Maybe you get clarity on something that has been sitting in the back of your mind.</p>
+              <figure class="letter-photo letter-photo--inline letter-photo--inline-alt">
+                <img src="../assets/personal-group-on-big-rock.jpg" alt="A group of children and a young man sit and lie on top of a large boulder against the sky." data-i18n-alt="s83" width="2048" height="1536" loading="lazy" decoding="async" />
+                <figcaption class="mono" data-i18n="s84">FROM ALEX’S ARCHIVE / GOOD COMPANY</figcaption>
+              </figure>
+              <p data-i18n="s71">Or maybe you simply have a really good week.</p>
+              <p class="letter-emphasis" data-i18n="s72">That is enough too.</p>
+              <p data-i18n="s73">My belief is simple: as technology becomes more powerful and more present in your life, deliberately creating space for offline human experience will become increasingly valuable.</p>
             </section>
 
             <footer class="letter-signoff">
-              <p>Technology is here to help you,<br /><strong>but your life is still happening out here.</strong></p>
-              <div class="letter-signature"><span>With care,</span><b>Popica#14</b></div>
+              <p data-i18n-html="s74">Technology is here to help you,<br /><strong>but your life is still happening out here.</strong></p>
+              <div class="letter-signature"><span data-i18n="s75">With care,</span><b>Popica#14</b></div>
             </footer>
           </div>
         </div>
 
         <div class="letter-afterword">
-          <p class="mono">LESS DIGITAL. MORE ANALOGUE.</p>
-          <a class="button" href="/">Explore Unplug to Reconnect <span aria-hidden="true">↗</span></a>
+          <p class="mono" data-i18n="s76">LESS DIGITAL. MORE ANALOGUE.</p>
+          <a class="button" href="/" data-i18n-html="s77">Explore Unplug to Reconnect <span aria-hidden="true">↗</span></a>
         </div>
       </article>
     </main>
 
     <footer class="letter-footer">
       <a class="brand brand--footer" href="/"><span><b>UNPLUG</b><small>to</small><b>RECONNECT</b></span></a>
-      <a href="#letter">BACK TO THE LETTER ↑</a>
+      <a href="#letter" data-i18n="s78">BACK TO THE LETTER ↑</a>
     </footer>
+    <script src="letter-i18n.js"></script>
+    <script src="letter.js"></script>
   </body>
 </html>

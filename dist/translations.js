@@ -8,7 +8,7 @@ const en = {
     description: "One week offline in the Romanian Carpathians, giving young adults room to find their own direction through nature, practical experience, and real human connection."
   },
   access: { skip: "Skip to the real world", home: "Unplug to Reconnect, home", primaryNav: "Primary navigation", keyFacts: "Key facts", switch: "Digital to analogue", outcomes: "What you take home", route: "Expedition route", reset: "Less digital, more analogue" },
-  nav: { menu: "Menu", week: "The week", activities: "What you do", expedition: "The expedition", glance: "At a glance", join: "Join the pilot list", language: "Language" },
+  nav: { menu: "Menu", week: "The week", activities: "What you do", expedition: "The expedition", glance: "At a glance", about: "The Why", join: "Join the pilot list", language: "Language" },
   hero: {
     imageAlt: "A small group carrying backpacks walks from a mountain village into the Carpathians at sunrise.",
     fieldTest: "FIELD TEST 001", location: "CARPATHIANS / RO", signalLeaving: "...LEAVING SIGNAL", signalGone: "...NO SIGNAL",
@@ -35,7 +35,7 @@ const en = {
     dinnerLabel: "05 / DINNER", dinner: schedule("Cook together", "Everyone helps prepare dinner, clean up, and look after the camp."),
     eveningLabel: "06 / EVENING", evening: schedule("Campfire, games, conversation", "After dinner come music, conversations, and stars."),
     pauseLabel: "UNSTRUCTURED TIME / 01", pauseTitle: "BOREDOM<br>ALLOWED",
-    imageAlt: "Young adults prepare dinner together at a wooden table outside a rural house.", caption: "EVENING / DINNER CREW / CAMERA 02"
+    imageAlt: "A child sits on a branch of an apple tree, looking out over a green valley.", caption: "AFTERNOON / NOTHING SCHEDULED / CAMERA 02"
   },
   workshops: {
     index: "03 / LEARN TOGETHER", eyebrow: "The morning workshop", title: "It can take<br><em>different forms.</em>",
@@ -79,6 +79,7 @@ const en = {
     emailLabel: "Your email", emailPlaceholder: "you@example.com", submit: "Keep me posted", consent: "I’m happy to receive occasional pilot updates. No feed-filling nonsense.",
     note: "Prototype form: submissions are not sent until a mailing-list service is connected.", invalidEmail: "Enter a valid email address to join the list.", consentRequired: "Please confirm that occasional pilot updates are okay.", success: "Looks good. Connect the mailing-list service to start collecting sign-ups."
   },
+  letter: { imageAlt: "An older man in a white cap leans over a large pot on an outdoor stove, stirring it with a wooden spoon in an orchard.", caption: "FROM THE ARCHIVE", eyebrow: "OPEN LETTER / FROM ALEX", title: "An open letter from Alex about why we do this.", copy: "Basketball, software, and a week in the hills with my grandfather. This is not a rejection of technology. It is an invitation to step out of the noise for a while.", cta: "Read the letter", close: "Close" },
   footer: { line: "Let’s unplug for a moment from our digital worlds and reconnect with nature, people, and simple things.", less: "LESS DIGITAL.", more: "MORE ANALOGUE.", top: "BACK TO TOP ↑" }
 };
 
@@ -88,7 +89,7 @@ const de = {
     description: "Eine Woche offline in den rumänischen Karpaten, in der junge Erwachsene durch Natur, praktische Erfahrungen und echte menschliche Begegnungen Raum für ihren eigenen Weg finden."
   },
   access: { skip: "Direkt zur echten Welt", home: "Unplug to Reconnect, Startseite", primaryNav: "Hauptnavigation", keyFacts: "Wichtige Fakten", switch: "Von digital zu analog", outcomes: "Was du mitnimmst", route: "Route der Expedition", reset: "Weniger digital, mehr analog" },
-  nav: { menu: "Menü", week: "Die Woche", activities: "Was du machst", expedition: "Die Expedition", glance: "Auf einen Blick", join: "Zur Pilotliste", language: "Sprache" },
+  nav: { menu: "Menü", week: "Die Woche", activities: "Was du machst", expedition: "Die Expedition", glance: "Auf einen Blick", about: "Das Warum", join: "Zur Pilotliste", language: "Sprache" },
   hero: {
     imageAlt: "Eine kleine Gruppe mit Rucksäcken wandert bei Sonnenaufgang aus einem Bergdorf in die Karpaten.",
     fieldTest: "FELDTEST 001", location: "KARPATEN / RO", signalLeaving: "...SIGNAL WIRD SCHWÄCHER", signalGone: "...KEIN SIGNAL",
@@ -115,7 +116,7 @@ const de = {
     dinnerLabel: "05 / ABENDESSEN", dinner: schedule("Gemeinsam kochen", "Alle helfen beim Abendessen, beim Aufräumen und dabei, das Camp in Ordnung zu halten."),
     eveningLabel: "06 / ABEND", evening: schedule("Lagerfeuer, Spiele, Gespräche", "Nach dem Essen folgen Musik, Gespräche und Sterne."),
     pauseLabel: "FREIE ZEIT / 01", pauseTitle: "LANGEWEILE<br>ERLAUBT",
-    imageAlt: "Junge Erwachsene bereiten gemeinsam an einem Holztisch vor einem ländlichen Haus das Abendessen zu.", caption: "ABEND / KÜCHENTEAM / KAMERA 02"
+    imageAlt: "Ein Kind sitzt auf einem Ast eines Apfelbaums und blickt über ein grünes Tal.", caption: "NACHMITTAG / NICHTS GEPLANT / KAMERA 02"
   },
   workshops: {
     index: "03 / GEMEINSAM LERNEN", eyebrow: "Der Vormittagsworkshop", title: "Er kann<br><em>verschiedene Formen haben.</em>",
@@ -136,7 +137,7 @@ const de = {
   },
   glance: {
     index: "05 / DIE WOCHE AUF EINEN BLICK", title: "Alles Wichtige<br><em>an einem Ort.</em>",
-    who: fact("WER", "18–25 Jahre"), group: fact("GRUPPE", "10–12 Teilnehmende + zwei Hosts"), duration: fact("DAUER", "Eine Woche"),
+    who: fact("WER", "18–25 Jahre"), group: fact("GRUPPE", "10–12 Teilnehmende + zwei Gastgebende"), duration: fact("DAUER", "Eine Woche"),
     place: fact("ORT", "Eine ländliche Gemeinde in den rumänischen Karpaten"), language: fact("SPRACHE", "Englisch"), dates: fact("TERMINE + PREIS", "Für den Pilotdurchlauf noch offen"),
     format: fact("FORMAT", "Leben im Freien, gemeinsame Mahlzeiten, Vormittagsworkshops, freie Nachmittage, gemeinsame Abende und eine Bergexpedition mit Übernachtung"),
     phones: fact("HANDYS", "Du kannst dein Handy benutzen, wenn es wirklich nötig ist. Wir empfehlen jedoch, es sicher verwahrt zu lassen und die Woche ohne Handy auszuprobieren. Das Camp bleibt erreichbar, falls dich jemand von zu Hause kontaktieren muss."),
@@ -156,9 +157,10 @@ const de = {
   pilot: { stamp: "PILOT<br>001", eyebrow: "Wir fangen klein an", title: "10–12 Personen.<br>7 Tage.<br><em>0 Algorithmen, die bestimmen, was als Nächstes kommt.</em>" },
   signup: {
     index: "MITMACHEN / PILOT 001", title: "Komm mit.", copy: "Das erste Camp bleibt bewusst klein. Trag dich in die Pilotliste ein, erfahre, wann die Bewerbungen starten, und gestalte mit, was Unplug to Reconnect wird.",
-    emailLabel: "Deine E-Mail", emailPlaceholder: "du@beispiel.de", submit: "Informiert mich", consent: "Ich möchte gelegentliche Updates zum Pilotprojekt erhalten. Kein Feed-Füllmaterial.",
+    emailLabel: "Deine E-Mail", emailPlaceholder: "du@beispiel.de", submit: "Halt mich auf dem Laufenden", consent: "Ich möchte hin und wieder Neuigkeiten zum Pilotprojekt erhalten. Kein Spam, versprochen.",
     note: "Prototyp-Formular: Eingaben werden erst gesendet, wenn ein Mailinglisten-Dienst verbunden ist.", invalidEmail: "Gib eine gültige E-Mail-Adresse ein.", consentRequired: "Bitte bestätige, dass gelegentliche Updates in Ordnung sind.", success: "Sieht gut aus. Verbinde den Mailinglisten-Dienst, um Anmeldungen zu sammeln."
   },
+  letter: { imageAlt: "Ein älterer Mann mit weißer Mütze beugt sich in einem Obstgarten über einen großen Topf auf einem Outdoor-Herd und rührt mit einem Holzlöffel.", caption: "AUS DEM ARCHIV", eyebrow: "OFFENER BRIEF / VON ALEX", title: "Ein offener Brief von Alex über das Warum hinter Unplug to Reconnect.", copy: "Basketball, Software und eine Woche in den Hügeln mit meinem Großvater. Das ist keine Absage an Technologie. Es ist eine Einladung, für eine Weile aus dem Lärm herauszutreten.", cta: "Den Brief lesen", close: "Schließen" },
   footer: { line: "Lass uns für einen Moment von unseren digitalen Welten abschalten und uns wieder mit Natur, Menschen und einfachen Dingen verbinden.", less: "WENIGER DIGITAL.", more: "MEHR ANALOG.", top: "NACH OBEN ↑" }
 };
 
@@ -167,8 +169,8 @@ const fr = {
     title: "Unplug to Reconnect : Moins numérique. Plus analogique.",
     description: "Une semaine hors ligne dans les Carpates roumaines, pour permettre aux jeunes adultes de trouver leur propre direction grâce à la nature, à l’expérience pratique et aux liens humains."
   },
-  access: { skip: "Aller directement au monde réel", home: "Unplug to Reconnect, accueil", primaryNav: "Navigation principale", keyFacts: "Informations clés", switch: "Du numérique à l’analogique", outcomes: "Ce que vous emportez", route: "Itinéraire de l’expédition", reset: "Moins numérique, plus analogique" },
-  nav: { menu: "Menu", week: "La semaine", activities: "Ce que vous ferez", expedition: "L’expédition", glance: "En bref", join: "Rejoindre la liste pilote", language: "Langue" },
+  access: { skip: "Aller directement au monde réel", home: "Unplug to Reconnect, accueil", primaryNav: "Navigation principale", keyFacts: "Informations clés", switch: "Du numérique à l’analogique", outcomes: "Ce que tu emportes", route: "Itinéraire de l’expédition", reset: "Moins numérique, plus analogique" },
+  nav: { menu: "Menu", week: "La semaine", activities: "Ce que tu vivras", expedition: "L’expédition", glance: "En bref", about: "Le pourquoi", join: "Rejoindre la liste pilote", language: "Langue" },
   hero: {
     imageAlt: "Un petit groupe avec des sacs à dos quitte un village de montagne pour marcher dans les Carpates au lever du soleil.",
     fieldTest: "TEST TERRAIN 001", location: "CARPATES / RO", signalLeaving: "...PERTE DU SIGNAL", signalGone: "...AUCUN SIGNAL",
@@ -177,13 +179,13 @@ const fr = {
     people: "10–12 PERSONNES", days: "7 JOURS", ages: "18–25 ANS"
   },
   point: {
-    index: "01 / L’IDÉE", title: "Éloignez-vous du bruit numérique pendant une semaine.",
-    copy: "<p>Entre 18 et 25 ans, beaucoup d’entre nous prennent leurs premières grandes décisions concernant les études, le travail, les relations, l’endroit où vivre et la vie que nous voulons mener.</p><p>En même temps, une grande partie de ce que nous voyons, entendons et utilisons pour nous comparer passe par un écran.</p><p><strong>Nous ne proposons pas de réponses. Nous créons un autre environnement où vous pouvez trouver votre propre direction, de l’inspiration ou une nouvelle perspective en faisant des choses concrètes, en passant du temps dans la nature et en parlant avec d’autres personnes face à face.</strong></p>",
-    digital: "NUMÉRIQUE", analogue: "ANALOGIQUE", phone: "Votre téléphone survivra une semaine sans vous."
+    index: "01 / L’IDÉE", title: "Une semaine loin du bruit numérique.",
+    copy: "<p>Entre 18 et 25 ans, beaucoup d’entre nous prennent leurs premières grandes décisions : les études, le travail, les relations, l’endroit où vivre, la vie qu’on veut mener.</p><p>Et en même temps, une grande partie de ce qu’on voit, entend et utilise pour se comparer aux autres passe par un écran.</p><p><strong>On ne donne pas de réponses. On crée un autre cadre où tu peux trouver ta propre direction, de l’inspiration ou un nouveau point de vue, en faisant des choses concrètes, en passant du temps dans la nature et en parlant face à face avec d’autres personnes.</strong></p>",
+    digital: "NUMÉRIQUE", analogue: "ANALOGIQUE", phone: "Ton téléphone survivra à une semaine sans toi."
   },
   outcomes: {
-    resetTitle: "Pause numérique", resetCopy: "Éloignez la technologie du centre de votre quotidien pendant une semaine et observez ce qui change lorsque votre téléphone n’est plus votre réflexe par défaut.",
-    confidenceTitle: "Confiance", confidenceCopy: "Marcher, cuisiner, camper, apprendre des compétences pratiques, prendre des responsabilités et découvrir tout ce que vous pouvez faire par vous-même.",
+    resetTitle: "Pause numérique", resetCopy: "Mets la technologie hors du centre de ta vie quotidienne pendant une semaine et vois ce qui change quand ton téléphone n’est plus ton réflexe par défaut.",
+    confidenceTitle: "Confiance", confidenceCopy: "Marcher, cuisiner, camper, apprendre des gestes utiles, prendre des responsabilités et découvrir tout ce dont tu es capable par toi-même.",
     connectionTitle: "Liens réels", connectionCopy: "Vivre, travailler, manger, ne pas être d’accord, rire et passer du temps avec un petit groupe, face à face."
   },
   day: {
@@ -195,7 +197,7 @@ const fr = {
     dinnerLabel: "05 / DÎNER", dinner: schedule("Cuisiner ensemble", "Tout le monde aide à préparer le dîner, à ranger et à prendre soin du camp."),
     eveningLabel: "06 / SOIRÉE", evening: schedule("Feu de camp, jeux, discussions", "Après le dîner viennent la musique, les conversations et les étoiles."),
     pauseLabel: "TEMPS LIBRE / 01", pauseTitle: "ENNUI<br>AUTORISÉ",
-    imageAlt: "De jeunes adultes préparent le dîner ensemble sur une table en bois devant une maison rurale.", caption: "SOIRÉE / ÉQUIPE DÎNER / APPAREIL 02"
+    imageAlt: "Un enfant est assis sur une branche de pommier et regarde une vallée verte.", caption: "APRÈS-MIDI / RIEN DE PRÉVU / APPAREIL 02"
   },
   workshops: {
     index: "03 / APPRENDRE ENSEMBLE", eyebrow: "L’atelier du matin", title: "Il peut prendre<br><em>différentes formes.</em>",
@@ -205,12 +207,12 @@ const fr = {
     practicalNote: "Animés par des mentors, des artisans ou des habitants ayant une expérience pratique.",
     format2: "FORMAT 02", discussionTitle: "Discussion / débat", possibleTopics: "Sujets possibles",
     discussionList: list(["Relations", "Genre", "Réseaux sociaux", "Climat", "Politique", "Consommation", "Réussite", "Entrée dans l’âge adulte"]),
-    discussionNote: "Un mentor ou une personne chargée de la modération pose des questions utiles et crée un espace pour différents points de vue, sans imposer une réponse ‘juste’.",
+    discussionNote: "Un mentor ou une personne qui modère pose de bonnes questions et ouvre la place à des points de vue différents, sans imposer une réponse « juste ».",
     role: "NOTRE RÔLE : CRÉER L’ENVIRONNEMENT / PAS DICTER LA RÉPONSE"
   },
   mountain: {
     imageAlt: "Un petit groupe est assis autour d’un feu de camp, près de tentes, sous un ciel de montagne étoilé.", index: "04 / LA NUIT EN MONTAGNE", eyebrow: "Départ du camp. À pied.",
-    title: "Passez une nuit<br><em>dans les montagnes.</em>",
+    title: "Passe une nuit<br><em>en montagne.</em>",
     copy: "<p>L’une des expériences marquantes de la semaine est une expédition d’une nuit en montagne, au départ direct du camp.</p><p>Nous partons à pied avec nos sacs à dos, tentes, sacs de couchage, nourriture et matériel. Nous marchons dans les montagnes, installons le camp, cuisinons, passons la soirée dehors, dormons sur place, regardons le lever du soleil, rangeons tout et revenons à pied à la base le lendemain.</p><p><strong>Pas de bus touristique. Pas de trajet vers une attraction. Nous partons du camp et y revenons à pied.</strong></p><p>C’est un vrai défi qui comprend un inconfort volontaire, mais ce n’est pas un entraînement de survie. Un encadrement expérimenté, une bonne préparation, un équipement adapté et la sécurité restent essentiels.</p>",
     pack: "PRÉPARER", walk: "MARCHER", camp: "CAMPER", sunrise: "LEVER DU SOLEIL", home: "RETOUR", kit: "MATÉRIEL FOURNI", backpacks: "SACS À DOS ADAPTÉS", tents: "TENTES FIABLES", sleepingBags: "SACS DE COUCHAGE / ~0°C", sharedGear: "MATÉRIEL DE CAMPING COLLECTIF"
   },
@@ -219,107 +221,109 @@ const fr = {
     who: fact("POUR QUI", "18–25 ans"), group: fact("GROUPE", "10–12 participants + deux hôtes"), duration: fact("DURÉE", "Une semaine"),
     place: fact("LIEU", "Une communauté rurale des Carpates roumaines"), language: fact("LANGUE", "Anglais"), dates: fact("DATES + PRIX", "À annoncer pour le projet pilote"),
     format: fact("FORMAT", "Vie en plein air, repas partagés, ateliers le matin, après-midis libres, soirées ensemble et expédition d’une nuit en montagne"),
-    phones: fact("TÉLÉPHONES", "Vous pouvez utiliser votre téléphone si vous en avez vraiment besoin, mais nous vous proposons de le laisser en sécurité et d’essayer de vivre la semaine sans lui. Le camp reste joignable si un proche doit vous contacter."),
+    phones: fact("TÉLÉPHONES", "Tu peux utiliser ton téléphone si tu en as vraiment besoin, mais on te propose de le laisser en sécurité et d’essayer la semaine sans lui. Le camp reste joignable si un proche doit te contacter."),
     safety: fact("SÉCURITÉ", "La semaine comprend de la randonnée, de la vie en plein air et un inconfort gérable. Un équipement adapté, une bonne préparation et un encadrement expérimenté sont essentiels.")
   },
   faq: {
-    index: "06 / QUESTIONS", title: "Avant de faire votre sac.",
-    phoneQ: "Puis-je utiliser mon téléphone et mes proches peuvent-ils me joindre ?", phoneA: "Oui. Vous pouvez utiliser votre téléphone si vous en avez vraiment besoin, mais nous vous proposons de le laisser en sécurité et d’essayer de vivre la semaine sans lui. Le camp reste joignable si un proche doit vous contacter.",
+    index: "06 / QUESTIONS", title: "Avant de faire ton sac.",
+    phoneQ: "Puis-je utiliser mon téléphone, et mes proches peuvent-ils me joindre ?", phoneA: "Oui. Tu peux utiliser ton téléphone si tu en as vraiment besoin, mais on te propose de le laisser en sécurité et d’essayer la semaine sans lui. Le camp reste joignable si un proche doit te contacter.",
     experienceQ: "Faut-il avoir de l’expérience en randonnée ou en camping ?", experienceA: "Aucune expérience préalable de randonnée ou de camping n’est requise. La semaine repose sur l’apprentissage par la pratique. Le parcours en montagne sera préparé et adapté au groupe afin que tout le monde puisse le réaliser.",
     survivalQ: "S’agit-il d’un stage de survie et quel matériel est fourni ?", survivalA: "Non. La nuit en montagne est un défi en plein air planifié, pas un stage de survie. Le camp fournit des sacs à dos adaptés, des tentes fiables, des sacs de couchage convenant à des températures proches de 0°C et le matériel collectif nécessaire.",
-    costQ: "Quand aura lieu le séjour et combien coûtera-t-il ?", costA: "Les dates et le prix du premier projet pilote ne sont pas encore définitifs. Rejoignez la liste pilote et nous communiquerons les détails à l’ouverture des candidatures.",
-    englishQ: "Dois-je parler anglais couramment ?", englishA: "Non. L’anglais est la langue commune du camp, mais il ne doit pas être votre langue maternelle. L’idée est d’utiliser l’anglais naturellement en cuisinant, en marchant, en parlant et en passant du temps ensemble, pas de le parler parfaitement.",
+    costQ: "Quand aura lieu le séjour et combien coûtera-t-il ?", costA: "Les dates et le prix du premier projet pilote ne sont pas encore définitifs. Rejoins la liste pilote et on te donnera tous les détails à l’ouverture des candidatures.",
+    englishQ: "Dois-je parler anglais couramment ?", englishA: "Non. L’anglais est la langue commune du camp, mais ce n’est pas obligé d’être ta langue maternelle. L’idée, c’est de l’utiliser naturellement en cuisinant, en marchant, en discutant et en passant du temps ensemble, pas de le parler parfaitement.",
     sleepQ: "Où dormons-nous ?", sleepA: "Le camp de base propose un hébergement simple en plein air dans un environnement rural, avec des tentes et l’accès aux installations de base nécessaires pour la semaine. Une nuit est passée en montagne pendant l’expédition. Les détails précis seront communiqués avant la réservation.",
     foodQ: "Qu’allons-nous manger ?", foodA: "Les repas font partie de l’expérience collective. Le déjeuner est préparé frais par une personne de la région, avec des plats simples et des ingrédients locaux. Nous préparons le dîner ensemble. Les régimes alimentaires et allergies seront recueillis lors de l’inscription afin que l’équipe puisse confirmer ce qui peut être adapté."
   },
   reset: { imageAlt: "Deux tentes en toile et un feu de camp brillent près d’une grange en bois dans un jardin du Maramureș.", title: "Moins numérique.<br><em>Plus analogique.</em>" },
   pilot: { stamp: "PILOTE<br>001", eyebrow: "Tout commence à petite échelle", title: "10–12 personnes.<br>7 jours.<br><em>0 algorithme pour décider de la suite.</em>" },
   signup: {
-    index: "REJOINDRE / PILOTE 001", title: "Venez avec nous.", copy: "Le premier camp sera volontairement petit. Rejoignez la liste pilote pour savoir quand les candidatures ouvriront et contribuer à façonner l’avenir d’Unplug to Reconnect.",
-    emailLabel: "Votre e-mail", emailPlaceholder: "vous@exemple.fr", submit: "Tenez-moi au courant", consent: "J’accepte de recevoir occasionnellement des nouvelles du projet pilote. Rien pour remplir votre fil.",
-    note: "Formulaire prototype : les réponses ne seront pas envoyées tant qu’un service de liste de diffusion ne sera pas connecté.", invalidEmail: "Saisissez une adresse e-mail valide.", consentRequired: "Veuillez confirmer que vous acceptez de recevoir des nouvelles occasionnelles.", success: "Tout est prêt. Connectez le service de liste de diffusion pour commencer à recueillir les inscriptions."
+    index: "REJOINDRE / PILOTE 001", title: "Viens avec nous.", copy: "Le premier camp sera petit, volontairement. Rejoins la liste pilote pour savoir quand les candidatures ouvrent et aider à façonner ce que deviendra Unplug to Reconnect.",
+    emailLabel: "Ton e-mail", emailPlaceholder: "toi@exemple.fr", submit: "Tiens-moi au courant", consent: "J’accepte de recevoir de temps en temps des nouvelles du projet pilote. Pas de spam, promis.",
+    note: "Formulaire de test : rien n’est envoyé tant qu’un service de liste de diffusion n’est pas connecté.", invalidEmail: "Saisis une adresse e-mail valide.", consentRequired: "Confirme que tu es d’accord pour recevoir des nouvelles de temps en temps.", success: "C’est bon. Connecte le service de liste de diffusion pour commencer à recueillir les inscriptions."
   },
+  letter: { imageAlt: "Un homme âgé coiffé d’une casquette blanche se penche sur une grande marmite posée sur un réchaud en plein air et la remue avec une cuillère en bois, dans un verger.", caption: "DES ARCHIVES", eyebrow: "LETTRE OUVERTE / D’ALEX", title: "Une lettre ouverte d’Alex sur les raisons d’être d’Unplug to Reconnect.", copy: "Basket, informatique et une semaine dans les collines avec mon grand-père. Ce n’est pas un rejet de la technologie. C’est une invitation à sortir du bruit pendant un moment.", cta: "Lire la lettre", close: "Fermer" },
   footer: { line: "Déconnectons-nous un moment de nos mondes numériques pour nous reconnecter à la nature, aux autres et aux choses simples.", less: "MOINS NUMÉRIQUE.", more: "PLUS ANALOGIQUE.", top: "RETOUR EN HAUT ↑" }
 };
 
 const ro = {
   meta: {
     title: "Unplug to Reconnect: Mai puțin digital. Mai mult analog.",
-    description: "O săptămână offline în Carpații Românești, în care tinerii adulți își pot găsi propria direcție prin natură, experiențe practice și conexiuni umane reale."
+    description: "O săptămână offline în Carpații României, pentru tineri între 18 și 25 de ani: natură, lucruri făcute cu mâna ta și oameni adevărați, față în față."
   },
-  access: { skip: "Mergi direct în lumea reală", home: "Unplug to Reconnect, pagina principală", primaryNav: "Navigare principală", keyFacts: "Informații esențiale", switch: "De la digital la analog", outcomes: "Cu ce pleci acasă", route: "Traseul expediției", reset: "Mai puțin digital, mai mult analog" },
-  nav: { menu: "Meniu", week: "Săptămâna", activities: "Ce vei face", expedition: "Expediția", glance: "Pe scurt", join: "Înscrie-te pe lista pilot", language: "Limbă" },
+  access: { skip: "Treci direct în lumea reală", home: "Unplug to Reconnect, pagina principală", primaryNav: "Navigare principală", keyFacts: "Pe scurt, ce trebuie să știi", switch: "De la digital la analog", outcomes: "Ce iei cu tine acasă", route: "Traseul expediției", reset: "Mai puțin digital, mai mult analog" },
+  nav: { menu: "Meniu", week: "Săptămâna", activities: "Ce facem", expedition: "Expediția", glance: "Pe scurt", about: "De ce", join: "Înscrie-te pe lista pilot", language: "Limbă" },
   hero: {
-    imageAlt: "Un grup mic cu rucsacuri pleacă dintr-un sat de munte spre Carpați la răsărit.",
-    fieldTest: "TEST PE TEREN 001", location: "CARPAȚI / RO", signalLeaving: "...IEȘIM DIN SEMNAL", signalGone: "...FĂRĂ SEMNAL",
+    imageAlt: "Un grup mic, cu rucsacurile în spate, pornește la răsărit dintr-un sat de munte spre Carpați.",
+    fieldTest: "TEST PE TEREN 001", location: "CARPAȚI / RO", signalLeaving: "...SE PIERDE SEMNALUL", signalGone: "...FĂRĂ SEMNAL",
     eyebrow: "Unplug to Reconnect prezintă", title: "O săptămână <em>offline.</em><br><em>Mai puțin digital.</em><br>Mai mult analog.",
-    lede: "O experiență de o săptămână în aer liber pentru tineri adulți, într-un colț rural al Carpaților Românești.", seeWeek: "Vezi săptămâna",
-    people: "10–12 PERSOANE", days: "7 ZILE", ages: "18–25 ANI"
+    lede: "O săptămână în aer liber pentru tineri, într-un sat mândru din Carpații României.", seeWeek: "Vezi săptămâna",
+    people: "10–12 OAMENI", days: "7 ZILE", ages: "18–25 ANI"
   },
   point: {
-    index: "01 / IDEEA", title: "Ia o pauză de o săptămână de la zgomotul digital.",
-    copy: "<p>Între 18 și 25 de ani, mulți dintre noi luăm primele decizii importante despre studii, muncă, relații, locul în care vrem să trăim și felul de viață pe care ni-l dorim.</p><p>În același timp, mare parte din ceea ce vedem, auzim și folosim pentru a ne compara cu ceilalți vine printr-un ecran.</p><p><strong>Nu oferim răspunsuri. Creăm un mediu diferit în care îți poți găsi propria direcție, inspirație sau perspectivă făcând lucruri concrete, petrecând timp în natură și vorbind față în față cu alți oameni.</strong></p>",
-    digital: "DIGITAL", analogue: "ANALOG", phone: "Telefonul tău va supraviețui o săptămână fără tine."
+    index: "01 / DE CE", title: "O săptămână departe de zgomotul digital.",
+    copy: "<p>Între 18 și 25 de ani, mulți dintre noi începem să luăm primele decizii mari: ce studiem, ce muncă facem, cu cine ne legăm, unde vrem să trăim și ce fel de viață ne dorim.</p><p>Și tot atunci, mare parte din ce vedem, auzim și cu ce ne comparăm vine printr-un ecran.</p><p><strong>Noi nu dăm răspunsuri. Facem loc unui alt fel de mediu, în care îți poți găsi singur drumul, o idee sau o perspectivă nouă: făcând lucruri cu mâinile tale, stând în natură și vorbind cu alți oameni, față în față.</strong></p>",
+    digital: "DIGITAL", analogue: "ANALOG", phone: "Telefonul tău se descurcă și o săptămână fără tine."
   },
   outcomes: {
-    resetTitle: "Resetare digitală", resetCopy: "Mută tehnologia din centrul vieții de zi cu zi pentru o săptămână și observă ce se schimbă atunci când telefonul nu mai este locul spre care te îndrepți automat.",
-    confidenceTitle: "Încredere", confidenceCopy: "Fă drumeții, gătește, campează, învață abilități practice, asumă-ți responsabilități și descoperă mai mult din ceea ce poți face singur.",
-    connectionTitle: "Conexiune reală", connectionCopy: "Trăiește, lucrează, mănâncă, contrazice-te, râzi și petrece timp cu un grup mic de oameni, față în față."
+    resetTitle: "Pauză de la digital", resetCopy: "Dă tehnologia la o parte o săptămână și vezi ce se schimbă când telefonul nu mai e primul lucru după care întinzi mâna.",
+    confidenceTitle: "Încredere", confidenceCopy: "Faci drumeții, gătești, dormi în cort, înveți lucruri practice, îți asumi răspunderi și descoperi cât de multe poți face singur.",
+    connectionTitle: "Legături adevărate", connectionCopy: "Trăiești, muncești, mănânci, te contrazici, râzi și stai la un loc cu un grup mic de oameni, față în față."
   },
   day: {
-    index: "02 / O ZI OBIȘNUITĂ ÎN TABĂRĂ", title: "Un ritm general, nu un program încărcat.", intro: "Fiecare zi va fi puțin diferită, dar cele mai multe urmează aceeași structură simplă. Este timp pentru învățat, timp pentru a ajuta la viața taberei și destul timp în care nu este programat nimic.",
-    breakfastLabel: "01 / MIC DEJUN", breakfast: schedule("Începe încet", "Mâncăm împreună, bem cafea sau ceai, verificăm vremea și ne pregătim pentru zi."),
-    workshopLabel: "02 / ATELIER DE DIMINEAȚĂ", workshop: schedule("Învață sau discută", "O sesiune practică în care învățăm făcând, sau o sesiune de discuții și dezbateri în care explorăm împreună un subiect."),
-    lunchLabel: "03 / PRÂNZ", lunch: schedule("Mâncăm împreună", "Un bucătar local pregătește mâncare proaspătă și tradițională din regiune, acel fel generos de mâncare pe care l-ar pune pe masă o bunică din România."),
-    afternoonLabel: "04 / DUPĂ-AMIAZĂ LIBERĂ", afternoon: schedule("Nimic programat", "Citește, dormi, plimbă-te, joacă cărți, ajută în grădină sau vorbește. Să petreci timp nestructurat fără să iei automat telefonul face parte din experiență."),
-    dinnerLabel: "05 / CINĂ", dinner: schedule("Gătim împreună", "Toată lumea ajută la pregătirea cinei, la curățenie și la îngrijirea taberei."),
-    eveningLabel: "06 / SEARĂ", evening: schedule("Foc de tabără, jocuri, conversații", "După cină vin muzica, conversațiile și stelele."),
-    pauseLabel: "TIMP NESTRUCTURAT / 01", pauseTitle: "PLICTISEALA<br>ESTE PERMISĂ",
-    imageAlt: "Tineri adulți pregătesc cina împreună la o masă de lemn, lângă o casă rurală.", caption: "SEARĂ / ECHIPA DE CINĂ / CAMERA 02"
+    index: "02 / O ZI LA TABĂRĂ", title: "Un ritm, nu un program încărcat.", intro: "Fiecare zi iese puțin altfel, dar cele mai multe merg pe aceeași schemă simplă. E timp de învățat, timp de dat o mână de ajutor prin tabără și destul timp în care nu ai nimic de făcut.",
+    breakfastLabel: "01 / MICUL DEJUN", breakfast: schedule("Începem încet", "Mâncăm împreună, bem o cafea sau un ceai, ne uităm cum e vremea și ne pregătim de zi."),
+    workshopLabel: "02 / ATELIERUL DE DIMINEAȚĂ", workshop: schedule("Învățăm sau discutăm", "Ori facem ceva practic, învățând prin făcut, ori stăm la o discuție și o dezbatere, unde luăm un subiect la întors împreună."),
+    lunchLabel: "03 / PRÂNZ", lunch: schedule("Mâncăm împreună", "Cineva din sat gătește mâncare proaspătă, fain și din belșug, așa cum ți-ar pune buna pe masă."),
+    afternoonLabel: "04 / DUPĂ-AMIAZĂ LIBERĂ", afternoon: schedule("Nimic pe program", "Citești, tragi un somn, te plimbi, joci cărți, dai o mână de ajutor în grădină sau stai la povești. Să-ți petreci timpul fără program și fără să te repezi la telefon face parte din experiență."),
+    dinnerLabel: "05 / CINA", dinner: schedule("Gătim împreună", "Toți punem mâna la cină, la strâns și la treburile taberei."),
+    eveningLabel: "06 / SEARA", evening: schedule("Foc de tabără, jocuri, povești", "După cină vin muzica, vorba lungă și stelele."),
+    pauseLabel: "TIMP FĂRĂ PROGRAM / 01", pauseTitle: "PLICTISEALA<br>E PERMISĂ",
+    imageAlt: "Un copil stă pe o creangă de măr și privește peste o vale verde.", caption: "DUPĂ-AMIAZĂ / NIMIC PE PROGRAM / CAMERA 02"
   },
   workshops: {
-    index: "03 / ÎNVĂȚĂM ÎMPREUNĂ", eyebrow: "Atelierul de dimineață", title: "Poate avea<br><em>forme diferite.</em>",
-    intro: "<p>Unele dimineți se concentrează pe <strong>abilități practice</strong>, învățăm ceva făcând acel lucru cu adevărat.</p><p>Alte dimineți sunt dedicate <strong>atelierelor de discuții și dezbateri</strong>, o ocazie de a explora un subiect, de a asculta perspective diferite, de a pune întrebări și de a-ți forma propria opinie.</p><p>Combinația exactă nu este fixă. Depinde de participanți, mentori, oamenii din comunitate și loc.</p>",
+    index: "03 / ÎNVĂȚĂM ÎMPREUNĂ", eyebrow: "Atelierul de dimineață", title: "Poate fi<br><em>de mai multe feluri.</em>",
+    intro: "<p>În unele dimineți ne ocupăm de <strong>lucruri practice</strong>: învățăm ceva făcând, nu doar ascultând.</p><p>În altele facem <strong>ateliere de discuții și dezbateri</strong>: luăm un subiect la întors pe toate fețele, ascultăm păreri diferite, punem întrebări și ne facem propria părere.</p><p>Cum le amestecăm nu e bătut în cuie. Depinde de participanți, de mentori, de oamenii din sat și de locul în care ajungem.</p>",
     format1: "FORMAT 01", practicalTitle: "Practic", possibleWorkshops: "Ateliere posibile",
-    practicalList: list(["Foc de tabără", "Orientare", "Pregătirea unei drumeții", "Organizarea taberei", "Alimentație și nutriție", "Lucrul cu lemnul", "Meșteșuguri rurale tradiționale"]),
-    practicalNote: "Conduse de mentori, meșteșugari sau localnici cu experiență practică.",
-    format2: "FORMAT 02", discussionTitle: "Discuție / dezbatere", possibleTopics: "Subiecte posibile",
-    discussionList: list(["Relații", "Gen", "Rețele sociale", "Climă", "Politică", "Consum", "Succes", "Viața de adult"]),
-    discussionNote: "Un mentor sau un moderator pune întrebări utile și creează spațiu pentru perspective diferite, nu pentru un singur răspuns ‘corect’.",
-    role: "ROLUL NOSTRU: CREĂM MEDIUL / NU DICTĂM RĂSPUNSUL"
+    practicalList: list(["Focul de tabără", "Orientare în natură", "Pregătirea unei ture la munte", "Montarea taberei", "Mâncare sănătoasă", "Lucrul cu lemnul", "Meșteșuguri și munci de la țară"]),
+    practicalNote: "Duse de mentori, meșteri sau oameni din sat care știu meserie din practică.",
+    format2: "FORMAT 02", discussionTitle: "Discuții / dezbateri", possibleTopics: "Subiecte posibile",
+    discussionList: list(["Relații", "Gen", "Rețele sociale", "Clima", "Politică", "Consum", "Succes", "Viața de adult"]),
+    discussionNote: "Un mentor sau un moderator pune întrebări bune și face loc pentru păreri diferite, nu pentru un singur răspuns „corect”.",
+    role: "ROLUL NOSTRU: CREĂM CADRUL / NU DĂM RĂSPUNSURILE"
   },
   mountain: {
-    imageAlt: "Un grup mic stă în jurul unui foc de tabără, lângă corturi, sub un cer montan plin de stele.", index: "04 / NOAPTEA PE MUNTE", eyebrow: "Plecăm pe jos din tabără.",
-    title: "Petrece o noapte<br><em>în munți.</em>",
-    copy: "<p>Una dintre experiențele definitorii ale săptămânii este o expediție de o noapte în munți, cu plecare direct din tabără.</p><p>Plecăm pe jos cu rucsacurile, corturile, sacii de dormit, mâncarea și echipamentul. Urcăm în munți, instalăm tabăra, gătim, petrecem seara afară, dormim acolo, privim răsăritul, împachetăm totul și ne întoarcem pe jos la bază a doua zi.</p><p><strong>Fără autocar de excursie. Fără drum până la o atracție turistică. Plecăm și revenim pe jos, direct din tabără.</strong></p><p>Este o provocare reală, cu un anumit disconfort asumat, dar nu este antrenament de supraviețuire. Conducerea cu experiență, planificarea atentă, echipamentul potrivit și siguranța rămân fundamentale.</p>",
-    pack: "ÎMPACHETĂM", walk: "MERGEM", camp: "CAMPĂM", sunrise: "RĂSĂRIT", home: "ÎNAPOI", kit: "ECHIPAMENT OFERIT", backpacks: "RUCSACURI POTRIVITE", tents: "CORTURI FIABILE", sleepingBags: "SACI DE DORMIT / ~0°C", sharedGear: "ECHIPAMENT COMUN DE CAMPING"
+    imageAlt: "Un grup mic stă în jurul focului, lângă corturi, sub un cer de munte plin de stele.", index: "04 / NOAPTEA LA MUNTE", eyebrow: "Plecăm pe jos, direct din tabără.",
+    title: "Petreci o noapte<br><em>sus, la munte.</em>",
+    copy: "<p>Una dintre cele mai tari clipe ale săptămânii e expediția de o noapte la munte, care pornește chiar din tabără.</p><p>Plecăm pe jos, cu rucsacurile în spate: corturi, saci de dormit, mâncare, tot ce ne trebuie. Urcăm la munte, ne punem tabăra, gătim, stăm seara afară, dormim acolo, ne uităm cum răsare soarele, strângem tot și coborâm pe jos la bază a doua zi.</p><p><strong>Fără autocar de excursie. Fără drum cu mașina până la vreo atracție turistică. Plecăm și ne întoarcem pe jos, din tabără.</strong></p><p>E o provocare adevărată, cu puțin disconfort asumat, dar nu e curs de supraviețuire. Oameni cu experiență, un plan bun, echipament potrivit și siguranța rămân pe primul loc.</p>",
+    pack: "ÎMPACHETĂM", walk: "PORNIM", camp: "TABĂRĂ", sunrise: "RĂSĂRIT", home: "ACASĂ", kit: "ECHIPAMENT OFERIT", backpacks: "RUCSACURI BUNE", tents: "CORTURI SIGURE", sleepingBags: "SACI DE DORMIT / ~0°C", sharedGear: "ECHIPAMENT COMUN DE TABĂRĂ"
   },
   glance: {
-    index: "05 / SĂPTĂMÂNA PE SCURT", title: "Tot ce contează<br><em>într-un singur loc.</em>",
-    who: fact("PENTRU CINE", "18–25 ani"), group: fact("GRUP", "10–12 participanți + două gazde"), duration: fact("DURATĂ", "O săptămână"),
-    place: fact("LOC", "O comunitate rurală din Carpații Românești"), language: fact("LIMBĂ", "Engleză"), dates: fact("DATE + PREȚ", "Vor fi anunțate pentru ediția pilot"),
-    format: fact("FORMAT", "Viață în aer liber, mese împreună, ateliere dimineața, după-amiezi libere, seri petrecute împreună și o expediție de o noapte în munți"),
-    phones: fact("TELEFOANE", "Îți poți folosi telefonul dacă ai într-adevăr nevoie, dar îți propunem să îl păstrezi în siguranță și să încerci să petreci săptămâna fără el. Tabăra rămâne accesibilă dacă cineva de acasă trebuie să te contacteze."),
-    safety: fact("SIGURANȚĂ", "Săptămâna include drumeții, viață în aer liber și un disconfort ușor de gestionat. Echipamentul potrivit, planificarea și conducerea cu experiență sunt fundamentale.")
+    index: "05 / SĂPTĂMÂNA PE SCURT", title: "Tot ce trebuie să știi<br><em>într-un singur loc.</em>",
+    who: fact("PENTRU CINE", "Tineri de 18–25 de ani"), group: fact("GRUP", "10–12 participanți + două gazde"), duration: fact("DURATĂ", "O săptămână"),
+    place: fact("LOC", "O comunitate de la țară, în Carpații României"), language: fact("LIMBĂ", "Engleză"), dates: fact("DATE + PREȚ", "Le anunțăm pentru ediția pilot"),
+    format: fact("FORMAT", "Viață în aer liber, mese împreună, ateliere dimineața, după-amiezi libere, seri petrecute împreună și o expediție de o noapte la munte"),
+    phones: fact("TELEFOANE", "Îți poți lua telefonul dacă chiar ai nevoie, dar îți propunem să-l lași la păstrare și să încerci săptămâna fără el. Dacă te caută cineva de acasă, ne poate suna oricând la tabără."),
+    safety: fact("SIGURANȚĂ", "Săptămâna înseamnă drumeții, viață în aer liber și un disconfort pe care îl poți duce. Echipament potrivit, un plan bun și oameni cu experiență: astea sunt de bază.")
   },
   faq: {
-    index: "06 / ÎNTREBĂRI", title: "Înainte să îți faci bagajul.",
-    phoneQ: "Pot să îmi folosesc telefonul și mă poate contacta cineva de acasă?", phoneA: "Da. Îți poți folosi telefonul dacă ai într-adevăr nevoie, dar îți propunem să îl păstrezi în siguranță și să încerci să petreci săptămâna fără el. Tabăra rămâne accesibilă dacă cineva de acasă trebuie să te contacteze.",
-    experienceQ: "Am nevoie de experiență în drumeții sau camping?", experienceA: "Nu este necesară experiență anterioară în drumeții sau camping. Săptămâna este construită în jurul învățării prin practică, iar traseul montan va fi planificat și adaptat grupului astfel încât toată lumea să îl poată parcurge.",
-    survivalQ: "Este antrenament de supraviețuire și ce echipament este oferit?", survivalA: "Nu. Noaptea pe munte este o provocare planificată în aer liber, nu un antrenament de supraviețuire. Tabăra oferă rucsacuri potrivite, corturi fiabile, saci de dormit pentru temperaturi în jur de 0°C și echipamentul comun necesar.",
-    costQ: "Când are loc și cât va costa?", costA: "Datele și prețul primei ediții pilot nu sunt încă stabilite. Înscrie-te pe lista pilot și îți vom trimite detaliile când se deschid aplicațiile.",
-    englishQ: "Trebuie să vorbesc fluent engleză?", englishA: "Nu. Engleza este limba comună a taberei, dar nu trebuie să fie limba ta maternă. Ideea este să folosești engleza firesc în timp ce gătești, mergi pe munte, vorbești și petreci timp cu ceilalți, nu să o vorbești perfect.",
-    sleepQ: "Unde dormim?", sleepA: "Tabăra de bază folosește cazare simplă în aer liber, într-un cadru rural, cu corturi și acces la facilitățile de bază necesare pentru săptămână. O noapte este petrecută în munți, ca parte a expediției. Detaliile exacte despre cazare vor fi comunicate înainte de rezervare.",
-    foodQ: "Ce vom mânca?", foodA: "Mesele fac parte din experiența comună. Prânzul este pregătit proaspăt de un bucătar local, cu mâncare simplă și ingrediente locale. Cina o pregătim împreună. Preferințele alimentare și alergiile vor fi colectate la înscriere, astfel încât echipa să poată confirma ce poate fi adaptat."
+    index: "06 / ÎNTREBĂRI", title: "Înainte să-ți faci rucsacul.",
+    phoneQ: "Pot să-mi iau telefonul și mă poate găsi cineva de acasă?", phoneA: "Da. Îți poți folosi telefonul dacă chiar ai nevoie, dar îți propunem să-l lași la păstrare și să încerci săptămâna fără el. Dacă te caută cineva de acasă, ne poate suna oricând la tabără.",
+    experienceQ: "Trebuie să am experiență la drumeții sau la cort?", experienceA: "Nu-i musai. Nu cerem nicio experiență de drumeții sau de dormit în cort. Săptămâna se învață prin făcut, iar traseul la munte îl alegem și îl adaptăm după grup, ca să-l poată duce toți.",
+    survivalQ: "E curs de supraviețuire și ce echipament primesc?", survivalA: "Nu. Noaptea la munte e o provocare pregătită cu cap, nu curs de supraviețuire. Tabăra pune la dispoziție rucsacuri bune, corturi sigure, saci de dormit buni pentru vreo 0°C și echipamentul comun de care e nevoie.",
+    costQ: "Când e și cât costă?", costA: "Datele și prețul pentru prima ediție pilot nu sunt încă bătute în cuie. Înscrie-te pe lista pilot și îți scriem de cum se deschid înscrierile.",
+    englishQ: "Trebuie să vorbesc engleza ca la carte?", englishA: "Nu-i musai. Engleza e limba comună a taberei, dar nu trebuie să fie limba ta maternă. Ideea e s-o folosești firesc, când gătești, când mergi pe munte, când stai de vorbă, nu s-o vorbești perfect.",
+    sleepQ: "Unde dormim?", sleepA: "La tabăra de bază dormim simplu, în aer liber, la țară, în corturi, cu acces la tot ce ne trebuie de bază pe durata săptămânii. O noapte o petrecem la munte, în expediție. Detaliile exacte ți le spunem înainte de rezervare.",
+    foodQ: "Ce mâncăm?", foodA: "Mesele fac parte din ce trăim împreună. Prânzul îl gătește proaspăt cineva din sat, mâncare simplă, cu ingrediente de-ale locului. Cina o gătim împreună. Alergiile și ce nu mănânci le notăm la înscriere, ca echipa să-ți poată spune ce putem face."
   },
-  reset: { imageAlt: "Două corturi din pânză și un foc de tabără luminează lângă un hambar din lemn, într-o grădină din Maramureș.", title: "Mai puțin digital.<br><em>Mai mult analog.</em>" },
-  pilot: { stamp: "PILOT<br>001", eyebrow: "Începem cu puțini oameni", title: "10–12 persoane.<br>7 zile.<br><em>0 algoritmi care decid ce urmează.</em>" },
+  reset: { imageAlt: "Două corturi din pânză și un foc de tabără lângă un hambar de lemn, într-o grădină din Maramureș.", title: "Mai puțin digital.<br><em>Mai mult analog.</em>" },
+  pilot: { stamp: "PILOT<br>001", eyebrow: "Începem mic", title: "10–12 oameni.<br>7 zile.<br><em>0 algoritmi care hotărăsc ce urmează.</em>" },
   signup: {
-    index: "ÎNSCRIERI / PILOT 001", title: "Vino cu noi.", copy: "Prima tabără va fi intenționat mică. Înscrie-te pe lista pilot pentru a afla când se deschid aplicațiile și pentru a contribui la ceea ce va deveni Unplug to Reconnect.",
-    emailLabel: "Adresa ta de e-mail", emailPlaceholder: "tu@exemplu.ro", submit: "Ține-mă la curent", consent: "Sunt de acord să primesc ocazional noutăți despre ediția pilot. Fără mesaje inutile.",
-    note: "Formular prototip: răspunsurile nu sunt trimise până când nu este conectat un serviciu de listă de e-mail.", invalidEmail: "Introdu o adresă de e-mail validă.", consentRequired: "Confirmă că ești de acord să primești ocazional noutăți.", success: "Totul arată bine. Conectează serviciul de e-mail pentru a începe colectarea înscrierilor."
+    index: "ÎNSCRIERI / PILOT 001", title: "Noah, hai cu noi.", copy: "Prima tabără o facem mică, cu bună știință. Înscrie-te pe lista pilot ca să afli când se deschid înscrierile și ca să ne ajuți să croim ce va fi Unplug to Reconnect.",
+    emailLabel: "Adresa ta de e-mail", emailPlaceholder: "tu@exemplu.ro", submit: "Ține-mă la curent", consent: "Sunt de acord să primesc din când în când vești despre ediția pilot. Fără mesaje de umplutură.",
+    note: "Formular de probă: nu trimitem nimic până nu legăm un serviciu de mailing.", invalidEmail: "Scrie o adresă de e-mail validă.", consentRequired: "Bifează că ești de acord să primești vești din când în când.", success: "Merge fain. Leagă serviciul de mailing ca să începem să strângem înscrieri."
   },
-  footer: { line: "Hai să ne deconectăm pentru o clipă de lumile digitale și să ne reconectăm cu natura, oamenii și lucrurile simple.", less: "MAI PUȚIN DIGITAL.", more: "MAI MULT ANALOG.", top: "ÎNAPOI SUS ↑" }
+  letter: { imageAlt: "Un bărbat în vârstă cu șapcă albă se apleacă deasupra unui cazan mare pe o plită în aer liber și amestecă cu o lingură de lemn, într-o livadă.", caption: "DIN ARHIVĂ", eyebrow: "SCRISOARE DESCHISĂ / DE LA ALEX", title: "O scrisoare deschisă de la Alex despre motivația din spatele Unplug to Reconnect.", copy: "Baschet, software și o săptămână pe dealuri cu bunu meu. Nu-i o respingere a tehnologiei. E o invitație să ieși o vreme din zgomot.", cta: "Citește scrisoarea", close: "Închide" },
+  footer: { line: "Hai să ne deconectăm o clipă de lumile noastre digitale și să ne reconectăm cu natura, cu oamenii și cu lucrurile simple.", less: "MAI PUȚIN DIGITAL.", more: "MAI MULT ANALOG.", top: "ÎNAPOI SUS ↑" }
 };
 
 const es = {
@@ -328,7 +332,7 @@ const es = {
     description: "Una semana sin conexión en los Cárpatos rumanos para que jóvenes adultos encuentren su propia dirección a través de la naturaleza, la experiencia práctica y la conexión humana real."
   },
   access: { skip: "Ir directamente al mundo real", home: "Unplug to Reconnect, inicio", primaryNav: "Navegación principal", keyFacts: "Datos clave", switch: "De digital a analógico", outcomes: "Lo que te llevas", route: "Ruta de la expedición", reset: "Menos digital, más analógico" },
-  nav: { menu: "Menú", week: "La semana", activities: "Qué harás", expedition: "La expedición", glance: "De un vistazo", join: "Únete a la lista piloto", language: "Idioma" },
+  nav: { menu: "Menú", week: "La semana", activities: "Qué harás", expedition: "La expedición", glance: "De un vistazo", about: "El porqué", join: "Únete a la lista piloto", language: "Idioma" },
   hero: {
     imageAlt: "Un pequeño grupo con mochilas sale de un pueblo de montaña hacia los Cárpatos al amanecer.",
     fieldTest: "PRUEBA DE CAMPO 001", location: "CÁRPATOS / RO", signalLeaving: "...PERDIENDO SEÑAL", signalGone: "...SIN SEÑAL",
@@ -343,7 +347,7 @@ const es = {
   },
   outcomes: {
     resetTitle: "Reinicio digital", resetCopy: "Aleja la tecnología del centro de la vida cotidiana durante una semana y descubre qué cambia cuando el teléfono deja de ser el lugar al que recurres por defecto.",
-    confidenceTitle: "Confianza", confidenceCopy: "Camina, cocina, acampa, aprende habilidades prácticas, asume responsabilidades y descubre mejor todo lo que puedes hacer por ti mismo.",
+    confidenceTitle: "Confianza", confidenceCopy: "Camina, cocina, acampa, aprende habilidades prácticas, asume responsabilidades y descubre todo lo que eres capaz de hacer por ti mismo.",
     connectionTitle: "Conexión real", connectionCopy: "Vive, trabaja, come, discrepa, ríe y pasa tiempo con un pequeño grupo de personas, cara a cara."
   },
   day: {
@@ -355,7 +359,7 @@ const es = {
     dinnerLabel: "05 / CENA", dinner: schedule("Cocinar juntos", "Todo el mundo ayuda a preparar la cena, limpiar y cuidar el campamento."),
     eveningLabel: "06 / NOCHE", evening: schedule("Hoguera, juegos, conversación", "Después de cenar llegan la música, las conversaciones y las estrellas."),
     pauseLabel: "TIEMPO SIN ESTRUCTURA / 01", pauseTitle: "ABURRIRSE<br>ESTÁ PERMITIDO",
-    imageAlt: "Jóvenes adultos preparan la cena juntos en una mesa de madera frente a una casa rural.", caption: "NOCHE / EQUIPO DE CENA / CÁMARA 02"
+    imageAlt: "Un niño está sentado en una rama de un manzano y mira un valle verde.", caption: "TARDE / NADA PROGRAMADO / CÁMARA 02"
   },
   workshops: {
     index: "03 / APRENDER JUNTOS", eyebrow: "El taller de la mañana", title: "Puede adoptar<br><em>formas diferentes.</em>",
@@ -396,9 +400,10 @@ const es = {
   pilot: { stamp: "PILOTO<br>001", eyebrow: "Esto empieza en pequeño", title: "10–12 personas.<br>7 días.<br><em>0 algoritmos decidiendo qué viene después.</em>" },
   signup: {
     index: "ÚNETE / PILOTO 001", title: "Ven con nosotros.", copy: "El primer campamento será pequeño a propósito. Únete a la lista piloto para saber cuándo se abren las solicitudes y ayudar a dar forma a lo que será Unplug to Reconnect.",
-    emailLabel: "Tu correo electrónico", emailPlaceholder: "tu@ejemplo.es", submit: "Mantenme al tanto", consent: "Acepto recibir noticias ocasionales sobre el programa piloto. Nada de rellenar tu feed.",
+    emailLabel: "Tu correo electrónico", emailPlaceholder: "tu@ejemplo.es", submit: "Mantenme al tanto", consent: "Acepto recibir noticias ocasionales sobre el programa piloto. Sin spam, prometido.",
     note: "Formulario de prototipo: las respuestas no se enviarán hasta que se conecte un servicio de listas de correo.", invalidEmail: "Introduce una dirección de correo válida.", consentRequired: "Confirma que aceptas recibir noticias ocasionales.", success: "Todo listo. Conecta el servicio de correo para empezar a recoger inscripciones."
   },
+  letter: { imageAlt: "Un hombre mayor con gorra blanca se inclina sobre una olla grande en una cocina al aire libre y la remueve con una cuchara de madera, en un huerto.", caption: "DEL ARCHIVO", eyebrow: "CARTA ABIERTA / DE ALEX", title: "Una carta abierta de Alex sobre el porqué de Unplug to Reconnect.", copy: "Baloncesto, software y una semana en las colinas con mi abuelo. No es un rechazo de la tecnología. Es una invitación a salir del ruido durante un tiempo.", cta: "Leer la carta", close: "Cerrar" },
   footer: { line: "Desconectemos un momento de nuestros mundos digitales y volvamos a conectar con la naturaleza, las personas y las cosas sencillas.", less: "MENOS DIGITAL.", more: "MÁS ANALÓGICO.", top: "VOLVER ARRIBA ↑" }
 };
 
@@ -408,7 +413,7 @@ const it = {
     description: "Una settimana offline nei Carpazi rumeni, per dare ai giovani adulti lo spazio di trovare la propria direzione attraverso la natura, le esperienze pratiche e le relazioni umane."
   },
   access: { skip: "Vai direttamente al mondo reale", home: "Unplug to Reconnect, home", primaryNav: "Navigazione principale", keyFacts: "Informazioni chiave", switch: "Da digitale ad analogico", outcomes: "Cosa porti con te", route: "Percorso della spedizione", reset: "Meno digitale, più analogico" },
-  nav: { menu: "Menu", week: "La settimana", activities: "Cosa farai", expedition: "La spedizione", glance: "In breve", join: "Unisciti alla lista pilota", language: "Lingua" },
+  nav: { menu: "Menu", week: "La settimana", activities: "Cosa farai", expedition: "La spedizione", glance: "In breve", about: "Il perché", join: "Unisciti alla lista pilota", language: "Lingua" },
   hero: {
     imageAlt: "Un piccolo gruppo con gli zaini lascia un villaggio di montagna e cammina nei Carpazi all’alba.",
     fieldTest: "TEST SUL CAMPO 001", location: "CARPAZI / RO", signalLeaving: "...IL SEGNALE SVANISCE", signalGone: "...NESSUN SEGNALE",
@@ -423,7 +428,7 @@ const it = {
   },
   outcomes: {
     resetTitle: "Pausa digitale", resetCopy: "Sposta la tecnologia dal centro della vita quotidiana per una settimana e scopri cosa cambia quando il telefono non è più il posto verso cui ti rivolgi automaticamente.",
-    confidenceTitle: "Fiducia", confidenceCopy: "Cammina, cucina, campeggia, impara abilità pratiche, assumiti responsabilità e scopri meglio ciò che sai fare da solo.",
+    confidenceTitle: "Fiducia", confidenceCopy: "Cammina, cucina, campeggia, impara abilità pratiche, assumiti responsabilità e scopri quanto sai fare da solo.",
     connectionTitle: "Connessione reale", connectionCopy: "Vivi, lavora, mangia, non essere d’accordo, ridi e passa il tempo con un piccolo gruppo di persone, faccia a faccia."
   },
   day: {
@@ -435,7 +440,7 @@ const it = {
     dinnerLabel: "05 / CENA", dinner: schedule("Cucinare insieme", "Tutti aiutano a preparare la cena, riordinare e prendersi cura del campo."),
     eveningLabel: "06 / SERA", evening: schedule("Falò, giochi, conversazioni", "Dopo cena arrivano la musica, le conversazioni e le stelle."),
     pauseLabel: "TEMPO NON STRUTTURATO / 01", pauseTitle: "NOIA<br>CONSENTITA",
-    imageAlt: "Giovani adulti preparano insieme la cena su un tavolo di legno davanti a una casa rurale.", caption: "SERA / SQUADRA CENA / FOTOCAMERA 02"
+    imageAlt: "Un bambino è seduto su un ramo di un melo e guarda una valle verde.", caption: "POMERIGGIO / NULLA IN PROGRAMMA / FOTOCAMERA 02"
   },
   workshops: {
     index: "03 / IMPARARE INSIEME", eyebrow: "Il laboratorio del mattino", title: "Può avere<br><em>forme diverse.</em>",
@@ -476,9 +481,10 @@ const it = {
   pilot: { stamp: "PILOTA<br>001", eyebrow: "Iniziamo in piccolo", title: "10–12 persone.<br>7 giorni.<br><em>0 algoritmi a decidere cosa viene dopo.</em>" },
   signup: {
     index: "PARTECIPA / PILOTA 001", title: "Vieni con noi.", copy: "Il primo campo sarà volutamente piccolo. Unisciti alla lista pilota per sapere quando apriranno le candidature e contribuire a dare forma a ciò che diventerà Unplug to Reconnect.",
-    emailLabel: "La tua e-mail", emailPlaceholder: "tu@esempio.it", submit: "Tienimi aggiornato", consent: "Accetto di ricevere occasionalmente aggiornamenti sul progetto pilota. Niente contenuti riempitivi.",
+    emailLabel: "La tua e-mail", emailPlaceholder: "tu@esempio.it", submit: "Tienimi aggiornato", consent: "Accetto di ricevere ogni tanto aggiornamenti sul progetto pilota. Niente spam, promesso.",
     note: "Modulo prototipo: le risposte non verranno inviate finché non sarà collegato un servizio di mailing list.", invalidEmail: "Inserisci un indirizzo e-mail valido.", consentRequired: "Conferma che accetti di ricevere aggiornamenti occasionali.", success: "Tutto pronto. Collega il servizio di mailing list per iniziare a raccogliere le iscrizioni."
   },
+  letter: { imageAlt: "Un uomo anziano con il berretto bianco si china su una grande pentola su un fornello all’aperto e la mescola con un mestolo di legno, in un frutteto.", caption: "DALL’ARCHIVIO", eyebrow: "LETTERA APERTA / DA ALEX", title: "Una lettera aperta di Alex sul perché di Unplug to Reconnect.", copy: "Basket, software e una settimana sulle colline con mio nonno. Non è un rifiuto della tecnologia. È un invito a uscire dal rumore per un po’.", cta: "Leggi la lettera", close: "Chiudi" },
   footer: { line: "Disconnettiamoci per un momento dai nostri mondi digitali e riconnettiamoci con la natura, le persone e le cose semplici.", less: "MENO DIGITALE.", more: "PIÙ ANALOGICO.", top: "TORNA SU ↑" }
 };
 
