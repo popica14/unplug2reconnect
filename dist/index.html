@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#20211e" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/brand/site.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Unplug to Reconnect" />
+    <meta property="og:title" content="Unplug to Reconnect: Less digital. More analogue." />
+    <meta property="og:description" content="One week offline in the Romanian Carpathians, giving young adults room to find their own direction through nature, practical experience, and real human connection." />
+    <meta property="og:image" content="https://unplug-to-reconnect.vercel.app/assets/brand/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Unplug to Reconnect. Less digital. More analogue. One week offline in the Romanian Carpathians." />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="description"
       content="One week offline in the Romanian Carpathians, giving young adults room to find their own direction through nature, practical experience, and real human connection."
@@ -16,6 +29,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="countries.js" defer></script>
     <script src="translations.js" defer></script>
     <script src="script.js" defer></script>
   </head>
@@ -24,10 +38,7 @@
 
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Unplug to Reconnect, home" data-i18n-aria-label="access.home">
-        <svg class="brand-mark" viewBox="0 0 42 28" aria-hidden="true">
-          <path d="M2 24h5V19H2zM10 24h5V14h-5zM18 24h5V9h-5z" />
-          <path d="m18 23 9-12 13 13H18Z" />
-        </svg>
+        <span class="brand-mark" aria-hidden="true"></span>
         <span><b>UNPLUG</b><small>to</small><b>RECONNECT</b></span>
       </a>
 
@@ -349,6 +360,33 @@
             <div class="field">
               <label for="email" data-i18n="signup.emailLabel">Your email</label>
               <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" data-i18n-placeholder="signup.emailPlaceholder" required />
+            </div>
+            <p class="field__hint field__hint--group" data-i18n="signup.demoIntro">A little about you, so we know who this might be for. We only use it to understand who is interested.</p>
+            <div class="field-row">
+              <div class="field">
+                <label for="age" data-i18n="signup.ageLabel">Your age</label>
+                <input id="age" name="age" type="number" inputmode="numeric" min="16" max="99" step="1" autocomplete="off" required />
+              </div>
+              <div class="field">
+                <label for="country" data-i18n="signup.countryLabel">Where do you live?</label>
+                <select id="country" name="country" autocomplete="country" required data-country-select>
+                  <option value="" data-i18n="signup.countryPlaceholder">Choose your country</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="city"><span data-i18n="signup.cityLabel">City or town</span> <span class="field__optional" data-i18n="signup.optional">optional</span></label>
+                <input id="city" name="city" type="text" maxlength="100" autocomplete="address-level2" />
+              </div>
+              <div class="field">
+                <label for="gender"><span data-i18n="signup.genderLabel">Gender</span> <span class="field__optional" data-i18n="signup.optional">optional</span></label>
+                <select id="gender" name="gender">
+                  <option value="" data-i18n="signup.genderSkip">I prefer not to answer</option>
+                  <option value="woman" data-i18n="signup.genderWoman">Woman</option>
+                  <option value="man" data-i18n="signup.genderMan">Man</option>
+                </select>
+              </div>
             </div>
             <div class="field">
               <label for="message" data-i18n="signup.messageLabel">Want to tell us something?</label>

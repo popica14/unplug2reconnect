@@ -264,6 +264,33 @@ const loadSignupCount = async () => {
 
 let doneState = null; // "new" or "duplicate", kept so a language change can re-translate the message
 
+// Country menu: ISO codes from countries.js, names in the visitor's language, sorted for that language.
+const countrySelect = document.querySelector("[data-country-select]");
+
+const renderCountries = () => {
+  if (!countrySelect || !window.U2R_COUNTRIES) return;
+  const chosen = countrySelect.value;
+  const names = typeof Intl !== "undefined" && Intl.DisplayNames ? new Intl.DisplayNames([currentLocale], { type: "region" }) : null;
+  const label = (code) => {
+    try {
+      return (names && names.of(code)) || code;
+    } catch {
+      return code;
+    }
+  };
+  const options = window.U2R_COUNTRIES.map((code) => ({ code, name: label(code) })).sort((a, b) =>
+    a.name.localeCompare(b.name, currentLocale)
+  );
+  countrySelect.querySelectorAll("option[value]:not([value=''])").forEach((option) => option.remove());
+  options.forEach(({ code, name }) => {
+    const option = document.createElement("option");
+    option.value = code;
+    option.textContent = name;
+    countrySelect.append(option);
+  });
+  countrySelect.value = chosen;
+};
+
 const renderDone = () => {
   if (!doneBox || !doneState) return;
   const title = doneBox.querySelector("[data-signup-done-title]");
@@ -302,10 +329,27 @@ form?.addEventListener("submit", async (event) => {
   const question = form.querySelector("textarea[name='question']");
   const honeypot = form.querySelector("input[name='website']");
   const submit = form.querySelector("button[type='submit']");
+  const age = form.querySelector("input[name='age']");
+  const country = form.querySelector("select[name='country']");
+  const city = form.querySelector("input[name='city']");
+  const gender = form.querySelector("select[name='gender']");
 
   if (!email.validity.valid) {
     message.textContent = translate("signup.invalidEmail");
     email.focus();
+    return;
+  }
+
+  const ageValue = Number(age.value);
+  if (!/^\d{1,3}$/.test(age.value.trim()) || ageValue < 16 || ageValue > 99) {
+    message.textContent = translate("signup.invalidAge");
+    age.focus();
+    return;
+  }
+
+  if (!country.value) {
+    message.textContent = translate("signup.invalidCountry");
+    country.focus();
     return;
   }
 
@@ -324,6 +368,10 @@ form?.addEventListener("submit", async (event) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         email: email.value.trim(),
+        age: ageValue,
+        country: country.value,
+        city: city.value,
+        gender: gender.value,
         message: note.value,
         question: question.value,
         consent: true,
@@ -342,6 +390,12 @@ form?.addEventListener("submit", async (event) => {
     } else if (result.error === "invalid_email") {
       message.textContent = translate("signup.invalidEmail");
       email.focus();
+    } else if (result.error === "invalid_age") {
+      message.textContent = translate("signup.invalidAge");
+      age.focus();
+    } else if (result.error === "invalid_country") {
+      message.textContent = translate("signup.invalidCountry");
+      country.focus();
     } else if (result.error === "consent_required") {
       message.textContent = translate("signup.consentRequired");
       consent.focus();
@@ -358,9 +412,11 @@ form?.addEventListener("submit", async (event) => {
 });
 
 loadSignupCount();
+renderCountries();
 
 // Re-translate the progress line and the success message when the language changes.
 window.u2rOnLocaleChange = () => {
+  renderCountries();
   renderProgress();
   renderDone();
 };

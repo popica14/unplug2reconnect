@@ -7,13 +7,13 @@ const setup = () => {
   const db = makeMemorySql();
   return { db, handler: createHandler(() => db.sql) };
 };
-const ok = { email: "a@b.co", consent: true };
+const ok = { email: "a@b.co", age: 24, country: "RO", consent: true };
 
 module.exports = async () => {
   await test("invalid emails are rejected with 400 and nothing is stored", async () => {
     for (const email of ["", "nope", "a@b", "a b@c.de", "@x.com", "x".repeat(260) + "@e.com", 42, null, undefined]) {
       const { db, handler } = setup();
-      const r = await call(handler, { body: { email, consent: true } });
+      const r = await call(handler, { body: { ...ok, email } });
       assert.equal(r.status, 400, "email " + String(email).slice(0, 20));
       assert.equal(r.json.error, "invalid_email");
       assert.equal(db.rows.length, 0);
@@ -23,7 +23,7 @@ module.exports = async () => {
   await test("consent must be exactly true", async () => {
     for (const consent of [false, undefined, "true", 1, "on", null]) {
       const { db, handler } = setup();
-      const r = await call(handler, { body: { email: "a@b.co", consent } });
+      const r = await call(handler, { body: { ...ok, consent } });
       assert.equal(r.status, 400, "consent " + String(consent));
       assert.equal(r.json.error, "consent_required");
       assert.equal(db.rows.length, 0);
@@ -66,8 +66,8 @@ module.exports = async () => {
   await test("cross-site POST is refused, same-site and no Origin are accepted", async () => {
     const { handler } = setup();
     assert.equal((await call(handler, { body: ok, headers: { origin: "https://evil.example" } })).status, 403);
-    assert.equal((await call(handler, { body: { email: "x@b.co", consent: true }, headers: { origin: "https://example.com" } })).status, 200);
-    assert.equal((await call(handler, { body: { email: "y@b.co", consent: true } })).status, 200);
+    assert.equal((await call(handler, { body: { ...ok, email: "x@b.co" }, headers: { origin: "https://example.com" } })).status, 200);
+    assert.equal((await call(handler, { body: { ...ok, email: "y@b.co" } })).status, 200);
   });
 
   await test("a JSON string body is parsed", async () => {

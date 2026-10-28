@@ -7,12 +7,12 @@ const setup = (seed = 0) => {
   const db = makeMemorySql(seed);
   return { db, handler: createHandler(() => db.sql) };
 };
-const ok = { email: "a@b.co", consent: true };
+const ok = { email: "a@b.co", age: 24, country: "RO", consent: true };
 
 module.exports = async () => {
   await test("new sign-up is stored with email, message, question, consent and timestamps", async () => {
     const { db, handler } = setup();
-    const r = await call(handler, { body: { email: "  Alex@Example.COM ", message: " hi ", question: " when? ", consent: true, language: "ro" } });
+    const r = await call(handler, { body: { email: "  Alex@Example.COM ", age: 24, country: "RO", message: " hi ", question: " when? ", consent: true, language: "ro" } });
     assert.equal(r.status, 200);
     assert.deepEqual(r.json, { ok: true, duplicate: false, count: 1, goal: GOAL });
     const row = db.rows[0];
@@ -35,14 +35,14 @@ module.exports = async () => {
   await test("the count is the real number of unique sign-ups, starting from zero", async () => {
     const { handler } = setup();
     assert.deepEqual((await call(handler, { method: "GET" })).json, { ok: true, count: 0, goal: 50 });
-    for (const email of ["a@b.co", "b@b.co", "c@b.co"]) await call(handler, { body: { email, consent: true } });
+    for (const email of ["a@b.co", "b@b.co", "c@b.co"]) await call(handler, { body: { ...ok, email } });
     assert.equal((await call(handler, { method: "GET" })).json.count, 3);
   });
 
   await test("duplicate email does not raise the counter and is flagged as duplicate", async () => {
     const { db, handler } = setup();
     await call(handler, { body: ok });
-    const again = await call(handler, { body: { email: "A@B.co", consent: true, message: "second try" } });
+    const again = await call(handler, { body: { ...ok, email: "A@B.co", message: "second try" } });
     assert.equal(again.status, 200);
     assert.equal(again.json.duplicate, true);
     assert.equal(again.json.count, 1);
@@ -53,7 +53,7 @@ module.exports = async () => {
   await test("unsubscribed people do not count", async () => {
     const { db, handler } = setup();
     await call(handler, { body: ok });
-    await call(handler, { body: { email: "b@b.co", consent: true } });
+    await call(handler, { body: { ...ok, email: "b@b.co" } });
     db.rows[0].unsubscribed_at = "2026-11-01";
     assert.equal((await call(handler, { method: "GET" })).json.count, 1);
   });

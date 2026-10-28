@@ -14,10 +14,10 @@ const makeMemorySql = (seedCount = 0) => {
     calls.push({ text, values });
 
     if (/INSERT INTO signups/i.test(text)) {
-      const [email, message, question, language, consentVersion, source] = values;
+      const [email, age, country, city, gender, message, question, language, consentVersion, source] = values;
       if (rows.some((row) => row.email === email)) return [];
       const row = {
-        id: rows.length + 1, email, message, question, consent: true, language,
+        id: rows.length + 1, email, age, country, city, gender, message, question, consent: true, language,
         consent_version: consentVersion, source, consent_at: new Date().toISOString(),
         created_at: new Date().toISOString(), unsubscribed_at: null
       };

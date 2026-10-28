@@ -4,5 +4,6 @@ const { summary } = require("./helpers");
 (async () => {
   await require("./storage.test")();
   await require("./validation.test")();
+  await require("./demographics.test")();
   summary();
 })();
