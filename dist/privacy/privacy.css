@@ -1,0 +1,10 @@
+/* Privacy page: reuses the letter page header and footer. */
+.privacy { padding: 8rem var(--gutter) 5rem; }
+.privacy__paper { width: min(46rem, 100%); margin: 0 auto; padding: clamp(2rem, 5vw, 4rem); color: #292923; background: #f7f2e7; border: 1px solid rgba(32,33,30,.18); box-shadow: 0 2rem 5rem rgba(32,33,30,.18); font-family: var(--serif); font-size: 1.08rem; line-height: 1.7; }
+.privacy__draft { display: inline-block; margin: 0 0 1.5rem; padding: .3rem .55rem; color: var(--bone); background: var(--clay); font-size: .62rem; font-weight: 700; }
+.privacy h1 { margin-bottom: 1.5rem; font-size: clamp(3rem, 7vw, 5rem); }
+.privacy h2 { margin: 2.6rem 0 .8rem; font-size: clamp(1.7rem, 3vw, 2.3rem); }
+.privacy p, .privacy li { margin: 0 0 1rem; }
+.privacy ul { margin: 0 0 1rem; padding-left: 1.3rem; }
+.privacy__lead { font-size: 1.25rem; font-style: italic; }
+@media (max-width: 640px) { .privacy { padding-top: 6.5rem; } }

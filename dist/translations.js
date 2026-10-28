@@ -75,9 +75,16 @@ const en = {
   reset: { imageAlt: "Two canvas tents and a campfire glow beside a timber barn in a Maramureș garden.", title: "Less digital.<br><em>More analogue.</em>" },
   pilot: { stamp: "PILOT<br>001", eyebrow: "This starts small", title: "10–12 people.<br>7 days.<br><em>0 algorithms deciding what comes next.</em>" },
   signup: {
-    index: "JOIN / PILOT 001", title: "Come with us.", copy: "The first camp will be small on purpose. Join the pilot list to hear when applications open and help shape what Unplug to Reconnect becomes.",
-    emailLabel: "Your email", emailPlaceholder: "you@example.com", submit: "Keep me posted", consent: "I’m happy to receive occasional pilot updates. No feed-filling nonsense.",
-    note: "Prototype form: submissions are not sent until a mailing-list service is connected.", invalidEmail: "Enter a valid email address to join the list.", consentRequired: "Please confirm that occasional pilot updates are okay.", success: "Looks good. Connect the mailing-list service to start collecting sign-ups."
+    index: "JOIN / PILOT 001", title: "Help us get the first pilot off the ground.", copy: "<p>Unplug to Reconnect is still at the beginning. Before we start adding all the details, we want to know if there are people out there who actually want this to happen.</p><p>We’re looking for the first <strong>50 people</strong> interested in the pilot.</p><p>Leave us your email, a few words if you want, and any question you’d like us to answer as the pilot takes shape.</p>",
+    progress: "{count} / {goal} people interested", progressLabel: "People interested in the pilot", goalReached: "50+ people are interested. We made it.",
+    emailLabel: "Your email", emailPlaceholder: "you@example.com",
+    messageLabel: "Want to tell us something?", messageHint: "A few words of encouragement, what you like about the idea, or whatever comes to mind.",
+    questionLabel: "What’s important for you to know?", questionHint: "Ask us anything you’d want answered before considering the pilot.",
+    consent: "Yes, you can email me about Unplug to Reconnect and the first pilot.", note: "We’ll use your email to keep you updated about the project and the pilot. You can unsubscribe at any time.", privacyLink: "Privacy information",
+    submit: "I’m interested", sending: "Sending…",
+    doneTitle: "You’re one of the first.", doneThanks: "Thanks for raising your hand.", doneBody: "We’ll keep working on the pilot and let you know when there’s something worth sharing.", doneQuestion: "And if you left us a question: we’ll read it.",
+    duplicate: "Looks like you’re already in. Good to have you here.",
+    invalidEmail: "Enter a valid email address to join the list.", consentRequired: "Please tick the box so we can email you.", tooLong: "That’s a bit long. Please keep each note under 1,000 characters.", error: "Something went wrong on our side. Please try again in a moment."
   },
   letter: { imageAlt: "An older man in a white cap leans over a large pot on an outdoor stove, stirring it with a wooden spoon in an orchard.", caption: "FROM THE ARCHIVE", eyebrow: "OPEN LETTER / FROM ALEX", title: "An open letter from Alex about why we do this.", copy: "Basketball, software, and a week in the hills with my grandfather. This is not a rejection of technology. It is an invitation to step out of the noise for a while.", cta: "Read the letter", close: "Close" },
   footer: { line: "Let’s unplug for a moment from our digital worlds and reconnect with nature, people, and simple things.", less: "LESS DIGITAL.", more: "MORE ANALOGUE.", top: "BACK TO TOP ↑" }
@@ -156,9 +163,16 @@ const de = {
   reset: { imageAlt: "Zwei Leinwandzelte und ein Lagerfeuer leuchten neben einer Holzscheune in einem Garten in Maramureș.", title: "Weniger digital.<br><em>Mehr analog.</em>" },
   pilot: { stamp: "PILOT<br>001", eyebrow: "Wir fangen klein an", title: "10–12 Personen.<br>7 Tage.<br><em>0 Algorithmen, die bestimmen, was als Nächstes kommt.</em>" },
   signup: {
-    index: "MITMACHEN / PILOT 001", title: "Komm mit.", copy: "Das erste Camp bleibt bewusst klein. Trag dich in die Pilotliste ein, erfahre, wann die Bewerbungen starten, und gestalte mit, was Unplug to Reconnect wird.",
-    emailLabel: "Deine E-Mail", emailPlaceholder: "du@beispiel.de", submit: "Halt mich auf dem Laufenden", consent: "Ich möchte hin und wieder Neuigkeiten zum Pilotprojekt erhalten. Kein Spam, versprochen.",
-    note: "Prototyp-Formular: Eingaben werden erst gesendet, wenn ein Mailinglisten-Dienst verbunden ist.", invalidEmail: "Gib eine gültige E-Mail-Adresse ein.", consentRequired: "Bitte bestätige, dass gelegentliche Updates in Ordnung sind.", success: "Sieht gut aus. Verbinde den Mailinglisten-Dienst, um Anmeldungen zu sammeln."
+    index: "MITMACHEN / PILOT 001", title: "Hilf uns, den ersten Pilot auf den Weg zu bringen.", copy: "<p>Unplug to Reconnect steht noch ganz am Anfang. Bevor wir alle Details ausarbeiten, wollen wir wissen, ob es da draußen Menschen gibt, die sich das wirklich wünschen.</p><p>Wir suchen die ersten <strong>50 Menschen</strong>, die sich für den Pilot interessieren.</p><p>Hinterlass uns deine E-Mail-Adresse, ein paar Worte, wenn du magst, und jede Frage, die wir beantworten sollen, während der Pilot Gestalt annimmt.</p>",
+    progress: "{count} / {goal} Interessierte", progressLabel: "Menschen, die sich für den Pilot interessieren", goalReached: "Über 50 Menschen sind interessiert. Wir haben es geschafft.",
+    emailLabel: "Deine E-Mail", emailPlaceholder: "du@beispiel.de",
+    messageLabel: "Möchtest du uns etwas sagen?", messageHint: "Ein paar aufmunternde Worte, was dir an der Idee gefällt, oder einfach, was dir gerade einfällt.",
+    questionLabel: "Was ist dir wichtig zu wissen?", questionHint: "Frag uns alles, was du beantwortet haben möchtest, bevor du über den Pilot nachdenkst.",
+    consent: "Ja, ihr dürft mir E-Mails zu Unplug to Reconnect und zum ersten Pilot schicken.", note: "Wir nutzen deine E-Mail-Adresse, um dich über das Projekt und den Pilot auf dem Laufenden zu halten. Du kannst dich jederzeit abmelden.", privacyLink: "Datenschutzhinweise",
+    submit: "Ich bin interessiert", sending: "Wird gesendet…",
+    doneTitle: "Du gehörst zu den Ersten.", doneThanks: "Danke, dass du die Hand gehoben hast.", doneBody: "Wir arbeiten weiter am Pilot und melden uns, wenn es etwas zu berichten gibt.", doneQuestion: "Und wenn du uns eine Frage hinterlassen hast: Wir lesen sie.",
+    duplicate: "Du bist schon dabei. Schön, dass du hier bist.",
+    invalidEmail: "Gib eine gültige E-Mail-Adresse ein.", consentRequired: "Bitte setz das Häkchen, damit wir dir schreiben dürfen.", tooLong: "Das ist etwas lang. Bitte halte jeden Text unter 1.000 Zeichen.", error: "Bei uns ist etwas schiefgelaufen. Bitte versuch es gleich noch einmal."
   },
   letter: { imageAlt: "Ein älterer Mann mit weißer Mütze beugt sich in einem Obstgarten über einen großen Topf auf einem Outdoor-Herd und rührt mit einem Holzlöffel.", caption: "AUS DEM ARCHIV", eyebrow: "OFFENER BRIEF / VON ALEX", title: "Ein offener Brief von Alex über das Warum hinter Unplug to Reconnect.", copy: "Basketball, Software und eine Woche in den Hügeln mit meinem Großvater. Das ist keine Absage an Technologie. Es ist eine Einladung, für eine Weile aus dem Lärm herauszutreten.", cta: "Den Brief lesen", close: "Schließen" },
   footer: { line: "Lass uns für einen Moment von unseren digitalen Welten abschalten und uns wieder mit Natur, Menschen und einfachen Dingen verbinden.", less: "WENIGER DIGITAL.", more: "MEHR ANALOG.", top: "NACH OBEN ↑" }
@@ -237,9 +251,16 @@ const fr = {
   reset: { imageAlt: "Deux tentes en toile et un feu de camp brillent près d’une grange en bois dans un jardin du Maramureș.", title: "Moins numérique.<br><em>Plus analogique.</em>" },
   pilot: { stamp: "PILOTE<br>001", eyebrow: "Tout commence à petite échelle", title: "10–12 personnes.<br>7 jours.<br><em>0 algorithme pour décider de la suite.</em>" },
   signup: {
-    index: "REJOINDRE / PILOTE 001", title: "Viens avec nous.", copy: "Le premier camp sera petit, volontairement. Rejoins la liste pilote pour savoir quand les candidatures ouvrent et aider à façonner ce que deviendra Unplug to Reconnect.",
-    emailLabel: "Ton e-mail", emailPlaceholder: "toi@exemple.fr", submit: "Tiens-moi au courant", consent: "J’accepte de recevoir de temps en temps des nouvelles du projet pilote. Pas de spam, promis.",
-    note: "Formulaire de test : rien n’est envoyé tant qu’un service de liste de diffusion n’est pas connecté.", invalidEmail: "Saisis une adresse e-mail valide.", consentRequired: "Confirme que tu es d’accord pour recevoir des nouvelles de temps en temps.", success: "C’est bon. Connecte le service de liste de diffusion pour commencer à recueillir les inscriptions."
+    index: "REJOINDRE / PILOTE 001", title: "Aide-nous à lancer le premier pilote.", copy: "<p>Unplug to Reconnect en est encore à ses débuts. Avant d’ajouter tous les détails, on veut savoir s’il y a vraiment des personnes qui ont envie que ça existe.</p><p>On cherche les <strong>50 premières personnes</strong> intéressées par le pilote.</p><p>Laisse-nous ton e-mail, quelques mots si tu veux, et toute question à laquelle tu aimerais qu’on réponde à mesure que le pilote prend forme.</p>",
+    progress: "{count} / {goal} personnes intéressées", progressLabel: "Personnes intéressées par le pilote", goalReached: "Plus de 50 personnes sont intéressées. On y est arrivés.",
+    emailLabel: "Ton e-mail", emailPlaceholder: "toi@exemple.fr",
+    messageLabel: "Un mot à nous dire ?", messageHint: "Quelques mots d’encouragement, ce que tu aimes dans l’idée, ou ce qui te passe par la tête.",
+    questionLabel: "Qu’est-ce qui est important pour toi de savoir ?", questionHint: "Pose-nous la question à laquelle tu voudrais une réponse avant de considérer le pilote.",
+    consent: "Oui, vous pouvez m’écrire à propos d’Unplug to Reconnect et du premier pilote.", note: "On utilisera ton e-mail pour te tenir au courant du projet et du pilote. Tu peux te désabonner à tout moment.", privacyLink: "Informations sur la confidentialité",
+    submit: "Ça m’intéresse", sending: "Envoi en cours…",
+    doneTitle: "Tu fais partie des premiers.", doneThanks: "Merci d’avoir levé la main.", doneBody: "On continue de travailler sur le pilote et on te prévient dès qu’il y a quelque chose à partager.", doneQuestion: "Et si tu nous as laissé une question : on la lira.",
+    duplicate: "On dirait que tu es déjà dans la liste. Content de t’avoir ici.",
+    invalidEmail: "Saisis une adresse e-mail valide.", consentRequired: "Coche la case pour que nous puissions t’écrire.", tooLong: "C’est un peu long. Garde chaque texte sous 1 000 caractères.", error: "Un problème est survenu de notre côté. Réessaie dans un instant."
   },
   letter: { imageAlt: "Un homme âgé coiffé d’une casquette blanche se penche sur une grande marmite posée sur un réchaud en plein air et la remue avec une cuillère en bois, dans un verger.", caption: "DES ARCHIVES", eyebrow: "LETTRE OUVERTE / D’ALEX", title: "Une lettre ouverte d’Alex sur les raisons d’être d’Unplug to Reconnect.", copy: "Basket, informatique et une semaine dans les collines avec mon grand-père. Ce n’est pas un rejet de la technologie. C’est une invitation à sortir du bruit pendant un moment.", cta: "Lire la lettre", close: "Fermer" },
   footer: { line: "Déconnectons-nous un moment de nos mondes numériques pour nous reconnecter à la nature, aux autres et aux choses simples.", less: "MOINS NUMÉRIQUE.", more: "PLUS ANALOGIQUE.", top: "RETOUR EN HAUT ↑" }
@@ -318,9 +339,16 @@ const ro = {
   reset: { imageAlt: "Două corturi din pânză și un foc de tabără lângă un hambar de lemn, într-o grădină din Maramureș.", title: "Mai puțin digital.<br><em>Mai mult analog.</em>" },
   pilot: { stamp: "PILOT<br>001", eyebrow: "Începem mic", title: "10–12 oameni.<br>7 zile.<br><em>0 algoritmi care hotărăsc ce urmează.</em>" },
   signup: {
-    index: "ÎNSCRIERI / PILOT 001", title: "Noah, hai cu noi.", copy: "Prima tabără o facem mică, cu bună știință. Înscrie-te pe lista pilot ca să afli când se deschid înscrierile și ca să ne ajuți să croim ce va fi Unplug to Reconnect.",
-    emailLabel: "Adresa ta de e-mail", emailPlaceholder: "tu@exemplu.ro", submit: "Ține-mă la curent", consent: "Sunt de acord să primesc din când în când vești despre ediția pilot. Fără mesaje de umplutură.",
-    note: "Formular de probă: nu trimitem nimic până nu legăm un serviciu de mailing.", invalidEmail: "Scrie o adresă de e-mail validă.", consentRequired: "Bifează că ești de acord să primești vești din când în când.", success: "Merge fain. Leagă serviciul de mailing ca să începem să strângem înscrieri."
+    index: "ÎNSCRIERI / PILOT 001", title: "Dă-ne o mână de ajutor să pornim primul pilot.", copy: "<p>Unplug to Reconnect abia începe. Înainte să ne apucăm de toate detaliile, vrem să știm dacă sunt oameni care chiar vor să se întâmple asta.</p><p>Căutăm primii <strong>50 de oameni</strong> interesați de pilot.</p><p>Lasă-ne adresa ta de e-mail, câteva vorbe dacă ai chef, și orice întrebare la care ai vrea să-ți răspundem pe măsură ce pilotul prinde formă.</p>",
+    progress: "{count} / {goal} oameni interesați", progressLabel: "Oameni interesați de pilot", goalReached: "Peste 50 de oameni sunt interesați. Am reușit.",
+    emailLabel: "Adresa ta de e-mail", emailPlaceholder: "tu@exemplu.ro",
+    messageLabel: "Vrei să ne spui ceva?", messageHint: "Câteva vorbe de încurajare, ce-ți place la idee sau orice-ți vine în minte.",
+    questionLabel: "Ce ți se pare important să afli?", questionHint: "Întreabă-ne orice ai vrea să știi înainte să te gândești la pilot.",
+    consent: "Da, puteți să-mi scrieți despre Unplug to Reconnect și despre primul pilot.", note: "Îți folosim adresa de e-mail ca să te ținem la curent cu proiectul și cu pilotul. Te poți dezabona oricând.", privacyLink: "Informații despre confidențialitate",
+    submit: "Mă interesează", sending: "Se trimite…",
+    doneTitle: "Ești printre primii.", doneThanks: "Mulțumim că ai ridicat mâna.", doneBody: "Lucrăm mai departe la pilot și îți dăm de veste când avem ceva de spus.", doneQuestion: "Iar dacă ne-ai lăsat o întrebare: o citim.",
+    duplicate: "Se pare că ești deja pe listă. Ne bucurăm că ești aici.",
+    invalidEmail: "Scrie o adresă de e-mail validă.", consentRequired: "Bifează căsuța ca să-ți putem scrie.", tooLong: "E cam lung. Păstrează fiecare mesaj sub 1.000 de caractere.", error: "Ceva n-a mers de partea noastră. Mai încearcă o dată într-un minut."
   },
   letter: { imageAlt: "Un bărbat în vârstă cu șapcă albă se apleacă deasupra unui cazan mare pe o plită în aer liber și amestecă cu o lingură de lemn, într-o livadă.", caption: "DIN ARHIVĂ", eyebrow: "SCRISOARE DESCHISĂ / DE LA ALEX", title: "O scrisoare deschisă de la Alex despre motivația din spatele Unplug to Reconnect.", copy: "Baschet, software și o săptămână pe dealuri cu bunu meu. Nu-i o respingere a tehnologiei. E o invitație să ieși o vreme din zgomot.", cta: "Citește scrisoarea", close: "Închide" },
   footer: { line: "Hai să ne deconectăm o clipă de lumile noastre digitale și să ne reconectăm cu natura, cu oamenii și cu lucrurile simple.", less: "MAI PUȚIN DIGITAL.", more: "MAI MULT ANALOG.", top: "ÎNAPOI SUS ↑" }
@@ -399,9 +427,16 @@ const es = {
   reset: { imageAlt: "Dos tiendas de lona y una hoguera iluminan el jardín junto a un granero de madera en Maramureș.", title: "Menos digital.<br><em>Más analógico.</em>" },
   pilot: { stamp: "PILOTO<br>001", eyebrow: "Esto empieza en pequeño", title: "10–12 personas.<br>7 días.<br><em>0 algoritmos decidiendo qué viene después.</em>" },
   signup: {
-    index: "ÚNETE / PILOTO 001", title: "Ven con nosotros.", copy: "El primer campamento será pequeño a propósito. Únete a la lista piloto para saber cuándo se abren las solicitudes y ayudar a dar forma a lo que será Unplug to Reconnect.",
-    emailLabel: "Tu correo electrónico", emailPlaceholder: "tu@ejemplo.es", submit: "Mantenme al tanto", consent: "Acepto recibir noticias ocasionales sobre el programa piloto. Sin spam, prometido.",
-    note: "Formulario de prototipo: las respuestas no se enviarán hasta que se conecte un servicio de listas de correo.", invalidEmail: "Introduce una dirección de correo válida.", consentRequired: "Confirma que aceptas recibir noticias ocasionales.", success: "Todo listo. Conecta el servicio de correo para empezar a recoger inscripciones."
+    index: "ÚNETE / PILOTO 001", title: "Ayúdanos a poner en marcha el primer piloto.", copy: "<p>Unplug to Reconnect está todavía en sus comienzos. Antes de ponernos con todos los detalles, queremos saber si hay gente ahí fuera que de verdad quiere que esto ocurra.</p><p>Buscamos a las primeras <strong>50 personas</strong> interesadas en el piloto.</p><p>Déjanos tu correo, unas palabras si quieres, y cualquier pregunta que te gustaría que respondiéramos a medida que el piloto va tomando forma.</p>",
+    progress: "{count} / {goal} personas interesadas", progressLabel: "Personas interesadas en el piloto", goalReached: "Más de 50 personas están interesadas. Lo hemos conseguido.",
+    emailLabel: "Tu correo electrónico", emailPlaceholder: "tu@ejemplo.es",
+    messageLabel: "¿Quieres contarnos algo?", messageHint: "Unas palabras de ánimo, lo que te gusta de la idea o lo que se te ocurra.",
+    questionLabel: "¿Qué te importa saber?", questionHint: "Pregúntanos lo que te gustaría tener respondido antes de plantearte el piloto.",
+    consent: "Sí, podéis escribirme sobre Unplug to Reconnect y el primer piloto.", note: "Usaremos tu correo para mantenerte al día sobre el proyecto y el piloto. Puedes darte de baja cuando quieras.", privacyLink: "Información de privacidad",
+    submit: "Me interesa", sending: "Enviando…",
+    doneTitle: "Eres de los primeros.", doneThanks: "Gracias por levantar la mano.", doneBody: "Seguiremos trabajando en el piloto y te avisaremos cuando haya algo que merezca la pena compartir.", doneQuestion: "Y si nos has dejado una pregunta: la leeremos.",
+    duplicate: "Parece que ya estás dentro. Nos alegra tenerte aquí.",
+    invalidEmail: "Introduce una dirección de correo válida.", consentRequired: "Marca la casilla para que podamos escribirte.", tooLong: "Es un poco largo. Mantén cada texto por debajo de 1.000 caracteres.", error: "Algo ha fallado por nuestra parte. Inténtalo de nuevo en un momento."
   },
   letter: { imageAlt: "Un hombre mayor con gorra blanca se inclina sobre una olla grande en una cocina al aire libre y la remueve con una cuchara de madera, en un huerto.", caption: "DEL ARCHIVO", eyebrow: "CARTA ABIERTA / DE ALEX", title: "Una carta abierta de Alex sobre el porqué de Unplug to Reconnect.", copy: "Baloncesto, software y una semana en las colinas con mi abuelo. No es un rechazo de la tecnología. Es una invitación a salir del ruido durante un tiempo.", cta: "Leer la carta", close: "Cerrar" },
   footer: { line: "Desconectemos un momento de nuestros mundos digitales y volvamos a conectar con la naturaleza, las personas y las cosas sencillas.", less: "MENOS DIGITAL.", more: "MÁS ANALÓGICO.", top: "VOLVER ARRIBA ↑" }
@@ -480,9 +515,16 @@ const it = {
   reset: { imageAlt: "Due tende in tela e un falò illuminano il giardino accanto a un fienile in legno nel Maramureș.", title: "Meno digitale.<br><em>Più analogico.</em>" },
   pilot: { stamp: "PILOTA<br>001", eyebrow: "Iniziamo in piccolo", title: "10–12 persone.<br>7 giorni.<br><em>0 algoritmi a decidere cosa viene dopo.</em>" },
   signup: {
-    index: "PARTECIPA / PILOTA 001", title: "Vieni con noi.", copy: "Il primo campo sarà volutamente piccolo. Unisciti alla lista pilota per sapere quando apriranno le candidature e contribuire a dare forma a ciò che diventerà Unplug to Reconnect.",
-    emailLabel: "La tua e-mail", emailPlaceholder: "tu@esempio.it", submit: "Tienimi aggiornato", consent: "Accetto di ricevere ogni tanto aggiornamenti sul progetto pilota. Niente spam, promesso.",
-    note: "Modulo prototipo: le risposte non verranno inviate finché non sarà collegato un servizio di mailing list.", invalidEmail: "Inserisci un indirizzo e-mail valido.", consentRequired: "Conferma che accetti di ricevere aggiornamenti occasionali.", success: "Tutto pronto. Collega il servizio di mailing list per iniziare a raccogliere le iscrizioni."
+    index: "PARTECIPA / PILOTA 001", title: "Aiutaci a far partire il primo pilota.", copy: "<p>Unplug to Reconnect è ancora agli inizi. Prima di mettere a punto tutti i dettagli, vogliamo sapere se là fuori c’è davvero qualcuno che vuole che questo succeda.</p><p>Cerchiamo le prime <strong>50 persone</strong> interessate al pilota.</p><p>Lasciaci la tua e-mail, due parole se ti va, e qualsiasi domanda a cui vorresti che rispondessimo man mano che il pilota prende forma.</p>",
+    progress: "{count} / {goal} persone interessate", progressLabel: "Persone interessate al pilota", goalReached: "Più di 50 persone sono interessate. Ce l’abbiamo fatta.",
+    emailLabel: "La tua e-mail", emailPlaceholder: "tu@esempio.it",
+    messageLabel: "Vuoi dirci qualcosa?", messageHint: "Due parole di incoraggiamento, cosa ti piace dell’idea o qualsiasi cosa ti venga in mente.",
+    questionLabel: "Cosa ti interessa sapere?", questionHint: "Chiedici quello a cui vorresti una risposta prima di considerare il pilota.",
+    consent: "Sì, potete scrivermi di Unplug to Reconnect e del primo pilota.", note: "Useremo la tua e-mail per tenerti aggiornato sul progetto e sul pilota. Puoi annullare l’iscrizione in qualsiasi momento.", privacyLink: "Informativa sulla privacy",
+    submit: "Mi interessa", sending: "Invio in corso…",
+    doneTitle: "Sei tra i primi.", doneThanks: "Grazie per aver alzato la mano.", doneBody: "Continueremo a lavorare al pilota e ti faremo sapere quando ci sarà qualcosa da raccontare.", doneQuestion: "E se ci hai lasciato una domanda: la leggeremo.",
+    duplicate: "Sembra che tu sia già dentro. Bello averti qui.",
+    invalidEmail: "Inserisci un indirizzo e-mail valido.", consentRequired: "Spunta la casella così possiamo scriverti.", tooLong: "È un po’ lungo. Tieni ogni testo sotto i 1.000 caratteri.", error: "Qualcosa è andato storto da parte nostra. Riprova tra un attimo."
   },
   letter: { imageAlt: "Un uomo anziano con il berretto bianco si china su una grande pentola su un fornello all’aperto e la mescola con un mestolo di legno, in un frutteto.", caption: "DALL’ARCHIVIO", eyebrow: "LETTERA APERTA / DA ALEX", title: "Una lettera aperta di Alex sul perché di Unplug to Reconnect.", copy: "Basket, software e una settimana sulle colline con mio nonno. Non è un rifiuto della tecnologia. È un invito a uscire dal rumore per un po’.", cta: "Leggi la lettera", close: "Chiudi" },
   footer: { line: "Disconnettiamoci per un momento dai nostri mondi digitali e riconnettiamoci con la natura, le persone e le cose semplici.", less: "MENO DIGITALE.", more: "PIÙ ANALOGICO.", top: "TORNA SU ↑" }

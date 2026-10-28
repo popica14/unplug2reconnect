@@ -75,6 +75,7 @@ const applyLocale = (locale, updateUrl = false) => {
   if (signalLabel) signalLabel.textContent = translate(window.scrollY > 48 ? "hero.signalGone" : "hero.signalLeaving");
   const formMessage = form?.querySelector(".form-message");
   if (formMessage) formMessage.textContent = "";
+  window.u2rOnLocaleChange?.();
 
   try {
     window.localStorage.setItem("u2r-locale", currentLocale);
@@ -208,11 +209,99 @@ document.querySelectorAll("details").forEach((item) => {
   });
 });
 
-form?.addEventListener("submit", (event) => {
+// ---- Pilot interest sign-up -------------------------------------------------
+// The count shown here is always the real number from /api/signup. It is never faked or seeded.
+const signupGoal = 50;
+const progressBox = document.querySelector("[data-progress]");
+const progressText = document.querySelector("[data-progress-text]");
+const progressBar = document.querySelector("[data-progress-bar]");
+const doneBox = document.querySelector("[data-signup-done]");
+let signupCount = null;
+
+const formatTemplate = (key, values) =>
+  Object.entries(values).reduce((text, [name, value]) => text.split(`{${name}}`).join(value), translate(key));
+
+const countLine = (count) =>
+  count >= signupGoal
+    ? translate("signup.goalReached")
+    : formatTemplate("signup.progress", { count: String(count), goal: String(signupGoal) });
+
+const renderProgress = () => {
+  if (signupCount === null) return; // unknown (still loading or the request failed): show nothing rather than guess
+  const reached = signupCount >= signupGoal;
+
+  if (progressText) {
+    progressText.textContent = countLine(signupCount);
+    progressText.hidden = false;
+  }
+  if (progressBar) {
+    progressBar.hidden = false;
+    progressBar.setAttribute("aria-valuenow", String(Math.min(signupCount, signupGoal)));
+    progressBar.setAttribute("aria-valuetext", reached ? translate("signup.goalReached") : countLine(signupCount));
+    const fill = progressBar.querySelector("span");
+    if (fill) fill.style.width = `${Math.min(100, (signupCount / signupGoal) * 100)}%`;
+  }
+  const doneCount = document.querySelector("[data-done-count]");
+  if (doneCount && doneBox && !doneBox.hidden) {
+    doneCount.textContent = countLine(signupCount);
+    doneCount.hidden = false;
+  }
+};
+
+const loadSignupCount = async () => {
+  if (!progressBox) return;
+  try {
+    const response = await fetch("/api/signup", { headers: { Accept: "application/json" } });
+    const data = await response.json();
+    if (response.ok && data.ok && Number.isInteger(data.count)) {
+      signupCount = data.count;
+      renderProgress();
+    }
+  } catch {
+    // Offline or no backend yet: the section simply shows no number.
+  }
+};
+
+let doneState = null; // "new" or "duplicate", kept so a language change can re-translate the message
+
+const renderDone = () => {
+  if (!doneBox || !doneState) return;
+  const title = doneBox.querySelector("[data-signup-done-title]");
+  const body = doneBox.querySelector("[data-signup-done-body]");
+  const extra = doneBox.querySelector("[data-signup-done-extra]");
+
+  if (doneState.kind === "duplicate") {
+    title.textContent = translate("signup.duplicate");
+    body.textContent = "";
+    body.hidden = true;
+    extra.hidden = true;
+  } else {
+    title.textContent = translate("signup.doneTitle");
+    body.textContent = `${translate("signup.doneThanks")} ${translate("signup.doneBody")}`;
+    body.hidden = false;
+    extra.textContent = translate("signup.doneQuestion");
+    extra.hidden = !doneState.hadQuestion;
+  }
+  renderProgress();
+};
+
+const showDone = (kind, hadQuestion) => {
+  doneState = { kind, hadQuestion };
+  form.hidden = true;
+  doneBox.hidden = false;
+  renderDone();
+  doneBox.focus();
+};
+
+form?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const message = form.querySelector(".form-message");
   const email = form.querySelector("input[type='email']");
   const consent = form.querySelector("input[name='consent']");
+  const note = form.querySelector("textarea[name='message']");
+  const question = form.querySelector("textarea[name='question']");
+  const honeypot = form.querySelector("input[name='website']");
+  const submit = form.querySelector("button[type='submit']");
 
   if (!email.validity.valid) {
     message.textContent = translate("signup.invalidEmail");
@@ -226,9 +315,56 @@ form?.addEventListener("submit", (event) => {
     return;
   }
 
-  message.textContent = translate("signup.success");
-  form.reset();
+  submit.disabled = true;
+  message.textContent = translate("signup.sending");
+
+  try {
+    const response = await fetch("/api/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email: email.value.trim(),
+        message: note.value,
+        question: question.value,
+        consent: true,
+        language: currentLocale,
+        website: honeypot ? honeypot.value : ""
+      })
+    });
+    const result = await response.json().catch(() => ({}));
+
+    if (response.ok && result.ok) {
+      if (Number.isInteger(result.count)) signupCount = result.count;
+      const hadQuestion = question.value.trim() !== "";
+      message.textContent = "";
+      form.reset();
+      showDone(result.duplicate ? "duplicate" : "new", hadQuestion);
+    } else if (result.error === "invalid_email") {
+      message.textContent = translate("signup.invalidEmail");
+      email.focus();
+    } else if (result.error === "consent_required") {
+      message.textContent = translate("signup.consentRequired");
+      consent.focus();
+    } else if (result.error === "too_long") {
+      message.textContent = translate("signup.tooLong");
+    } else {
+      message.textContent = translate("signup.error");
+    }
+  } catch {
+    message.textContent = translate("signup.error");
+  } finally {
+    submit.disabled = false;
+  }
 });
+
+loadSignupCount();
+
+// Re-translate the progress line and the success message when the language changes.
+window.u2rOnLocaleChange = () => {
+  renderProgress();
+  renderDone();
+};
+
 
 // Floating letter card: stays pinned while scrolling, can be dismissed, and steps aside at the sign-up form.
 const letterFloat = document.querySelector("[data-letter-float]");
@@ -262,3 +398,9 @@ if (letterFloat) {
   syncLetterFloat();
 }
 
+
+// The digital / analogue switch: purely playful, it only flips its own state.
+const phoneSwitch = document.querySelector("[data-switch]");
+phoneSwitch?.addEventListener("click", () => {
+  phoneSwitch.setAttribute("aria-checked", String(phoneSwitch.getAttribute("aria-checked") !== "true"));
+});

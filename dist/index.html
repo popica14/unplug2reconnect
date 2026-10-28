@@ -121,12 +121,12 @@
             <p><strong>We don’t offer answers. We create a different environment where you might find your own direction, inspiration, or perspective through doing things, spending time in nature, and talking face-to-face with other people.</strong></p>
           </div>
         </div>
-        <div class="switch-card reveal" aria-label="Digital to analogue" data-i18n-aria-label="access.switch">
-          <span class="mono" data-i18n="point.digital">DIGITAL</span>
-          <div class="toggle-track"><i></i></div>
-          <span class="mono" data-i18n="point.analogue">ANALOGUE</span>
-          <p data-i18n="point.phone">Your phone will survive a week without you.</p>
-        </div>
+        <button type="button" class="switch-card reveal" role="switch" aria-checked="true" aria-labelledby="switch-phrase" data-switch>
+          <span class="mono switch-card__side switch-card__side--digital" data-i18n="point.digital">DIGITAL</span>
+          <span class="toggle-track"><i></i></span>
+          <span class="mono switch-card__side switch-card__side--analogue" data-i18n="point.analogue">ANALOGUE</span>
+          <span class="switch-card__phrase" id="switch-phrase" data-i18n="point.phone">Your phone will survive a week without you.</span>
+        </button>
       </section>
 
       <section class="outcomes" aria-label="What you take home" data-i18n-aria-label="access.outcomes">
@@ -337,21 +337,45 @@
       <section id="join" class="signup section-grid" aria-labelledby="join-title">
         <div class="section-index mono" data-i18n="signup.index">JOIN / PILOT 001</div>
         <div class="signup__content reveal">
-          <h2 id="join-title" data-i18n="signup.title">Come with us.</h2>
-          <p data-i18n="signup.copy">The first camp will be small on purpose. Join the pilot list to hear when applications open and help shape what Unplug to Reconnect becomes.</p>
+          <h2 id="join-title" data-i18n="signup.title">Help us get the first pilot off the ground.</h2>
+          <div class="signup__intro" data-i18n-html="signup.copy"><p>Unplug to Reconnect is still at the beginning. Before we start adding all the details, we want to know if there are people out there who actually want this to happen.</p><p>We’re looking for the first <strong>50 people</strong> interested in the pilot.</p><p>Leave us your email, a few words if you want, and any question you’d like us to answer as the pilot takes shape.</p></div>
+
+          <div class="progress" data-progress aria-live="polite">
+            <p class="progress__count" data-progress-text hidden></p>
+            <div class="progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="50" aria-valuenow="0" aria-label="People interested in the pilot" data-i18n-aria-label="signup.progressLabel" data-progress-bar hidden><span></span></div>
+          </div>
+
           <form class="interest-form" data-interest-form novalidate>
-            <div class="form-row">
+            <div class="field">
               <label for="email" data-i18n="signup.emailLabel">Your email</label>
               <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" data-i18n-placeholder="signup.emailPlaceholder" required />
-              <button class="button button--light" type="submit"><span data-i18n="signup.submit">Keep me posted</span> <span aria-hidden="true">↗</span></button>
+            </div>
+            <div class="field">
+              <label for="message" data-i18n="signup.messageLabel">Want to tell us something?</label>
+              <p class="field__hint" id="message-hint" data-i18n="signup.messageHint">A few words of encouragement, what you like about the idea, or whatever comes to mind.</p>
+              <textarea id="message" name="message" rows="3" maxlength="1000" aria-describedby="message-hint"></textarea>
+            </div>
+            <div class="field">
+              <label for="question" data-i18n="signup.questionLabel">What’s important for you to know?</label>
+              <p class="field__hint" id="question-hint" data-i18n="signup.questionHint">Ask us anything you’d want answered before considering the pilot.</p>
+              <textarea id="question" name="question" rows="3" maxlength="1000" aria-describedby="question-hint"></textarea>
             </div>
             <label class="consent">
               <input type="checkbox" name="consent" required />
-              <span data-i18n="signup.consent">I’m happy to receive occasional pilot updates. No feed-filling nonsense.</span>
+              <span data-i18n="signup.consent">Yes, you can email me about Unplug to Reconnect and the first pilot.</span>
             </label>
-            <p class="form-note" data-i18n="signup.note">Prototype form: submissions are not sent until a mailing-list service is connected.</p>
+            <p class="form-note"><span data-i18n="signup.note">We’ll use your email to keep you updated about the project and the pilot. You can unsubscribe at any time.</span> <a href="/privacy/" data-i18n="signup.privacyLink">Privacy information</a></p>
+            <div class="form-hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+            <button class="button button--light" type="submit"><span data-i18n="signup.submit">I’m interested</span> <span aria-hidden="true">→</span></button>
             <p class="form-message" role="status" aria-live="polite"></p>
           </form>
+
+          <div class="signup__done" data-signup-done hidden tabindex="-1">
+            <h3 data-signup-done-title></h3>
+            <p data-signup-done-body></p>
+            <p class="signup__done-extra" data-signup-done-extra hidden></p>
+            <p class="progress__count" data-done-count hidden></p>
+          </div>
         </div>
 
         <aside class="letter-preview reveal" aria-labelledby="letter-preview-title">

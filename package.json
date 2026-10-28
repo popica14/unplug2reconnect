@@ -1,0 +1,11 @@
+{
+  "name": "unplug-to-reconnect",
+  "private": true,
+  "scripts": {
+    "dev": "node dev/server.js",
+    "test": "node test/signup.test.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0"
+  }
+}
